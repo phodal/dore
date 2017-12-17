@@ -1,8 +1,10 @@
 # Dore
 
-> Dore is a WebView container implemented using React Native that lets you invoke React Native components on a WebView.
+> Dore is a WebView container implemented using React Native. Help you migrate Cordova application to React Native WebView.
 
 **Dore 是一个使用 React Native 实现的 WebView 容器，可以让你在 WebView 调用 React Native 组件。**
+
+设计初衷：用于迁移 Cordova 的 WebView 应用到 React Native 的 WebView。
 
 Support Bridges:
 
