@@ -1,14 +1,14 @@
-let BadgeBridge = (payload, webView, RNIconBadge) => {
+let BadgeBridge = (payload, webView, IconBadge) => {
   if (payload.type === 'SET_BADGE') {
-    RNIconBadge.setIconBadge(payload.badgeNumber)
+    IconBadge.setIconBadge(payload.badgeNumber)
   } else if (payload.type === 'ADD_BADGE') {
-    RNIconBadge.badgeAdd(payload.badgeNumber)
+    IconBadge.badgeAdd(payload.badgeNumber)
   } else if (payload.type === 'MINUS_BADGE') {
-    RNIconBadge.badgeMinus(payload.badgeNumber)
+    IconBadge.badgeMinus(payload.badgeNumber)
   } else if (payload.type === 'CLEAR_BADGE') {
-    RNIconBadge.clearBadge()
+    IconBadge.clearBadge()
   } else if (payload.type === 'GET_BADGE') {
-    RNIconBadge.getBadgeNumber().then((data) => {
+    IconBadge.getBadgeNumber().then((data) => {
       webView.postMessage(JSON.stringify(data))
     })
   }

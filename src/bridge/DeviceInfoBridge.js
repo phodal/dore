@@ -1,28 +1,28 @@
-let deviceInfoBridge = (payload, webView, RNDeviceInfo) => {
+let deviceInfoBridge = (payload, webView, DeviceInfo) => {
   const info = {};
 
   if (payload.type === 'APP_VERSION') {
-    info.version = RNDeviceInfo.getVersion();
+    info.version = DeviceInfo.getVersion();
   } else if (payload.type === 'DEVICE_ID') {
-    info.uniqueID = RNDeviceInfo.getUniqueID();
+    info.uniqueID = DeviceInfo.getUniqueID();
   } else if (payload.type === 'BRAND') {
-    info.brand = RNDeviceInfo.getBrand();
+    info.brand = DeviceInfo.getBrand();
   } else if (payload.type === 'MODEL') {
-    info.model = RNDeviceInfo.getModel();
+    info.model = DeviceInfo.getModel();
   } else if (payload.type === 'SYSTEM_NAME') {
-    info.systemName = RNDeviceInfo.getSystemName();
+    info.systemName = DeviceInfo.getSystemName();
   } else if (payload.type === 'IS_EMULATOR') {
-    info.isEmulator = RNDeviceInfo.isEmulator();
+    info.isEmulator = DeviceInfo.isEmulator();
   } else if (payload.type === 'IS_TABLET') {
-    info.isTablet = RNDeviceInfo.isTablet();
+    info.isTablet = DeviceInfo.isTablet();
   } else {
-    info.version = RNDeviceInfo.getVersion();
-    info.uniqueID = RNDeviceInfo.getUniqueID();
-    info.brand = RNDeviceInfo.getBrand();
-    info.model = RNDeviceInfo.getModel();
-    info.systemName = RNDeviceInfo.getSystemName();
-    info.isEmulator = RNDeviceInfo.isEmulator();
-    info.isTablet = RNDeviceInfo.isTablet();
+    info.version = DeviceInfo.getVersion();
+    info.uniqueID = DeviceInfo.getUniqueID();
+    info.brand = DeviceInfo.getBrand();
+    info.model = DeviceInfo.getModel();
+    info.systemName = DeviceInfo.getSystemName();
+    info.isEmulator = DeviceInfo.isEmulator();
+    info.isTablet = DeviceInfo.isTablet();
   }
   webView.postMessage(JSON.stringify(info))
 };
