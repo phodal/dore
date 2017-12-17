@@ -1,6 +1,6 @@
 {
   "name": "dore",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Framework for Growth APP",
   "main": "index.js",
   "scripts": {
