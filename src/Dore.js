@@ -11,6 +11,7 @@ import OrientationBridge from "./bridge/OrientationBridge";
 import NetInfoBridge from "./bridge/NetInfoBridge";
 import StatusBarBridge from "./bridge/StatusBarBridge";
 import StateBridge from "./bridge/StateBridge";
+import VibrationBridge from "./bridge/VibrationBridge";
 
 const Dore = {};
 
@@ -68,6 +69,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'STATE': {
       return StateBridge(payload, webView)
+    }
+    case 'VIBRATION': {
+      return VibrationBridge(payload)
     }
   }
 };
