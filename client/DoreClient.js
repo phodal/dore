@@ -13,19 +13,22 @@
   } else {
     factory(global);
   }
+
 }(typeof window !== "undefined" ? window : this, function (window, noGlobal) {
   function postMessage(action, payload) {
-    console.log(action, payload);
-    window.postMessage(JSON.stringify({
+    var message = JSON.stringify({
       action: action,
       payload: payload
-    }));
+    });
+    if (window.isPhone) {
+      window.postMessage(message, '');
+    } else {
+      console.log(message);
+    }
   }
 
   function getAsyncData(action, payload) {
     return new Promise(function (resolve, reject) {
-      console.log(resolve, reject);
-
       function listener(event) {
         event.target.removeEventListener('message', listener, false);
         resolve(JSON.parse(event.data));
@@ -47,7 +50,7 @@
     postMessage(action, payload);
   }
 
-  window.DoreClient = {
+  var DoreClient = {
     getAppVersion: function () {
       return getAsyncData('DEVICE_INFO', {type: 'APP_VERSION'});
     },
