@@ -27,29 +27,40 @@ Usage
 yarn add dore
 ```
 
-and add plugins. e.x. Device Info Plugin:
-
-```bash
-yarn add react-native-device-info
-react-native link react-native-device-info
-react-native link dore-icon-badge
-react-native link react-native-notag-datepicker
-react-native link react-native-orientation
-react-native link dore-toast
-```
-
 Example
 ---
 
-1.Import to your WebView
+1.Import to your React-Native WebView
 
 ```javascript
 ...
+import Toast from 'dore-toast';
+import Orientation from 'react-native-orientation';
+import RNIconBadge from 'dore-icon-badge'
+import RNDeviceInfo from "react-native-device-info";
 
-import Dore from '../src/Dore';
+import Dore from 'dore';
 
 export default class ExampleWebView extends Component {
   ...
+  
+  constructor() {
+    super()
+    ...
+    Dore.inject([{
+      name: 'Toast',
+      class: Toast
+    }, {
+      name: 'Orientation',
+      class: Orientation
+    }, {
+      name: 'Badge',
+      class: RNIconBadge
+    }, {
+      name: 'DeviceInfo',
+      class: RNDeviceInfo
+    }])
+  }
 
   onMessage = evt => {
     Dore.handleMessage(evt, this.webView)
@@ -76,9 +87,10 @@ export default class ExampleWebView extends Component {
 }
 ```
 
-2.import DoreClient, e.x:
+2.import [DoreClient](./client/DoreClient.js), e.x:
 
 ```html
+<script src="js/promise.js"></script>
 <script src="js/DoreClient.js"></script>
 ```
 

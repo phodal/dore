@@ -19,7 +19,7 @@ export default class ExampleWebView extends Component {
     super()
     this.state = {
       isLoading: true
-    }
+    };
     Dore.inject([{
       name: 'Toast',
       class: Toast
