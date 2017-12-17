@@ -48,7 +48,7 @@
     postMessage(action, payload);
   }
 
-  window.DoreClient = {
+  var DoreClient = {
     getAppVersion: function () {
       return getAsyncData('DEVICE_INFO', {type: 'APP_VERSION'});
     },

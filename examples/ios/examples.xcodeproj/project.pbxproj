@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -23,7 +22,6 @@
 		4067E8161FE612FF00B289D4 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4067E8151FE612FF00B289D4 /* DatePicker.xib */; };
 		4067E8201FE616B700B289D4 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4067E81D1FE6167A00B289D4 /* libRCTPushNotification.a */; };
 		440A62F25E024B1198020D62 /* libRNNoTagDatepicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFB08140E5C456888BD3709 /* libRNNoTagDatepicker.a */; };
-		5D685BA3F8644E639440A88D /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B486291B4BB7494F9F624EA6 /* libRCTCamera.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		872F254A54AE4421BF0CC35D /* libRCTToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 125FAFE5CCF04DB384AD52A3 /* libRCTToast.a */; };
@@ -222,13 +220,6 @@
 			remoteGlobalIDString = E72EC1401F7ABB5A0001BC90;
 			remoteInfo = "RNDeviceInfo-tvOS";
 		};
-		404E56D61FE5818B00966185 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F0E520BDFB3D43398809A244 /* RCTCamera.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
-			remoteInfo = RCTCamera;
-		};
 		404E56E81FE5849700966185 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
@@ -368,10 +359,8 @@
 		9EFB08140E5C456888BD3709 /* libRNNoTagDatepicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNNoTagDatepicker.a; sourceTree = "<group>"; };
 		A48A991F21BB4047977ECB83 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		B486291B4BB7494F9F624EA6 /* libRCTCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTCamera.a; sourceTree = "<group>"; };
 		C5467694081D4D139A05092F /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
-		F0E520BDFB3D43398809A244 /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,7 +382,6 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				4067E8201FE616B700B289D4 /* libRCTPushNotification.a in Frameworks */,
-				5D685BA3F8644E639440A88D /* libRCTCamera.a in Frameworks */,
 				8A9758AC82AD4E9082D3F1BB /* libRNDeviceInfo.a in Frameworks */,
 				872F254A54AE4421BF0CC35D /* libRCTToast.a in Frameworks */,
 				440A62F25E024B1198020D62 /* libRNNoTagDatepicker.a in Frameworks */,
@@ -549,14 +537,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		404E56D31FE5818B00966185 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				404E56D71FE5818B00966185 /* libRCTCamera.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		404E56D81FE5849600966185 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,7 +603,6 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				F0E520BDFB3D43398809A244 /* RCTCamera.xcodeproj */,
 				2DB1A21557874CDBAD8FB5CF /* RNDeviceInfo.xcodeproj */,
 				177886B774684C8F899DBB45 /* RCTToast.xcodeproj */,
 				10607A4D9A5444658790C77D /* RNNoTagDatepicker.xcodeproj */,
@@ -731,10 +710,6 @@
 				{
 					ProductGroup = ADBDB9201DFEBF0600ED6528 /* Products */;
 					ProjectRef = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
-				},
-				{
-					ProductGroup = 404E56D31FE5818B00966185 /* Products */;
-					ProjectRef = F0E520BDFB3D43398809A244 /* RCTCamera.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
@@ -990,13 +965,6 @@
 			remoteRef = 404E56D11FE5818B00966185 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		404E56D71FE5818B00966185 /* libRCTCamera.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRCTCamera.a;
-			remoteRef = 404E56D61FE5818B00966185 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		404E56E91FE5849700966185 /* libthird-party.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1168,7 +1136,6 @@
 				DEVELOPMENT_TEAM = D2DUAE8F5B;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-toast/ios/RCTToast",
 					"$(SRCROOT)/../node_modules/react-native-nogtag-datepicker/ios/RNNoTagDatepicker",
@@ -1178,8 +1145,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/examples\"",
-					"\"$(SRCROOT)/examples\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1199,7 +1164,6 @@
 				DEVELOPMENT_TEAM = D2DUAE8F5B;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-camera/ios",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-toast/ios/RCTToast",
 					"$(SRCROOT)/../node_modules/react-native-nogtag-datepicker/ios/RNNoTagDatepicker",
@@ -1209,8 +1173,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/examples\"",
-					"\"$(SRCROOT)/examples\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",

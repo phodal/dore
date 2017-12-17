@@ -6,7 +6,6 @@ import com.facebook.react.ReactApplication;
 import com.github.yamill.orientation.OrientationPackage;
 import com.remobile.toast.RCTToastPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
-import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -29,8 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new OrientationPackage(),
             new RCTToastPackage(),
-            new RNDeviceInfo(),
-            new RCTCameraPackage()
+            new RNDeviceInfo()
       );
     }
 
