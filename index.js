@@ -1,3 +1,3 @@
-import Dore from './examples/src/Dore';
+import Dore from './src/Dore';
 
 export default Dore;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {View, WebView, Dimensions} from "react-native";
 
-import Dore from '../src/Dore';
+import Dore from 'dore';
 
 let {
   height: deviceHeight,
