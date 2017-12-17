@@ -1,57 +1,25 @@
-angular.module('starter').service('DoreClient', function () {
-  function Promise() {
-    this._callbacks = [];
-  }
-
-  Promise.prototype.then = function(func, context) {
-    var p;
-    if (this._isdone) {
-      p = func.apply(context, this.result);
-    } else {
-      p = new Promise();
-      this._callbacks.push(function () {
-          var res = func.apply(context, arguments);
-          if (res && typeof res.then === 'function') {
-              res.then(p.done, p);
-          }
-      });
-      this._callbacks.push(func.bind(this,arguments))
-    }
-    return this;
-  };
-
-  Promise.prototype.done = function() {
-    this.result = arguments;
-    this._isdone = true;
-    for (var i = 0; i < this._callbacks.length; i++) {
-      this._callbacks[i].apply(null, arguments);
-    }
-    this._callbacks = [];
-  };
-
+window.addEventListener('load', function() {
   function postMessage(action, payload) {
-    if (window.isPhone) {
-      window.postMessage(JSON.stringify({
-        action: action,
-        payload: payload
-      }));
-    } else {
-      console.log({
-        action: action,
-        payload: payload
-      });
-    }
+    console.log(action, payload);
+    window.postMessage(JSON.stringify({
+      action: action,
+      payload: payload
+    }));
   }
 
   function getAsyncData(action, payload) {
     return new Promise(function (resolve, reject) {
+      console.log(resolve, reject);
       function listener(event) {
         event.target.removeEventListener('message', listener, false);
         resolve(JSON.parse(event.data));
       }
 
       window.document.addEventListener('message', listener, false);
-      postMessage(action, payload);
+      window.postMessage(JSON.stringify({
+        action: action,
+        payload: payload
+      }));
 
       setTimeout(function () {
         reject('timeout');
@@ -63,7 +31,7 @@ angular.module('starter').service('DoreClient', function () {
     postMessage(action, payload);
   }
 
-  return {
+  window.DoreClient = {
     getAppVersion: function () {
       return getAsyncData('DEVICE_INFO', {type: 'APP_VERSION'});
     },
@@ -162,4 +130,39 @@ angular.module('starter').service('DoreClient', function () {
       return invoke('STATE', {type: 'REMOVE_LISTENER'});
     }
   }
-});
+
+  function awaitPostMessage() {
+    var isReactNativePostMessageReady = !!window.originalPostMessage;
+    var queue = [];
+    var currentPostMessageFn = function store(message) {
+      if (queue.length > 100) queue.shift();
+      queue.push(message);
+    };
+    if (!isReactNativePostMessageReady) {
+      var originalPostMessage = window.postMessage;
+      Object.defineProperty(window, 'postMessage', {
+        configurable: true,
+        enumerable: true,
+        get: function () {
+          return currentPostMessageFn;
+        },
+        set: function (fn) {
+          currentPostMessageFn = fn;
+          isReactNativePostMessageReady = true;
+          setTimeout(sendQueue, 0);
+        }
+      });
+      window.postMessage.toString = function () {
+        return String(originalPostMessage);
+      };
+    }
+
+    function sendQueue() {
+      while (queue.length > 0) window.postMessage(queue.shift());
+    }
+  }
+
+  if (!!window.isPhone) {
+    awaitPostMessage(); // Call this only once in your Web Code.
+  }
+}, false);
