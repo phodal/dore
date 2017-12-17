@@ -29,6 +29,11 @@ and add plugins. e.x. Device Info Plugin:
 
 ```bash
 yarn add react-native-device-info
+react-native link react-native-device-info
+react-native link dore-icon-badge
+react-native link react-native-notag-datepicker
+react-native link react-native-orientation
+react-native link dore-toast
 ```
 
 Example
