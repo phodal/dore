@@ -8,7 +8,6 @@ let {
   width: deviceWidth
 } = Dimensions.get('window');
 
-
 export default class ExampleWebView extends Component {
   static componentName = 'ExampleWebView';
 

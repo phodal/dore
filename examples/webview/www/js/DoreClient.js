@@ -1,4 +1,4 @@
-angular.module('starter').service('DoreClient', function ($q, $timeout, $rootScope) {
+angular.module('starter').service('DoreClient', function ($q) {
   function postMessage(action, payload) {
     if (window.isPhone) {
       window.postMessage(JSON.stringify({

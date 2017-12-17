@@ -77,7 +77,7 @@ angular.module('starter.controllers', [])
       DoreClient.stopObserving()
     };
     $scope.getOrientation = function () {
-      DoreClient.getOrientation().then(function(data) {
+      DoreClient.getOrientation().then(function (data) {
         console.log(data);
         $scope.orientation = data;
       })
@@ -89,7 +89,7 @@ angular.module('starter.controllers', [])
       DoreClient.lockToPortrait();
     };
     $scope.getConnectionInfo = function () {
-      DoreClient.getConnectionInfo().then(function(data) {
+      DoreClient.getConnectionInfo().then(function (data) {
         $scope.connectionInfo = data;
       })
     };
