@@ -15,7 +15,7 @@ Screenshots:
 Features
 ---
 
-Support Bridges:
+### Support:
 
  - Badge (by react-native-icon-badge)
  - Clipboard 
@@ -28,6 +28,13 @@ Support Bridges:
  - State
  - StatusBar
  - Toast (by react-native-toast)
+
+### Todo 
+ 
+ - Vibration
+ - Share
+ - Storage
+ - more+
  
 Usage
 ---
