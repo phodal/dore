@@ -1,6 +1,6 @@
 {
   "name": "dore",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A Framework for Growth APP",
   "main": "index.js",
   "scripts": {
@@ -18,12 +18,5 @@
   "bugs": {
     "url": "https://github.com/phodal/dore/issues"
   },
-  "homepage": "https://github.com/phodal/dore#readme",
-  "dependencies": {
-    "react-native-device-info": "^0.13.0",
-    "dore-icon-badge": "1.2.1",
-    "react-native-notag-datepicker": "^0.0.1",
-    "react-native-orientation": "^3.1.0",
-    "dore-toast": "^1.0.8"
-  }
+  "homepage": "https://github.com/phodal/dore#readme"
 }

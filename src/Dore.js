@@ -14,6 +14,13 @@ import StateBridge from "./bridge/StateBridge";
 
 const Dore = {};
 
+Dore.inject = (modules) => {
+  for(let i=0;i<modules.length;i++) {
+    let module = modules[i];
+    Dore[module.name] = module.class;
+  }
+};
+
 Dore.handleMessage = (event, webView) => {
   let eventData = {};
   try {
@@ -27,16 +34,16 @@ Dore.handleMessage = (event, webView) => {
 
   switch (action) {
     case 'DEVICE_INFO': {
-      return DeviceInfoBridge(payload, webView)
+      return DeviceInfoBridge(payload, webView, Dore.RNDeviceInfo)
     }
     case 'TOAST': {
-      return ToastBridge(payload)
+      return ToastBridge(payload, Dore.Toast)
     }
     case 'BADGE': {
-      return BadgeBridge(payload, webView)
+      return BadgeBridge(payload, webView, Dore.RNIconBadge)
     }
     case 'DATE_PICKER': {
-      return DatePickerBridge(payload, webView)
+      return DatePickerBridge(payload, webView )
     }
     case 'KEYBOARD': {
       return KeyboardBridge(payload)
@@ -48,7 +55,7 @@ Dore.handleMessage = (event, webView) => {
       return GeolocationBridge(payload, webView)
     }
     case 'ORIENTATION': {
-      return OrientationBridge(payload, webView)
+      return OrientationBridge(payload, webView, Dore.Orientation)
     }
     case 'OPEN_LINK': {
       return Linking.openURL(payload)

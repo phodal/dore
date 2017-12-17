@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import {View, WebView, Dimensions} from "react-native";
+import Toast from 'dore-toast';
+import Orientation from 'react-native-orientation';
+import RNIconBadge from 'dore-icon-badge'
+import RNDeviceInfo from "react-native-device-info";
 
 import Dore from 'dore';
 
@@ -16,6 +20,19 @@ export default class ExampleWebView extends Component {
     this.state = {
       isLoading: true
     }
+    Dore.inject([{
+      name: 'Toast',
+      class: Toast
+    }, {
+      name: 'Orientation',
+      class: Orientation
+    }, {
+      name: 'RNIconBadge',
+      class: RNIconBadge
+    }, {
+      name: 'RNDeviceInfo',
+      class: RNDeviceInfo
+    }])
   }
 
   onMessage = evt => {

@@ -3,9 +3,9 @@ import {
   NativeModules,
 } from 'react-native'
 
-const RNNoTagDatePicker = NativeModules.RNNoTagDatepicker;
 let DatePickerBridge = (payload, webView) => {
-  const DatePickerEvent = new NativeEventEmitter(NativeModules.RNNoTagDatepicker);
+  const RNNoTagDatePicker = NativeModules.RNNoTagDatepicker;
+  const DatePickerEvent = new NativeEventEmitter(RNNoTagDatePicker);
 
   DatePickerEvent.addListener('DATEPICKER_NATIVE_INVOKE', (evt) => {
     if (evt.status === 'success') {

@@ -1,6 +1,4 @@
-import Orientation from 'react-native-orientation';
-
-let OrientationBridge = (payload, webView) => {
+let OrientationBridge = (payload, webView, Orientation) => {
   if (payload.type === 'LOCK_PORTRAIT') {
     Orientation.lockToPortrait()
   } else if (payload.type === 'LOCK_LANDSCAPE') {

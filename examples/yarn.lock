@@ -1462,15 +1462,9 @@ dore-toast@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/dore-toast/-/dore-toast-1.0.8.tgz#25c3a8a7d6ddcbfdb190e82660a4ded55fd72680"
 
-dore@0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/dore/-/dore-0.1.4.tgz#780ac4597003bd47aac5d6a9d71c6e2cf153d3d3"
-  dependencies:
-    dore-icon-badge "1.2.1"
-    dore-toast "^1.0.8"
-    react-native-device-info "^0.13.0"
-    react-native-notag-datepicker "^0.0.1"
-    react-native-orientation "^3.1.0"
+dore@0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/dore/-/dore-0.1.5.tgz#818b487b579e5a31dba2535ea607bd1a26329ede"
 
 duplexer2@0.0.2:
   version "0.0.2"

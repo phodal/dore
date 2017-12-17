@@ -1,6 +1,4 @@
-import Toast from 'dore-toast';
-
-let ToastBridge = (payload) => {
+let ToastBridge = (payload, Toast) => {
   let message = payload.message;
   if (!payload.options) {
     return Toast.show(message);

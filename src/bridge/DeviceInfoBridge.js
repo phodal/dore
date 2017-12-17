@@ -1,6 +1,4 @@
-import RNDeviceInfo from "react-native-device-info";
-
-let deviceInfoBridge = (payload, webView) => {
+let deviceInfoBridge = (payload, webView, RNDeviceInfo) => {
   const info = {};
 
   if (payload.type === 'APP_VERSION') {

@@ -1,6 +1,4 @@
-import RNIconBadge from 'dore-icon-badge'
-
-let BadgeBridge = (payload, webView) => {
+let BadgeBridge = (payload, webView, RNIconBadge) => {
   if (payload.type === 'SET_BADGE') {
     RNIconBadge.setIconBadge(payload.badgeNumber)
   } else if (payload.type === 'ADD_BADGE') {
