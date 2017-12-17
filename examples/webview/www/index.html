@@ -23,13 +23,6 @@
 <ion-nav-view></ion-nav-view>
 </body>
 <script>
-  window.open = function (link) {
-    window.postMessage(JSON.stringify({
-      action: 'OPENLINK',
-      payload: link
-    }));
-  };
-
   function awaitPostMessage() {
     var isReactNativePostMessageReady = !!window.originalPostMessage;
     var queue = [];
