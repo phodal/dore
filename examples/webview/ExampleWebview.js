@@ -27,10 +27,10 @@ export default class ExampleWebView extends Component {
       name: 'Orientation',
       class: Orientation
     }, {
-      name: 'RNIconBadge',
+      name: 'Badge',
       class: RNIconBadge
     }, {
-      name: 'RNDeviceInfo',
+      name: 'DeviceInfo',
       class: RNDeviceInfo
     }])
   }

@@ -34,16 +34,16 @@ Dore.handleMessage = (event, webView) => {
 
   switch (action) {
     case 'DEVICE_INFO': {
-      return DeviceInfoBridge(payload, webView, Dore.RNDeviceInfo)
+      return DeviceInfoBridge(payload, webView, Dore.DeviceInfo)
     }
     case 'TOAST': {
       return ToastBridge(payload, Dore.Toast)
     }
     case 'BADGE': {
-      return BadgeBridge(payload, webView, Dore.RNIconBadge)
+      return BadgeBridge(payload, webView, Dore.Badge)
     }
     case 'DATE_PICKER': {
-      return DatePickerBridge(payload, webView )
+      return DatePickerBridge(payload, webView)
     }
     case 'KEYBOARD': {
       return KeyboardBridge(payload)
