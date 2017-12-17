@@ -55,6 +55,7 @@ angular.module('starter.controllers', [])
       };
       DoreClient.showDatePicker(options).then(function (data) {
         $scope.date = data.date;
+        $scope.$apply();
       })
     };
 
