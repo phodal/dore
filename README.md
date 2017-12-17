@@ -34,6 +34,13 @@ Features
  - Vibration
  - Share
  - Storage
+ - BLE
+ - QRCode
+ - Camera
+ - fs
+ - SMS
+ - BackHandler (Android)
+ - Permissions (https://github.com/yonahforst/react-native-permissions)
  - more+
  
 Usage
