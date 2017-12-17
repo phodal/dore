@@ -1,4 +1,34 @@
-angular.module('starter').service('DoreClient', function ($q) {
+angular.module('starter').service('DoreClient', function () {
+  function Promise() {
+    this._callbacks = [];
+  }
+
+  Promise.prototype.then = function(func, context) {
+    var p;
+    if (this._isdone) {
+      p = func.apply(context, this.result);
+    } else {
+      p = new Promise();
+      this._callbacks.push(function () {
+          var res = func.apply(context, arguments);
+          if (res && typeof res.then === 'function') {
+              res.then(p.done, p);
+          }
+      });
+      this._callbacks.push(func.bind(this,arguments))
+    }
+    return this;
+  };
+
+  Promise.prototype.done = function() {
+    this.result = arguments;
+    this._isdone = true;
+    for (var i = 0; i < this._callbacks.length; i++) {
+      this._callbacks[i].apply(null, arguments);
+    }
+    this._callbacks = [];
+  };
+
   function postMessage(action, payload) {
     if (window.isPhone) {
       window.postMessage(JSON.stringify({
@@ -14,7 +44,7 @@ angular.module('starter').service('DoreClient', function ($q) {
   }
 
   function getAsyncData(action, payload) {
-    return $q(function (resolve, reject) {
+    return new Promise(function (resolve, reject) {
       function listener(event) {
         event.target.removeEventListener('message', listener, false);
         resolve(JSON.parse(event.data));
