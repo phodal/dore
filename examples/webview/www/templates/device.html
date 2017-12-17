@@ -1,0 +1,27 @@
+<ion-view view-title="Device Info">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-click="getAppVersion()">
+        getVersion：{{version}}
+      </ion-item>
+      <ion-item ng-click="getUniqueID()">
+        getUniqueID: {{uniqueID}}
+      </ion-item>
+      <ion-item ng-click="getBrand()">
+        getBrand: {{brand}}
+      </ion-item>
+      <ion-item ng-click="getModel()">
+        getModel: {{model}}
+      </ion-item>
+      <ion-item ng-click="getSystemName()">
+        systemName: {{systemName}}
+      </ion-item>
+      <ion-item ng-click="isEmulator()">
+        isEmulator: {{isEmulator}}
+      </ion-item>
+      <ion-item ng-click="isTablet()">
+        isTablet: {{isTablet}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

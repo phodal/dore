@@ -1,0 +1,114 @@
+<ion-view view-title="Dashboard">
+  <ion-content scroll="">
+    <div class="item item-divider">
+      Basic
+    </div>
+    <ion-list>
+      <ion-item>
+        State {{state}}
+      </ion-item>
+      <ion-item class="item item-icon-right" href="#/tab/dash/device">
+        Version {{version}}
+        <i class="icon ion-ios-arrow-right"></i>
+      </ion-item>
+      <ion-item ng-click="showToast()">
+        showToast
+      </ion-item>
+      <ion-item ng-click="showToastCenter()">
+        showToastCenter
+      </ion-item>
+      <ion-item ng-click="showDatePicker()">
+        showDatePicker {{date}}
+      </ion-item>
+      <ion-item ng-click="open()">
+        openLink
+      </ion-item>
+    </ion-list>
+
+    <div class="item item-divider">
+      Clipboard
+    </div>
+    <ion-item ng-click="copy()">
+      {{text}}
+    </ion-item>
+    <ion-item ng-click="paste()">
+      paste: {{copyText}}
+    </ion-item>
+    <label class="item item-input">
+      <i class="icon ion-ios-email placeholder-icon"></i>
+      <input type="email" placeholder="Paste">
+    </label>
+
+    <div class="item item-divider">
+      Orientation
+    </div>
+    <ion-item ng-click="getOrientation()">
+      getOrientation {{orientation}}
+    </ion-item>
+    <ion-item ng-click="lockToLandscape()">
+      lockToLandscape
+    </ion-item>
+    <ion-item ng-click="lockToPortrait()">
+      lockToPortrait
+    </ion-item>
+
+    <div class="item item-divider">
+      StatusBar
+    </div>
+    <ion-item ng-click="showStatusBar()">
+      showStatusBar
+    </ion-item>
+    <ion-item ng-click="hideStatusBar()">
+      hideStatusBar
+    </ion-item>
+
+    <div class="item item-divider">
+      NetInfo
+    </div>
+    <ion-item ng-click="getConnectionInfo()">
+      connectionInfo {{connectionInfo}}
+    </ion-item>
+    <ion-item ng-click="addEventListener()">
+      addEventListener {{wConnectionInfo}}
+    </ion-item>
+    <ion-item ng-click="removeEventListener()">
+      removeEventListener
+    </ion-item>
+
+    <div class="item item-divider">
+      Badge
+    </div>
+    <ion-list>
+      <ion-item ng-click="setBadge()">
+        setBadge
+      </ion-item>
+      <ion-item ng-click="getBadge()">
+        getBadge
+      </ion-item>
+      <ion-item ng-click="addBadge()">
+        addBadge
+      </ion-item>
+      <ion-item ng-click="minusBadge()">
+        minusBadge
+      </ion-item>
+    </ion-list>
+
+    <div class="item item-divider">
+      Position
+    </div>
+    <ion-list>
+      <ion-item ng-click="getCurrentPosition()">
+        getCurrentPosition: {{location}}
+      </ion-item>
+      <ion-item ng-click="watchPosition()">
+        watchPosition: {{wPosition}}
+      </ion-item>
+      <ion-item ng-click="clearWatch()">
+        clearWatch
+      </ion-item>
+      <ion-item ng-click="stopObserving()">
+        stopObserving
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
