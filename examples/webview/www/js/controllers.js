@@ -62,6 +62,7 @@ angular.module('starter.controllers', [])
     $scope.getCurrentPosition = function () {
       DoreClient.getCurrentPosition().then(function (data) {
         $scope.location = data;
+        $scope.$apply();
       })
     };
     $scope.watchPosition = function () {
@@ -79,8 +80,8 @@ angular.module('starter.controllers', [])
     };
     $scope.getOrientation = function () {
       DoreClient.getOrientation().then(function (data) {
-        console.log(data);
         $scope.orientation = data;
+        $scope.$apply();
       })
     };
     $scope.lockToLandscape = function () {
@@ -92,6 +93,7 @@ angular.module('starter.controllers', [])
     $scope.getConnectionInfo = function () {
       DoreClient.getConnectionInfo().then(function (data) {
         $scope.connectionInfo = data;
+        $scope.$apply();
       })
     };
     $scope.addEventListener = function () {
