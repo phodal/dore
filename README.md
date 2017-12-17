@@ -2,7 +2,7 @@
 
 > Dore is a WebView container implemented using React Native that lets you invoke React Native components on a WebView.
 
-Dore 是一个使用 React Native 实现的 WebView 容器，可以让你在 WebView 调用 React Native 组件。
+**Dore 是一个使用 React Native 实现的 WebView 容器，可以让你在 WebView 调用 React Native 组件。**
 
 Support Bridges:
 
@@ -21,13 +21,13 @@ Support Bridges:
 Usage
 ---
 
-```
+```bash
 yarn add dore
 ```
 
 and add plugins. e.x. Device Info Plugin:
 
-```
+```bash
 yarn add react-native-device-info
 ```
 
@@ -36,7 +36,7 @@ Example
 
 1.Import to your WebView
 
-```
+```javascript
 ...
 
 import Dore from '../src/Dore';
@@ -71,14 +71,14 @@ export default class ExampleWebView extends Component {
 
 2.import DoreClient, e.x:
 
-```
+```html
 <script src="js/DoreClient.js"></script>
 ```
 
 
 3.use in JavaScript
 
-```
+```javascript
 $scope.showToast = function () {
   DoreClient.showToast('this is a toast')
 };
@@ -87,7 +87,7 @@ $scope.showToast = function () {
 All Examples
 ---
 
-```
+```javascript
 angular.module('starter.controllers', [])
 
   .controller('DashCtrl', function ($scope, DoreClient, $ionicPlatform) {
