@@ -1,6 +1,6 @@
 {
   "name": "dore",
-  "version": "0.0.5",
+  "version": "0.1.4",
   "description": "A Framework for Growth APP",
   "main": "index.js",
   "scripts": {
@@ -21,9 +21,9 @@
   "homepage": "https://github.com/phodal/dore#readme",
   "dependencies": {
     "react-native-device-info": "^0.13.0",
-    "react-native-icon-badge": "@uuau99999/react-native-icon-badge",
-    "react-native-nogtag-datepicker": "git+https://github.com/phodal/react-native-notag-datepicker.git",
+    "dore-icon-badge": "1.2.1",
+    "react-native-notag-datepicker": "^0.0.1",
     "react-native-orientation": "^3.1.0",
-    "react-native-toast": "git+https://github.com/GrowthStudio/dore-toast.git"
+    "dore-toast": "^1.0.8"
   }
 }

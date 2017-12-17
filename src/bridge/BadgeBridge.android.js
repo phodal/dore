@@ -1,4 +1,4 @@
-import RNIconBadge from 'react-native-icon-badge'
+import RNIconBadge from 'dore-icon-badge'
 
 let BadgeBridge = (payload, webView) => {
   if (payload.type === 'SET_BADGE') {

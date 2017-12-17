@@ -1,4 +1,4 @@
-import Toast from 'react-native-toast';
+import Toast from 'dore-toast';
 
 let ToastBridge = (payload) => {
   let message = payload.message;
