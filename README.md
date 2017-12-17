@@ -6,6 +6,15 @@
 
 设计初衷：用于迁移 Cordova 的 WebView 应用到 React Native 的 WebView。
 
+Ionic v1 + Angular Demo: [examples](https://github.com/phodal/dore/tree/master/examples)
+
+Screenshots:
+
+![Screenshots](./doc/demo.jpg)
+
+Features
+---
+
 Support Bridges:
 
  - Badge (by react-native-icon-badge)
@@ -94,7 +103,6 @@ export default class ExampleWebView extends Component {
 <script src="js/DoreClient.js"></script>
 ```
 
-
 3.use in JavaScript
 
 ```javascript
@@ -105,6 +113,16 @@ $scope.showToast = function () {
 
 All Examples
 ---
+
+### App State Example
+
+```
+DoreClient.addStateListener();
+$ionicPlatform.on('STATE', function (event) {
+  $scope.state = event.detail.data;
+  $scope.$apply();
+});
+```
 
 ```javascript
 angular.module('starter.controllers', [])
