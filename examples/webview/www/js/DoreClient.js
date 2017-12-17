@@ -1,4 +1,20 @@
-window.addEventListener('load', function() {
+/*global define */
+(function (global, factory) {
+  "use strict";
+  if (typeof module === "object" && typeof module.exports === "object") {
+    module.exports = global.document ?
+      factory(global, true) :
+      function (w) {
+        if (!w.document) {
+          throw new Error("jQuery requires a window with a document");
+        }
+        return factory(w);
+      };
+  } else {
+    factory(global);
+  }
+
+}(typeof window !== "undefined" ? window : this, function (window, noGlobal) {
   function postMessage(action, payload) {
     console.log(action, payload);
     window.postMessage(JSON.stringify({
@@ -10,6 +26,7 @@ window.addEventListener('load', function() {
   function getAsyncData(action, payload) {
     return new Promise(function (resolve, reject) {
       console.log(resolve, reject);
+
       function listener(event) {
         event.target.removeEventListener('message', listener, false);
         resolve(JSON.parse(event.data));
@@ -165,4 +182,14 @@ window.addEventListener('load', function() {
   if (!!window.isPhone) {
     awaitPostMessage(); // Call this only once in your Web Code.
   }
-}, false);
+  if (typeof define === "function" && define.amd) {
+    define("DoreClient", [], function () {
+      return DoreClient;
+    });
+  }
+  var strundefined = typeof undefined;
+  if (typeof noGlobal === strundefined) {
+    window.DoreClient = DoreClient;
+  }
+  return DoreClient;
+}));
