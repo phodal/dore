@@ -1,4 +1,4 @@
-let deviceInfoBridge = (payload, webView, DeviceInfo) => {
+let DeviceInfoBridge = (payload, webView, DeviceInfo) => {
   const info = {};
 
   if (payload.type === 'APP_VERSION') {
@@ -27,4 +27,4 @@ let deviceInfoBridge = (payload, webView, DeviceInfo) => {
   webView.postMessage(JSON.stringify(info))
 };
 
-export default deviceInfoBridge
+export default DeviceInfoBridge
