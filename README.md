@@ -18,19 +18,19 @@ Features
 ### Support:
 
  - BackHandler (Android)
- - Badge (by react-native-icon-badge)
- - Brightness （by react-native-device-brightness)
+ - Badge (by [react-native-icon-badge](https://github.com/uuau99999/react-native-icon-badge)
+ - Brightness （by [react-native-device-brightness](https://github.com/Calvin-Huang/react-native-device-brightness))
  - Clipboard 
- - DatePicker (iOS by react-native-nogtag-datepicker)
- - DeviceInfo (by react-native-device-info)
+ - DatePicker (iOS by [react-native-notag-datepicker](https://github.com/phodal/react-native-notag-datepicker))
+ - DeviceInfo (by [react-native-device-info](https://github.com/rebeccahughes/react-native-device-info))
  - Geolocation
  - Keyboard
  - NetInfo
  - Orientation
- - Permissions (https://github.com/yonahforst/react-native-permissions)
+ - Permissions (by [react-native-permissions](https://github.com/yonahforst/react-native-permissions))
  - State
  - StatusBar
- - Toast (by react-native-toast)
+ - Toast (by [dore-toast](https://github.com/GrowthStudio/dore-toast))
  - Vibration
  
 ### Todo 
