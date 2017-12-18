@@ -1,4 +1,4 @@
-import { Linking } from 'react-native';
+import {Linking} from 'react-native';
 
 import ToastBridge from './bridge/ToastBridge';
 import DeviceInfoBridge from './bridge/DeviceInfoBridge';
@@ -13,9 +13,9 @@ import StatusBarBridge from './bridge/StatusBarBridge';
 import StateBridge from './bridge/StateBridge';
 import VibrationBridge from './bridge/VibrationBridge';
 
-import BackBridge from "./bridge/BackBridge";
-import BrightnessBridge from "./bridge/BrightnessBridge";
-import PermissionsBridge from "./bridge/PermissionsBridge";
+import BackBridge from './bridge/BackBridge';
+import BrightnessBridge from './bridge/BrightnessBridge';
+import PermissionsBridge from './bridge/PermissionsBridge';
 
 import ConsoleBridge from './bridge/ConsoleBridge';
 
