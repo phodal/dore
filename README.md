@@ -27,6 +27,7 @@ Features
  - Keyboard
  - NetInfo
  - Orientation
+ - Permissions (https://github.com/yonahforst/react-native-permissions)
  - State
  - StatusBar
  - Toast (by react-native-toast)
@@ -40,7 +41,6 @@ Features
  - Camera
  - Flashlight
  - fs
- - Permissions (https://github.com/yonahforst/react-native-permissions)
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - QRCode
  - Share
