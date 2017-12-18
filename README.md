@@ -29,6 +29,7 @@ Features
  - StatusBar
  - Toast (by react-native-toast)
  - Vibration
+ - BackHandler (Android)
  
 ### Todo 
  
@@ -39,7 +40,6 @@ Features
  - Camera
  - fs
  - SMS
- - BackHandler (Android)
  - APP Availability (https://github.com/ohh2ahh/AppAvailability)
  - Permissions (https://github.com/yonahforst/react-native-permissions)
  - more+
