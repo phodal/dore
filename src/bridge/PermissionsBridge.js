@@ -11,25 +11,25 @@
  *
  */
 let PermissionsBridge = (payload, webView, Permissions) => {
-  if (payload.options.type) {
-    console.warn("error, unknown type: " + payload.options.type);
+  if (!payload.permission) {
+    console.warn("error, unknown type - " + payload.permission);
     return;
   }
-  if (!payload.options.options) {
-    payload.options.options = { type: 'always' }
+  if (!payload.options) {
+    payload.options = { type: 'always' }
   }
   if (payload.type === 'CHECK') {
-    Permissions.check(payload.options.type, payload.options.options).then(response => {
+    Permissions.check(payload.permission, payload.options).then(response => {
       let result = { locationPermission: response };
       webView.postMessage(result);
     })
   } else if (payload.type === 'REQUEST') {
-    Permissions.check(payload.options.type, payload.options.options).then(response => {
+    Permissions.check(payload.permission, payload.options).then(response => {
       let result = { locationPermission: response };
       webView.postMessage(result);
     })
   } else if (payload.type === 'CHECK_MULTIPLE') {
-    Permissions.check(payload.options.type, payload.options.options).then(response => {
+    Permissions.checkMultiple(payload.permission, payload.options).then(response => {
       let result = { locationPermission: response };
       webView.postMessage(result);
     })

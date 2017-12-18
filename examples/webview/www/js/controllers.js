@@ -128,8 +128,14 @@ angular.module('starter.controllers', [])
         $scope.$apply();
       })
     };
+    $scope.checkPermissions = function () {
+      DoreClient.checkPermissions('camera');
+    };
     $scope.setBrightness = function () {
-      DoreClient.setBrightnessLevel(0.2);
+      DoreClient.requestPermissions('camera');
+    };
+    $scope.setBrightness = function () {
+      DoreClient.checkMultiple(['camera', 'photo']);
     };
   })
 
