@@ -40,6 +40,7 @@ Features
  - Camera
  - fs
  - SMS
+ - Brightness
  - APP Availability (https://github.com/ohh2ahh/AppAvailability)
  - Permissions (https://github.com/yonahforst/react-native-permissions)
  - more+
