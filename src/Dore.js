@@ -17,6 +17,8 @@ import BackBridge from "./bridge/BackBridge";
 import BrightnessBridge from "./bridge/BrightnessBridge";
 import PermissionsBridge from "./bridge/PermissionsBridge";
 
+import ConsoleBridge from './bridge/ConsoleBridge';
+
 const Dore = {};
 
 Dore.inject = modules => {
