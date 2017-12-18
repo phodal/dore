@@ -1,11 +1,11 @@
-angular.module('starter.controllers', [])
-  .controller('DashCtrl', function ($scope, $ionicPlatform) {
+angular
+  .module('starter.controllers', [])
+  .controller('DashCtrl', function($scope, $ionicPlatform) {
     $scope.version = null;
     $scope.text = 'Text Copy';
     $scope.copyText = '';
-
     DoreClient.addStateListener();
-    $ionicPlatform.on('STATE', function (event) {
+    $ionicPlatform.on('STATE', function(event) {
       $scope.state = event.detail.data;
       $scope.$apply();
     });
@@ -14,26 +14,24 @@ angular.module('starter.controllers', [])
       DoreClient.showToast('ANDROID_BACK');
     });
 
-    DoreClient.getAppVersion().then(function (data) {
+    DoreClient.getAppVersion().then(function(data) {
       $scope.version = data.version;
       $scope.$apply();
     });
-    $scope.showToast = function () {
-      DoreClient.showToast('this is a toast')
+    $scope.showToast = function() {
+      DoreClient.showToast('this is a toast');
     };
-    $scope.showToastCenter = function () {
-      DoreClient.showToast('this is a toast', 'long', 'center')
+    $scope.showToastCenter = function() {
+      DoreClient.showToast('this is a toast', 'long', 'center');
     };
-
-    $scope.open = function () {
-      DoreClient.open('https://www.phodal.com/')
+    $scope.open = function() {
+      DoreClient.open('https://www.phodal.com/');
     };
-
-    $scope.copy = function () {
+    $scope.copy = function() {
       DoreClient.copy($scope.text);
     };
-    $scope.paste = function () {
-      $ionicPlatform.on('PASTE', function (event) {
+    $scope.paste = function() {
+      $ionicPlatform.on('PASTE', function(event) {
         $scope.copyText = event.detail.data;
         $scope.$apply();
       });
@@ -46,77 +44,77 @@ angular.module('starter.controllers', [])
         $scope.$apply();
       })
     };
-    $scope.setBadge = function () {
-      DoreClient.setBadge(19)
+    $scope.setBadge = function() {
+      DoreClient.setBadge(19);
     };
     $scope.showDatePicker = function () {
       var options = {
         date: '2017-10-22 12:12:12',
         maxDate: '2022-10-22 12:12:12'
       };
-      DoreClient.showDatePicker(options).then(function (data) {
+      DoreClient.showDatePicker(options).then(function(data) {
         $scope.date = data.date;
         $scope.$apply();
-      })
+      });
     };
 
-    $scope.getCurrentPosition = function () {
-      DoreClient.getCurrentPosition().then(function (data) {
+    $scope.getCurrentPosition = function() {
+      DoreClient.getCurrentPosition().then(function(data) {
         $scope.location = data;
         $scope.$apply();
-      })
+      });
     };
-    $scope.watchPosition = function () {
-      $ionicPlatform.on('WATCH_POSITION', function (event) {
+    $scope.watchPosition = function() {
+      $ionicPlatform.on('WATCH_POSITION', function(event) {
         $scope.wPosition = event.detail.data;
         $scope.$apply();
       });
-      DoreClient.watchPosition()
+      DoreClient.watchPosition();
     };
-    $scope.clearWatch = function () {
-      DoreClient.clearWatch()
+    $scope.clearWatch = function() {
+      DoreClient.clearWatch();
     };
-    $scope.stopObserving = function () {
-      DoreClient.stopObserving()
+    $scope.stopObserving = function() {
+      DoreClient.stopObserving();
     };
-    $scope.getOrientation = function () {
-      DoreClient.getOrientation().then(function (data) {
+    $scope.getOrientation = function() {
+      DoreClient.getOrientation().then(function(data) {
         $scope.orientation = data;
         $scope.$apply();
-      })
+      });
     };
-    $scope.lockToLandscape = function () {
+    $scope.lockToLandscape = function() {
       DoreClient.lockToLandscape();
     };
-    $scope.lockToPortrait = function () {
+    $scope.lockToPortrait = function() {
       DoreClient.lockToPortrait();
     };
-    $scope.getConnectionInfo = function () {
-      DoreClient.getConnectionInfo().then(function (data) {
+    $scope.getConnectionInfo = function() {
+      DoreClient.getConnectionInfo().then(function(data) {
         $scope.connectionInfo = data;
         $scope.$apply();
-      })
+      });
     };
-    $scope.addEventListener = function () {
-      $ionicPlatform.on('CONNECTION_CHANGE', function (event) {
+    $scope.addEventListener = function() {
+      $ionicPlatform.on('CONNECTION_CHANGE', function(event) {
         $scope.wConnectionInfo = event.detail.data;
         $scope.$apply();
       });
       DoreClient.addNetInfoEventListener();
     };
-    $scope.removeEventListener = function () {
+    $scope.removeEventListener = function() {
       DoreClient.removeNetInfoEventListener();
     };
-    $scope.hideStatusBar = function () {
+    $scope.hideStatusBar = function() {
       DoreClient.hideStatusBar();
     };
-    $scope.showStatusBar = function () {
+    $scope.showStatusBar = function() {
       DoreClient.showStatusBar();
     };
-    $scope.vibrationVibrate = function () {
+    $scope.vibrationVibrate = function() {
       DoreClient.vibrationVibrate([1000, 2000, 3000]);
     };
-    $scope.vibrationCancel = function () {
+    $scope.vibrationCancel = function() {
       DoreClient.vibrationCancel();
     };
     $scope.getBrightness = function () {
@@ -140,49 +138,50 @@ angular.module('starter.controllers', [])
         DoreClient.showToast(JSON.stringify(response));
       })
     };
+    $scope.console = console //  can use inline console function after register
   })
 
-  .controller('DeviceCtrl', function ($scope) {
-    $scope.getAppVersion = function () {
-      DoreClient.getAppVersion().then(function (data) {
+  .controller('DeviceCtrl', function($scope) {
+    $scope.getAppVersion = function() {
+      DoreClient.getAppVersion().then(function(data) {
         $scope.version = data.version;
         $scope.$apply();
       });
     };
-    $scope.getUniqueID = function () {
-      DoreClient.getUniqueID().then(function (data) {
+    $scope.getUniqueID = function() {
+      DoreClient.getUniqueID().then(function(data) {
         $scope.uniqueID = data.uniqueID;
         $scope.$apply();
       });
     };
-    $scope.getBrand = function () {
-      DoreClient.getBrand().then(function (data) {
+    $scope.getBrand = function() {
+      DoreClient.getBrand().then(function(data) {
         $scope.brand = data.brand;
         $scope.$apply();
-      })
+      });
     };
-    $scope.getModel = function () {
-      DoreClient.getModel().then(function (data) {
+    $scope.getModel = function() {
+      DoreClient.getModel().then(function(data) {
         $scope.model = data.model;
         $scope.$apply();
-      })
+      });
     };
-    $scope.getSystemName = function () {
-      DoreClient.getSystemName().then(function (data) {
+    $scope.getSystemName = function() {
+      DoreClient.getSystemName().then(function(data) {
         $scope.systemName = data.systemName;
         $scope.$apply();
-      })
+      });
     };
-    $scope.isEmulator = function () {
-      DoreClient.isEmulator().then(function (data) {
+    $scope.isEmulator = function() {
+      DoreClient.isEmulator().then(function(data) {
         $scope.isEmulator = data;
         $scope.$apply();
-      })
+      });
     };
-    $scope.isTablet = function () {
-      DoreClient.isTablet().then(function (data) {
+    $scope.isTablet = function() {
+      DoreClient.isTablet().then(function(data) {
         $scope.isTablet = data;
         $scope.$apply();
-      })
-    }
+      });
+    };
   });

@@ -1,26 +1,28 @@
-import {Linking} from 'react-native'
+import { Linking } from 'react-native';
 
-import ToastBridge from './bridge/ToastBridge'
-import DeviceInfoBridge from './bridge/DeviceInfoBridge'
-import DatePickerBridge from './bridge/DatePickerBridge'
-import BadgeBridge from './bridge/BadgeBridge'
-import KeyboardBridge from './bridge/KeyboardBridge'
-import ClipboardBridge from './bridge/ClipboardBridge'
-import GeolocationBridge from './bridge/GeolocationBridge'
-import OrientationBridge from "./bridge/OrientationBridge";
-import NetInfoBridge from "./bridge/NetInfoBridge";
-import StatusBarBridge from "./bridge/StatusBarBridge";
-import StateBridge from "./bridge/StateBridge";
-import VibrationBridge from "./bridge/VibrationBridge";
+import ToastBridge from './bridge/ToastBridge';
+import DeviceInfoBridge from './bridge/DeviceInfoBridge';
+import DatePickerBridge from './bridge/DatePickerBridge';
+import BadgeBridge from './bridge/BadgeBridge';
+import KeyboardBridge from './bridge/KeyboardBridge';
+import ClipboardBridge from './bridge/ClipboardBridge';
+import GeolocationBridge from './bridge/GeolocationBridge';
+import OrientationBridge from './bridge/OrientationBridge';
+import NetInfoBridge from './bridge/NetInfoBridge';
+import StatusBarBridge from './bridge/StatusBarBridge';
+import StateBridge from './bridge/StateBridge';
+import VibrationBridge from './bridge/VibrationBridge';
 
 import BackBridge from "./bridge/BackBridge";
 import BrightnessBridge from "./bridge/BrightnessBridge";
 import PermissionsBridge from "./bridge/PermissionsBridge";
 
+import ConsoleBridge from './bridge/ConsoleBridge';
+
 const Dore = {};
 
-Dore.inject = (modules) => {
-  for(let i=0;i<modules.length;i++) {
+Dore.inject = modules => {
+  for (let i = 0; i < modules.length; i++) {
     let module = modules[i];
     Dore[module.name] = module.class;
   }
@@ -47,40 +49,40 @@ Dore.handleMessage = (event, webView) => {
 
   switch (action) {
     case 'DEVICE_INFO': {
-      return DeviceInfoBridge(payload, webView, Dore.DeviceInfo)
+      return DeviceInfoBridge(payload, webView, Dore.DeviceInfo);
     }
     case 'TOAST': {
-      return ToastBridge(payload, Dore.Toast)
+      return ToastBridge(payload, Dore.Toast);
     }
     case 'BADGE': {
-      return BadgeBridge(payload, webView, Dore.Badge)
+      return BadgeBridge(payload, webView, Dore.Badge);
     }
     case 'DATE_PICKER': {
-      return DatePickerBridge(payload, webView)
+      return DatePickerBridge(payload, webView);
     }
     case 'KEYBOARD': {
-      return KeyboardBridge(payload)
+      return KeyboardBridge(payload);
     }
     case 'CLIPBOARD': {
-      return ClipboardBridge(payload, webView)
+      return ClipboardBridge(payload, webView);
     }
     case 'GEOLOCATION': {
-      return GeolocationBridge(payload, webView)
+      return GeolocationBridge(payload, webView);
     }
     case 'ORIENTATION': {
-      return OrientationBridge(payload, webView, Dore.Orientation)
+      return OrientationBridge(payload, webView, Dore.Orientation);
     }
     case 'OPEN_LINK': {
-      return Linking.openURL(payload)
+      return Linking.openURL(payload);
     }
     case 'NET_INFO': {
-      return NetInfoBridge(payload, webView)
+      return NetInfoBridge(payload, webView);
     }
     case 'STATUS_BAR': {
-      return StatusBarBridge(payload)
+      return StatusBarBridge(payload);
     }
     case 'STATE': {
-      return StateBridge(payload, webView)
+      return StateBridge(payload, webView);
     }
     case 'VIBRATION': {
       return VibrationBridge(payload, webView, Dore.Vibration)
@@ -90,6 +92,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'PERMISSIONS': {
       return PermissionsBridge(payload, webView, Dore.Permissions)
+    }
+    case 'CONSOLE': {
+      return ConsoleBridge(payload);
     }
   }
 };
