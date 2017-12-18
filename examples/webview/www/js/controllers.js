@@ -123,10 +123,10 @@ angular.module('starter.controllers', [])
       DoreClient.vibrationCancel();
     };
     $scope.getBrightness = function () {
-      DoreClient.getBrightness();
+      DoreClient.getBrightnessLevel();
     };
     $scope.setBrightness = function () {
-      DoreClient.setBrightness(0.2);
+      DoreClient.setBrightnessLevel(0.2);
     };
   })
 

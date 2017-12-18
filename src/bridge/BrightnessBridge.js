@@ -1,4 +1,4 @@
-let BrightnessBridge = (payload, Brightness, webView) => {
+let BrightnessBridge = (payload, webView, Brightness) => {
   if (payload.type === 'GET') {
     Brightness.getBrightnessLevel()
       .then(function (luminous) {

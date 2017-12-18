@@ -4,6 +4,7 @@ import Toast from 'dore-toast';
 import Orientation from 'react-native-orientation';
 import RNIconBadge from 'dore-icon-badge'
 import RNDeviceInfo from "react-native-device-info";
+import DeviceBrightness from 'react-native-device-brightness';
 
 import Dore from 'dore';
 
@@ -32,6 +33,9 @@ export default class ExampleWebView extends Component {
     }, {
       name: 'DeviceInfo',
       class: RNDeviceInfo
+    }, {
+      name: 'Brightness',
+      class: DeviceBrightness
     }]);
   }
 

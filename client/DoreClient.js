@@ -155,7 +155,7 @@
       return invoke('VIBRATION', {type: 'CANCEL'});
     },
     setBrightnessLevel: function () {
-      return invoke('BRIGHTNESS', {type: 'SET'});
+      return invoke('BRIGHTNESS', {type: 'set'});
     },
     getBrightnessLevel: function () {
       return getAsyncData('BRIGHTNESS', {type: 'GET'});
