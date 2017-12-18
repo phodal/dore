@@ -15,6 +15,7 @@ import VibrationBridge from "./bridge/VibrationBridge";
 
 import BackBridge from "./bridge/BackBridge";
 import BrightnessBridge from "./bridge/BrightnessBridge";
+import PermissionsBridge from "./bridge/PermissionsBridge";
 
 const Dore = {};
 
@@ -86,6 +87,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'BRIGHTNESS': {
       return BrightnessBridge(payload, webView, Dore.Brightness)
+    }
+    case 'PERMISSIONS': {
+      return PermissionsBridge(payload, webView, Dore.Permissions)
     }
   }
 };
