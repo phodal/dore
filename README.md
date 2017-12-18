@@ -12,6 +12,10 @@ Screenshots:
 
 ![Screenshots](./doc/demo.jpg)
 
+Workflow:
+
+![Workflow](./doc.workflow.jpeg)
+
 Features
 ---
 
