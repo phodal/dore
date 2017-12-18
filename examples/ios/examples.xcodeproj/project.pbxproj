@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -199,13 +200,6 @@
 			remoteGlobalIDString = 3DBE0D0D1F3B181C0099AA32;
 			remoteInfo = "fishhook-tvOS";
 		};
-		404E56CB1FE5818B00966185 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 177886B774684C8F899DBB45 /* RCTToast.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 327633421BFAAD7E004DA88E;
-			remoteInfo = RCTToast;
-		};
 		404E56CF1FE5818B00966185 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2DB1A21557874CDBAD8FB5CF /* RNDeviceInfo.xcodeproj */;
@@ -283,13 +277,6 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RCTOrientation;
 		};
-		40F311BD1FE60FBA003B7D40 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10607A4D9A5444658790C77D /* RNNoTagDatepicker.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 40AE12DD1F3BFC0200EB5153;
-			remoteInfo = RNNoTagDatepicker;
-		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -325,6 +312,20 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		BFF9CDF11FE74FE900C16E87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFF9CDED1FE74FE900C16E87 /* RCTToast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 327633421BFAAD7E004DA88E;
+			remoteInfo = RCTToast;
+		};
+		BFF9CDF71FE7510900C16E87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFF9CDF31FE7510900C16E87 /* RNNoTagDatepicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40AE12DD1F3BFC0200EB5153;
+			remoteInfo = RNNoTagDatepicker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -336,7 +337,6 @@
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* examplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = examplesTests.m; sourceTree = "<group>"; };
-		10607A4D9A5444658790C77D /* RNNoTagDatepicker.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNNoTagDatepicker.xcodeproj; path = "../node_modules/react-native-nogtag-datepicker/ios/RNNoTagDatepicker.xcodeproj"; sourceTree = "<group>"; };
 		125FAFE5CCF04DB384AD52A3 /* libRCTToast.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTToast.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
@@ -348,7 +348,6 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = examples/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = examples/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		177886B774684C8F899DBB45 /* RCTToast.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTToast.xcodeproj; path = "../node_modules/react-native-toast/ios/RCTToast.xcodeproj"; sourceTree = "<group>"; };
 		1853882D700D4355B21D51B7 /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; };
 		2DB1A21557874CDBAD8FB5CF /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		4067E8151FE612FF00B289D4 /* DatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
@@ -359,6 +358,8 @@
 		9EFB08140E5C456888BD3709 /* libRNNoTagDatepicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNNoTagDatepicker.a; sourceTree = "<group>"; };
 		A48A991F21BB4047977ECB83 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		BFF9CDED1FE74FE900C16E87 /* RCTToast.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTToast.xcodeproj; path = "../node_modules/dore-toast/ios/RCTToast.xcodeproj"; sourceTree = "<group>"; };
+		BFF9CDF31FE7510900C16E87 /* RNNoTagDatepicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNNoTagDatepicker.xcodeproj; path = "../node_modules/react-native-notag-datepicker/ios/RNNoTagDatepicker.xcodeproj"; sourceTree = "<group>"; };
 		C5467694081D4D139A05092F /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -510,7 +511,6 @@
 		404E56AA1FE5818B00966185 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				B486291B4BB7494F9F624EA6 /* libRCTCamera.a */,
 				A48A991F21BB4047977ECB83 /* libRNDeviceInfo.a */,
 				1853882D700D4355B21D51B7 /* libRNDeviceInfo-tvOS.a */,
 				125FAFE5CCF04DB384AD52A3 /* libRCTToast.a */,
@@ -518,14 +518,6 @@
 				D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		404E56C61FE5818B00966185 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				404E56CC1FE5818B00966185 /* libRCTToast.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		404E56C81FE5818B00966185 /* Products */ = {
@@ -561,14 +553,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		40F311931FE60FBA003B7D40 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				40F311BE1FE60FBA003B7D40 /* libRNNoTagDatepicker.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +574,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BFF9CDF31FE7510900C16E87 /* RNNoTagDatepicker.xcodeproj */,
+				BFF9CDED1FE74FE900C16E87 /* RCTToast.xcodeproj */,
 				4067E8171FE6167A00B289D4 /* RCTPushNotification.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -604,8 +590,6 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				2DB1A21557874CDBAD8FB5CF /* RNDeviceInfo.xcodeproj */,
-				177886B774684C8F899DBB45 /* RCTToast.xcodeproj */,
-				10607A4D9A5444658790C77D /* RNNoTagDatepicker.xcodeproj */,
 				C5467694081D4D139A05092F /* RCTOrientation.xcodeproj */,
 			);
 			name = Libraries;
@@ -648,6 +632,22 @@
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
 				404E56B11FE5818B00966185 /* libRCTBlob-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFF9CDEE1FE74FE900C16E87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFF9CDF21FE74FE900C16E87 /* libRCTToast.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFF9CDF41FE7510900C16E87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFF9CDF81FE7510900C16E87 /* libRNNoTagDatepicker.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -744,8 +744,8 @@
 					ProjectRef = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
 				},
 				{
-					ProductGroup = 404E56C61FE5818B00966185 /* Products */;
-					ProjectRef = 177886B774684C8F899DBB45 /* RCTToast.xcodeproj */;
+					ProductGroup = BFF9CDEE1FE74FE900C16E87 /* Products */;
+					ProjectRef = BFF9CDED1FE74FE900C16E87 /* RCTToast.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302E01ABCB9EE00DB3ED1 /* Products */;
@@ -764,8 +764,8 @@
 					ProjectRef = 2DB1A21557874CDBAD8FB5CF /* RNDeviceInfo.xcodeproj */;
 				},
 				{
-					ProductGroup = 40F311931FE60FBA003B7D40 /* Products */;
-					ProjectRef = 10607A4D9A5444658790C77D /* RNNoTagDatepicker.xcodeproj */;
+					ProductGroup = BFF9CDF41FE7510900C16E87 /* Products */;
+					ProjectRef = BFF9CDF31FE7510900C16E87 /* RNNoTagDatepicker.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -944,13 +944,6 @@
 			remoteRef = 404E56C41FE5818B00966185 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		404E56CC1FE5818B00966185 /* libRCTToast.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRCTToast.a;
-			remoteRef = 404E56CB1FE5818B00966185 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		404E56D01FE5818B00966185 /* libRNDeviceInfo.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1028,13 +1021,6 @@
 			remoteRef = 4067E85F1FE636F000B289D4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		40F311BE1FE60FBA003B7D40 /* libRNNoTagDatepicker.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNNoTagDatepicker.a;
-			remoteRef = 40F311BD1FE60FBA003B7D40 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1068,6 +1054,20 @@
 			fileType = archive.ar;
 			path = libRCTBlob.a;
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFF9CDF21FE74FE900C16E87 /* libRCTToast.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTToast.a;
+			remoteRef = BFF9CDF11FE74FE900C16E87 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFF9CDF81FE7510900C16E87 /* libRNNoTagDatepicker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNNoTagDatepicker.a;
+			remoteRef = BFF9CDF71FE7510900C16E87 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1137,15 +1137,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-toast/ios/RCTToast",
+					"$(SRCROOT)/../node_modules/dore-toast/ios/RCTToast/**",
 					"$(SRCROOT)/../node_modules/react-native-nogtag-datepicker/ios/RNNoTagDatepicker",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1165,15 +1163,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-toast/ios/RCTToast",
+					"$(SRCROOT)/../node_modules/dore-toast/ios/RCTToast/**",
 					"$(SRCROOT)/../node_modules/react-native-nogtag-datepicker/ios/RNNoTagDatepicker",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
