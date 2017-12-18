@@ -11,6 +11,9 @@ import OrientationBridge from "./bridge/OrientationBridge";
 import NetInfoBridge from "./bridge/NetInfoBridge";
 import StatusBarBridge from "./bridge/StatusBarBridge";
 import StateBridge from "./bridge/StateBridge";
+import VibrationBridge from "./bridge/VibrationBridge";
+
+import BackHandler from "./bridge/BackHandler";
 
 const Dore = {};
 
@@ -19,6 +22,14 @@ Dore.inject = (modules) => {
     let module = modules[i];
     Dore[module.name] = module.class;
   }
+};
+
+Dore.addHandler = () => {
+  BackHandler.addListener();
+};
+
+Dore.removeHandler = () => {
+  BackHandler.removeListener();
 };
 
 Dore.handleMessage = (event, webView) => {
@@ -68,6 +79,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'STATE': {
       return StateBridge(payload, webView)
+    }
+    case 'VIBRATION': {
+      return VibrationBridge(payload)
     }
   }
 };

@@ -28,10 +28,11 @@ Features
  - State
  - StatusBar
  - Toast (by react-native-toast)
-
+ - Vibration
+ - BackHandler (Android)
+ 
 ### Todo 
  
- - Vibration
  - Share
  - Storage
  - BLE
@@ -39,7 +40,7 @@ Features
  - Camera
  - fs
  - SMS
- - BackHandler (Android)
+ - APP Availability (https://github.com/ohh2ahh/AppAvailability)
  - Permissions (https://github.com/yonahforst/react-native-permissions)
  - more+
  
@@ -251,6 +252,86 @@ angular.module('starter.controllers', [])
       DoreClient.showStatusBar();
     };
   })
+```
+
+Development
+---
+ 
+### DoreClient：**Browser -> vibrationVibrate -> DoreClient -> window.postMessage -> RN**
+
+DoreClient, handle message in WebView
+
+Browser
+
+```
+$scope.vibrationVibrate = function () {
+  DoreClient.vibrationVibrate([1000, 2000, 3000]);
+};
+```  
+
+DoreClient
+
+```
+function invoke(action, payload) {
+  function postMessage(action, payload) {
+    var message = JSON.stringify({
+      action: action,
+      payload: payload
+    });
+    window.postMessage(message, '');
+  }
+}
+
+DoreClient = {
+  vibrationVibrate: function (duration) {
+    return invoke('VIBRATION', {type: 'VIBRATE', duration: duration});
+  }
+}
+```
+
+### Dore: WebView -> onMessage -> Dore -> xxxBridge -> Native
+
+Dore, handle message in React Native
+
+WebView
+
+```
+  onMessage = evt => {
+    Dore.handleMessage(evt, this.webView)
+  };
+```
+
+Dore
+
+```
+Dore.handleMessage = (event, webView) => {
+  const action = eventData.action;
+  switch (action) {
+    case 'VIBRATION': {
+      return VibrationBridge(payload)
+    }
+  }
+```
+
+Bridge
+
+
+```
+import { Vibration } from 'react-native';
+
+let VibrationBridge = (payload) => {
+  if (payload.type === 'VIBRATE') {
+    if (!payload.options) {
+      return Vibration.vibrate(500)  // is duration is fixed time (about 500ms)
+    }
+
+    if (Number.isInteger(payload.duration) || payload.duration.length > 0) {
+      return Vibration.vibrate(payload.duration)
+    }
+  } else if (payload.type === 'CANCEL') {
+    Vibration.cancel();
+  }
+};
 ```
 
 License

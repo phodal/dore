@@ -145,10 +145,16 @@
     addStateListener: function () {
       return invoke('STATE', {type: 'ADD_LISTENER'});
     },
-    removeStateListner: function () {
+    removeStateListener: function () {
       return invoke('STATE', {type: 'REMOVE_LISTENER'});
+    },
+    vibrationVibrate: function (duration) {
+      return invoke('VIBRATION', {type: 'VIBRATE', duration: duration});
+    },
+    vibrationCancel: function () {
+      return invoke('VIBRATION', {type: 'CANCEL'});
     }
-  }
+  };
 
   function awaitPostMessage() {
     var isReactNativePostMessageReady = !!window.originalPostMessage;
