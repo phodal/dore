@@ -112,6 +112,12 @@ angular.module('starter.controllers', [])
     $scope.showStatusBar = function () {
       DoreClient.showStatusBar();
     };
+    $scope.vibrationVibrate = function () {
+      DoreClient.vibrationVibrate([1000, 2000, 3000]);
+    };
+    $scope.vibrationCancel = function () {
+      DoreClient.vibrationCancel();
+    };
   })
 
   .controller('DeviceCtrl', function ($scope) {
