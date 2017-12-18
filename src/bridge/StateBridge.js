@@ -6,7 +6,6 @@ let stateWebView
 let StateBridge = (payload, webView) => {
   stateWebView = webView;
   let handleAppStateChange = (state) => {
-    console.log(stateWebView);
     if (stateWebView) {
       WebViewEventHelper.postEvent('STATE', JSON.stringify(state), stateWebView);
     }

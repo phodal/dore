@@ -1,6 +1,6 @@
 import WebViewEventHelper from '../helper/WebViewEventHelper';
 
-let BackHandler ={};
+let BackHandler;
 
 let handler = () => {
   WebViewEventHelper.postEvent('ANDROID_BACK');
