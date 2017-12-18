@@ -13,7 +13,7 @@ import StatusBarBridge from "./bridge/StatusBarBridge";
 import StateBridge from "./bridge/StateBridge";
 import VibrationBridge from "./bridge/VibrationBridge";
 
-import BackHandler from "./bridge/BackHandler";
+import BackBridge from "./bridge/BackBridge";
 import BrightnessBridge from "./bridge/BrightnessBridge";
 
 const Dore = {};
@@ -26,11 +26,11 @@ Dore.inject = (modules) => {
 };
 
 Dore.addHandler = () => {
-  BackHandler.addListener();
+  BackBridge.addListener();
 };
 
 Dore.removeHandler = () => {
-  BackHandler.removeListener();
+  BackBridge.removeListener();
 };
 
 Dore.handleMessage = (event, webView) => {
