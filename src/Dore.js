@@ -83,7 +83,7 @@ Dore.handleMessage = (event, webView) => {
       return StateBridge(payload, webView)
     }
     case 'VIBRATION': {
-      return VibrationBridge(payload, webView, Dore.Brightness)
+      return VibrationBridge(payload, webView, Dore.Vibration)
     }
     case 'BRIGHTNESS': {
       return BrightnessBridge(payload, webView, Dore.Brightness)

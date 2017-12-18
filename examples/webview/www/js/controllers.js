@@ -129,13 +129,19 @@ angular.module('starter.controllers', [])
       })
     };
     $scope.checkPermissions = function () {
-      DoreClient.checkPermissions('camera');
+      DoreClient.checkPermissions('camera').then(function(response) {
+        DoreClient.showToast(JSON.stringify(response));
+      })
     };
     $scope.setBrightness = function () {
-      DoreClient.requestPermissions('camera');
+      DoreClient.requestPermissions('camera').then(function(response) {
+        DoreClient.showToast(JSON.stringify(response));
+      })
     };
     $scope.setBrightness = function () {
-      DoreClient.checkMultiple(['camera', 'photo']);
+      DoreClient.checkMultiple(['camera', 'photo']).then(function(response) {
+        DoreClient.showToast(JSON.stringify(response));
+      })
     };
   })
 

@@ -25,6 +25,7 @@
     "react-native-device-brightness": "^1.2.0",
     "react-native-device-info": "^0.13.0",
     "react-native-notag-datepicker": "^0.0.1",
-    "react-native-orientation": "^3.1.0"
+    "react-native-orientation": "^3.1.0",
+    "react-native-permissions": "^1.0.6"
   }
 }

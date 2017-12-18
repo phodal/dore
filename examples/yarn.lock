@@ -3490,6 +3490,10 @@ react-native-orientation@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-native-orientation/-/react-native-orientation-3.1.0.tgz#ce470fe44a9a47df5be4995b01a1089d3f4a033e"
 
+react-native-permissions@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-1.0.6.tgz#504f01728191431ad4b82895c4a349981fb5802b"
+
 react-native@0.50.3:
   version "0.50.3"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.50.3.tgz#91282bd5356cc7d794969cdc443cc764389b9af4"

@@ -168,8 +168,14 @@
     getBrightnessLevel: function () {
       return getAsyncData('BRIGHTNESS', {type: 'GET'});
     },
-    getSystemBrightnessLevel: function () {
-      return getAsyncData('BRIGHTNESS', {type: 'GET_SYSTEM'});
+    checkPermissions: function (permission, options) {
+      return getAsyncData('PERMISSIONS', {type: 'CHECK', permission: permission, options: options});
+    },
+    requestPermissions: function (permission, options) {
+      return getAsyncData('PERMISSIONS', {type: 'REQUEST', permission: permission, options: options});
+    },
+    checkMultiple: function (permission, options) {
+      return getAsyncData('PERMISSIONS', {type: 'CHECK_MULTIPLE', permission: permission, options: options});
     }
   };
 
