@@ -137,6 +137,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-device-brightness')
     compile project(':dore-icon-badge')
     compile project(':dore-toast')
     compile project(':react-native-orientation')

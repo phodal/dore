@@ -153,6 +153,15 @@
     },
     vibrationCancel: function () {
       return invoke('VIBRATION', {type: 'CANCEL'});
+    },
+    setBrightnessLevel: function () {
+      return invoke('BRIGHTNESS', {type: 'SET'});
+    },
+    getBrightnessLevel: function () {
+      return getAsyncData('BRIGHTNESS', {type: 'GET'});
+    },
+    getSystemBrightnessLevel: function () {
+      return getAsyncData('BRIGHTNESS', {type: 'GET_SYSTEM'});
     }
   };
 

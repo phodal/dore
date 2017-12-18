@@ -9,6 +9,10 @@ angular.module('starter.controllers', [])
       $scope.state = event.detail.data;
       $scope.$apply();
     });
+    $ionicPlatform.on('STATE', function (event) {
+      $scope.state = event.detail.data;
+      $scope.$apply();
+    });
 
     DoreClient.getAppVersion().then(function (data) {
       $scope.version = data.version;
@@ -117,6 +121,12 @@ angular.module('starter.controllers', [])
     };
     $scope.vibrationCancel = function () {
       DoreClient.vibrationCancel();
+    };
+    $scope.getBrightness = function () {
+      DoreClient.getBrightness();
+    };
+    $scope.setBrightness = function () {
+      DoreClient.setBrightness(0.2);
     };
   })
 

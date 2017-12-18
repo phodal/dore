@@ -17,13 +17,14 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "dore": "file:../",
+    "dore": "^0.2.1",
+    "dore-icon-badge": "1.2.1",
+    "dore-toast": "^1.0.8",
     "react": "16.0.0",
     "react-native": "0.50.3",
+    "react-native-device-brightness": "^1.2.0",
     "react-native-device-info": "^0.13.0",
-    "dore-icon-badge": "1.2.1",
     "react-native-notag-datepicker": "^0.0.1",
-    "react-native-orientation": "^3.1.0",
-    "dore-toast": "^1.0.8"
+    "react-native-orientation": "^3.1.0"
   }
 }

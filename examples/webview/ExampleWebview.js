@@ -32,12 +32,20 @@ export default class ExampleWebView extends Component {
     }, {
       name: 'DeviceInfo',
       class: RNDeviceInfo
-    }])
+    }]);
   }
 
   onMessage = evt => {
     Dore.handleMessage(evt, this.webView)
   };
+
+  componentDidMount() {
+    Dore.addHandler();
+  }
+
+  componentWillUnmount() {
+    Dore.removeHandler();
+  }
 
   onWebViewLoadStart = () => {
     if (this.state.isLoading) {
