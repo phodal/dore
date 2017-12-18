@@ -30,6 +30,7 @@ Features
  - Toast (by react-native-toast)
  - Vibration
  - BackHandler (Android)
+ - Brightness （by react-native-device-brightness)
  
 ### Todo 
  
@@ -40,7 +41,6 @@ Features
  - Camera
  - fs
  - SMS
- - Brightness
  - APP Availability (https://github.com/ohh2ahh/AppAvailability)
  - Permissions (https://github.com/yonahforst/react-native-permissions)
  - more+
