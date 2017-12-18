@@ -17,7 +17,9 @@ Features
 
 ### Support:
 
+ - BackHandler (Android)
  - Badge (by react-native-icon-badge)
+ - Brightness （by react-native-device-brightness)
  - Clipboard 
  - DatePicker (iOS by react-native-nogtag-datepicker)
  - DeviceInfo (by react-native-device-info)
@@ -29,21 +31,21 @@ Features
  - StatusBar
  - Toast (by react-native-toast)
  - Vibration
- - BackHandler (Android)
- - Brightness （by react-native-device-brightness)
  
 ### Todo 
  
- - Share
- - Storage
- - BLE
- - QRCode
+ - APP Availability (https://github.com/ohh2ahh/AppAvailability)
+ - BLE 
+ - Calender (https://github.com/wmcmahan/react-native-calendar-events)
  - Camera
  - Flashlight
  - fs
- - SMS
- - APP Availability (https://github.com/ohh2ahh/AppAvailability)
  - Permissions (https://github.com/yonahforst/react-native-permissions)
+ - Push Notifications (https://github.com/zo0r/react-native-push-notification)
+ - QRCode
+ - Share
+ - SMS
+ - Storage
  - more+
  
 Usage
