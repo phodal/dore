@@ -51,6 +51,14 @@
   }
 
   var DoreClient = {
+    invoke: function (options) {
+      invoke(options.action, options.payload);
+    },
+    getAsyncData: function (options, cb) {
+      getAsyncData(options.action, options.payload).then(function(results){
+        cb(results);
+      })
+    },
     getAppVersion: function () {
       return getAsyncData('DEVICE_INFO', {type: 'APP_VERSION'});
     },
