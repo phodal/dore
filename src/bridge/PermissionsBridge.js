@@ -19,22 +19,22 @@ let PermissionsBridge = (payload, webView, Permissions) => {
     payload.options = { type: 'always' }
   }
   if (payload.type === 'CHECK') {
+    console.log(payload.permission, payload.options)
     Permissions.check(payload.permission, payload.options).then(response => {
       let result = { locationPermission: response };
-      webView.postMessage(result);
+      webView.postMessage(JSON.stringify(result));
     })
   } else if (payload.type === 'REQUEST') {
-    Permissions.check(payload.permission, payload.options).then(response => {
+    Permissions.request(payload.permission, payload.options).then(response => {
       let result = { locationPermission: response };
-      webView.postMessage(result);
+      webView.postMessage(JSON.stringify(result));
     })
   } else if (payload.type === 'CHECK_MULTIPLE') {
     Permissions.checkMultiple(payload.permission, payload.options).then(response => {
       let result = { locationPermission: response };
-      webView.postMessage(result);
+      webView.postMessage(JSON.stringify(result));
     })
   }
 };
 
 export default PermissionsBridge
-

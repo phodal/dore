@@ -17,7 +17,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "dore": "^0.2.2",
+    "dore": "^0.2.4",
     "dore-icon-badge": "1.2.1",
     "dore-toast": "^1.0.8",
     "react": "16.0.0",
