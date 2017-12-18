@@ -101,8 +101,8 @@
         badgeNumber: badgeNumber
       });
     },
-    cleanBadge: function (badgeNumber) {
-      return invoke('BADGE', {type: 'CLEAN_BADGE', badgeNumber: badgeNumber});
+    cleanBadge: function () {
+      return invoke('BADGE', {type: 'CLEAN_BADGE'});
     },
     hideKeyboard: function() {
       return invoke('KEYBOARD', { type: 'DISMISS' });
