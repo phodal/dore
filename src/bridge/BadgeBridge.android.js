@@ -17,7 +17,7 @@ let BadgeBridge = (payload, webView, Badge) => {
     Badge.clearBadge()
   } else if (payload.type === 'GET_BADGE') {
     Badge.getBadgeNumber().then((data) => {
-      webView.postMessage(JSON.stringify(data))
+      webView.postMessage(JSON.stringify({badge: data}))
     })
   }
 };

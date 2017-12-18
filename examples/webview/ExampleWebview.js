@@ -44,6 +44,8 @@ export default class ExampleWebView extends Component {
   }
 
   onMessage = evt => {
+    let eventData = JSON.parse(evt.nativeEvent.data);
+    console.log(eventData);
     Dore.handleMessage(evt, this.webView)
   };
 
