@@ -44,7 +44,7 @@ export default class ExampleWebView extends Component {
   };
 
   componentDidMount() {
-    Dore.addHandler();
+    Dore.addHandler(this.webView);
   }
 
   componentWillUnmount() {

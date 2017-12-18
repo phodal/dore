@@ -20,18 +20,18 @@ let PermissionsBridge = (payload, webView, Permissions) => {
   }
   if (payload.type === 'CHECK') {
     Permissions.check(payload.options.type, payload.options.options).then(response => {
-      let response = { locationPermission: response };
-      webView.postMessage(response);
+      let result = { locationPermission: response };
+      webView.postMessage(result);
     })
   } else if (payload.type === 'REQUEST') {
     Permissions.check(payload.options.type, payload.options.options).then(response => {
-      let response = { locationPermission: response };
-      webView.postMessage(response);
+      let result = { locationPermission: response };
+      webView.postMessage(result);
     })
   } else if (payload.type === 'CHECK_MULTIPLE') {
     Permissions.check(payload.options.type, payload.options.options).then(response => {
-      let response = { locationPermission: response };
-      webView.postMessage(response);
+      let result = { locationPermission: response };
+      webView.postMessage(result);
     })
   }
 };

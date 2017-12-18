@@ -26,8 +26,8 @@ Dore.inject = (modules) => {
   }
 };
 
-Dore.addHandler = () => {
-  BackBridge.addListener();
+Dore.addHandler = (webView) => {
+  BackBridge.addListener(webView);
 };
 
 Dore.removeHandler = () => {

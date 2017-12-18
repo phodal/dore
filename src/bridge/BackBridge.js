@@ -1,4 +1,4 @@
-import { BackHandler } from 'react-native';
+import {BackHandler} from 'react-native';
 import WebViewEventHelper from '../helper/WebViewEventHelper';
 
 /**
@@ -14,11 +14,15 @@ import WebViewEventHelper from '../helper/WebViewEventHelper';
  */
 let BackBridge = {};
 
+let bridgeWebView = null;
 let handler = () => {
-  WebViewEventHelper.postEvent('ANDROID_BACK');
+  if (bridgeWebView) {
+    WebViewEventHelper.postEvent('ANDROID_BACK', '', bridgeWebView);
+  }
 };
 
-BackBridge.addListener = () => {
+BackBridge.addListener = (webView) => {
+  bridgeWebView = webView;
   BackHandler.addEventListener('hardwareBackPress', handler);
 };
 BackBridge.removeListener = () => {
