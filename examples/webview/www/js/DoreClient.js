@@ -346,7 +346,7 @@
           optionalParams
         });
       }
-  }};
+    }};
 
   function awaitPostMessage() {
     var isReactNativePostMessageReady = !!window.originalPostMessage;
@@ -381,6 +381,8 @@
 
   if (!!window.isPhone) {
     awaitPostMessage(); // Call this only once in your Web Code.
+    // TODO: fix console issue
+    window.console = DoreClient.console
   }
   if (typeof define === 'function' && define.amd) {
     define('DoreClient', [], function() {
@@ -391,9 +393,6 @@
   if (typeof noGlobal === strundefined) {
     window.DoreClient = DoreClient;
   }
-
-  // TODO: fix console issue
-  window.console = DoreClient.console
 
   return DoreClient;
 });

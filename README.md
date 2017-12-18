@@ -24,6 +24,7 @@ Features
  - BackHandler (Android)
  - Badge (by [react-native-icon-badge](https://github.com/uuau99999/react-native-icon-badge)
  - Brightness （by [react-native-device-brightness](https://github.com/Calvin-Huang/react-native-device-brightness))
+ - Console
  - Clipboard 
  - DatePicker (iOS by [react-native-notag-datepicker](https://github.com/phodal/react-native-notag-datepicker))
  - DeviceInfo (by [react-native-device-info](https://github.com/rebeccahughes/react-native-device-info))
