@@ -93,12 +93,6 @@
     getBadge: function (badgeNumber) {
       return getAsyncData('BADGE', {type: 'GET_BADGE', badgeNumber: badgeNumber});
     },
-    addBadge: function (badgeNumber) {
-      return invoke('BADGE', {type: 'ADD_BADGE', badgeNumber: badgeNumber});
-    },
-    minusBadge: function (badgeNumber) {
-      return invoke('BADGE', {type: 'MINUS_BADGE', badgeNumber: badgeNumber});
-    },
     cleanBadge: function (badgeNumber) {
       return invoke('BADGE', {type: 'CLEAN_BADGE', badgeNumber: badgeNumber});
     },

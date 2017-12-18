@@ -19,7 +19,6 @@ let PermissionsBridge = (payload, webView, Permissions) => {
     payload.options = { type: 'always' }
   }
   if (payload.type === 'CHECK') {
-    console.log(payload.permission, payload.options)
     Permissions.check(payload.permission, payload.options).then(response => {
       let result = { locationPermission: response };
       webView.postMessage(JSON.stringify(result));

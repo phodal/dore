@@ -41,16 +41,13 @@ angular.module('starter.controllers', [])
     };
 
     $scope.getBadge = function () {
-      DoreClient.getBadge()
+      DoreClient.getBadge().then(function (data) {
+        $scope.badge = data.badge;
+        $scope.$apply();
+      })
     };
     $scope.setBadge = function () {
       DoreClient.setBadge(19)
-    };
-    $scope.addBadge = function () {
-      DoreClient.addBadge(1)
-    };
-    $scope.minusBadge = function () {
-      DoreClient.minusBadge(1)
     };
     $scope.showDatePicker = function () {
       var options = {
