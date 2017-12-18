@@ -9,9 +9,9 @@ angular.module('starter.controllers', [])
       $scope.state = event.detail.data;
       $scope.$apply();
     });
-    $ionicPlatform.on('STATE', function (event) {
-      $scope.state = event.detail.data;
-      $scope.$apply();
+
+    $ionicPlatform.on('ANDROID_BACK', function (event) {
+      DoreClient.showToast('ANDROID_BACK');
     });
 
     DoreClient.getAppVersion().then(function (data) {

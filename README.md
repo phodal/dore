@@ -39,6 +39,7 @@ Features
  - BLE
  - QRCode
  - Camera
+ - Flashlight
  - fs
  - SMS
  - APP Availability (https://github.com/ohh2ahh/AppAvailability)

@@ -1,3 +1,15 @@
+/**
+ * @name Badge Bridge
+ * @description
+ * Dore BadgeBridge to handle Android Badge
+ *
+ * @example
+ * DoreClient.getBadge()
+ * DoreClient.setBadge(19)
+ * DoreClient.addBadge(1)
+ * DoreClient.minusBadge(1)
+ *
+ */
 let BadgeBridge = (payload, webView, IconBadge) => {
   if (payload.type === 'SET_BADGE') {
     IconBadge.setIconBadge(payload.badgeNumber)
