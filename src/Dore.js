@@ -13,9 +13,9 @@ import StatusBarBridge from './bridge/StatusBarBridge';
 import StateBridge from './bridge/StateBridge';
 import VibrationBridge from './bridge/VibrationBridge';
 
-import BackHandler from './bridge/BackHandler';
-import BrightnessBridge from './bridge/BrightnessBridge';
-import ConsoleBridge from './bridge/ConsoleBridge';
+import BackBridge from "./bridge/BackBridge";
+import BrightnessBridge from "./bridge/BrightnessBridge";
+import PermissionsBridge from "./bridge/PermissionsBridge";
 
 const Dore = {};
 
@@ -26,12 +26,12 @@ Dore.inject = modules => {
   }
 };
 
-Dore.addHandler = () => {
-  BackHandler.addListener();
+Dore.addHandler = (webView) => {
+  BackBridge.addListener(webView);
 };
 
 Dore.removeHandler = () => {
-  BackHandler.removeListener();
+  BackBridge.removeListener();
 };
 
 Dore.handleMessage = (event, webView) => {
@@ -83,10 +83,13 @@ Dore.handleMessage = (event, webView) => {
       return StateBridge(payload, webView);
     }
     case 'VIBRATION': {
-      return VibrationBridge(payload);
+      return VibrationBridge(payload, webView, Dore.Vibration)
     }
     case 'BRIGHTNESS': {
-      return BrightnessBridge(payload);
+      return BrightnessBridge(payload, webView, Dore.Brightness)
+    }
+    case 'PERMISSIONS': {
+      return PermissionsBridge(payload, webView, Dore.Permissions)
     }
     case 'CONSOLE': {
       return ConsoleBridge(payload);

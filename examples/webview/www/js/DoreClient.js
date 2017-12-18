@@ -53,8 +53,16 @@
   }
 
   var DoreClient = {
-    getAppVersion: function() {
-      return getAsyncData('DEVICE_INFO', { type: 'APP_VERSION' });
+    invoke: function (options) {
+      invoke(options.action, options.payload);
+    },
+    getAsyncData: function (options, cb) {
+      getAsyncData(options.action, options.payload).then(function(results){
+        cb(results);
+      })
+    },
+    getAppVersion: function () {
+      return getAsyncData('DEVICE_INFO', {type: 'APP_VERSION'});
     },
     getUniqueID: function() {
       return getAsyncData('DEVICE_INFO', { type: 'DEVICE_ID' });
@@ -93,14 +101,8 @@
         badgeNumber: badgeNumber
       });
     },
-    addBadge: function(badgeNumber) {
-      return invoke('BADGE', { type: 'ADD_BADGE', badgeNumber: badgeNumber });
-    },
-    minusBadge: function(badgeNumber) {
-      return invoke('BADGE', { type: 'MINUS_BADGE', badgeNumber: badgeNumber });
-    },
-    cleanBadge: function(badgeNumber) {
-      return invoke('BADGE', { type: 'CLEAN_BADGE', badgeNumber: badgeNumber });
+    cleanBadge: function (badgeNumber) {
+      return invoke('BADGE', {type: 'CLEAN_BADGE', badgeNumber: badgeNumber});
     },
     hideKeyboard: function() {
       return invoke('KEYBOARD', { type: 'DISMISS' });
@@ -129,52 +131,58 @@
     open: function(text) {
       return invoke('OPEN_LINK', text);
     },
-    getOrientation: function() {
-      return getAsyncData('ORIENTATION', { type: 'ORIENTATION' });
+    getOrientation: function () {
+      return getAsyncData('ORIENTATION', {type: 'ORIENTATION'});
     },
-    lockToPortrait: function() {
-      return invoke('ORIENTATION', { type: 'LOCK_PORTRAIT' });
+    lockToPortrait: function () {
+      return invoke('ORIENTATION', {type: 'LOCK_PORTRAIT'});
     },
-    lockToLandscape: function() {
-      return invoke('ORIENTATION', { type: 'LOCK_LANDSCAPE' });
+    lockToLandscape: function () {
+      return invoke('ORIENTATION', {type: 'LOCK_LANDSCAPE'});
     },
-    getConnectionInfo: function() {
-      return getAsyncData('NET_INFO', { type: 'CONNECTION_INFO' });
+    getConnectionInfo: function () {
+      return getAsyncData('NET_INFO', {type: 'CONNECTION_INFO'});
     },
-    addNetInfoEventListener: function() {
-      return invoke('NET_INFO', { type: 'ADD_LISTENER' });
+    addNetInfoEventListener: function () {
+      return invoke('NET_INFO', {type: 'ADD_LISTENER'});
     },
-    removeNetInfoEventListener: function() {
-      return invoke('NET_INFO', { type: 'REMOVE_LISTENER' });
+    removeNetInfoEventListener: function () {
+      return invoke('NET_INFO', {type: 'REMOVE_LISTENER'});
     },
-    hideStatusBar: function() {
-      return invoke('STATUS_BAR', { type: 'HIDE' });
+    hideStatusBar: function () {
+      return invoke('STATUS_BAR', {type: 'HIDE'});
     },
-    showStatusBar: function() {
-      return invoke('STATUS_BAR', { type: 'SHOW' });
+    showStatusBar: function () {
+      return invoke('STATUS_BAR', {type: 'SHOW'});
     },
-    addStateListener: function() {
-      return invoke('STATE', { type: 'ADD_LISTENER' });
+    addStateListener: function () {
+      return invoke('STATE', {type: 'ADD_LISTENER'});
     },
-    removeStateListener: function() {
-      return invoke('STATE', { type: 'REMOVE_LISTENER' });
+    removeStateListener: function () {
+      return invoke('STATE', {type: 'REMOVE_LISTENER'});
     },
-    vibrationVibrate: function(duration) {
-      return invoke('VIBRATION', { type: 'VIBRATE', duration: duration });
+    vibrationVibrate: function (duration) {
+      return invoke('VIBRATION', {type: 'VIBRATE', duration: duration});
     },
-    vibrationCancel: function() {
-      return invoke('VIBRATION', { type: 'CANCEL' });
+    vibrationCancel: function () {
+      return invoke('VIBRATION', {type: 'CANCEL'});
     },
-    setBrightnessLevel: function() {
-      return invoke('BRIGHTNESS', { type: 'SET' });
+    setBrightnessLevel: function (luminous) {
+      return invoke('BRIGHTNESS', {type: 'SET', luminous: luminous});
     },
-    getBrightnessLevel: function() {
-      return getAsyncData('BRIGHTNESS', { type: 'GET' });
+    getBrightnessLevel: function () {
+      return getAsyncData('BRIGHTNESS', {type: 'GET'});
     },
-    getSystemBrightnessLevel: function() {
-      return getAsyncData('BRIGHTNESS', { type: 'GET_SYSTEM' });
+    checkPermissions: function (permission, options) {
+      return getAsyncData('PERMISSIONS', {type: 'CHECK', permission: permission, options: options});
     },
-    console: {
+    requestPermissions: function (permission, options) {
+      return getAsyncData('PERMISSIONS', {type: 'REQUEST', permission: permission, options: options});
+    },
+    checkMultiple: function (permission, options) {
+      return getAsyncData('PERMISSIONS', {type: 'CHECK_MULTIPLE', permission: permission, options: options});
+    },
+     console: {
       // assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
       assert: function(test, message, ...optionalParams) {
         return invoke('CONSOLE', {
@@ -338,8 +346,7 @@
           optionalParams
         });
       }
-    }
-  };
+  }};
 
   function awaitPostMessage() {
     var isReactNativePostMessageReady = !!window.originalPostMessage;

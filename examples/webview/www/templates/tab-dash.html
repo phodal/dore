@@ -72,7 +72,7 @@
       Brightness
     </div>
     <ion-item ng-click="getBrightness()">
-      getBrightness
+      getBrightness: {{brightness}}
     </ion-item>
     <ion-item ng-click="setBrightness()">
       setBrightness
@@ -99,13 +99,20 @@
         setBadge
       </ion-item>
       <ion-item ng-click="getBadge()">
-        getBadge
+        getBadge: {{badge}}
       </ion-item>
-      <ion-item ng-click="addBadge()">
-        addBadge
+
+      <div class="item item-divider">
+        Permissions
+      </div>
+      <ion-item ng-click="checkPermissions()">
+        checkPermissions Camera
       </ion-item>
-      <ion-item ng-click="minusBadge()">
-        minusBadge
+      <ion-item ng-click="requestPermissions()">
+        requestPermissions Camera
+      </ion-item>
+      <ion-item ng-click="checkMultiple()">
+        checkMultiple Camera Photo
       </ion-item>
     </ion-list>
 

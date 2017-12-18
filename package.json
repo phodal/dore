@@ -1,6 +1,6 @@
 {
   "name": "dore",
-  "version": "0.2.1",
+  "version": "0.2.4",
   "description": "A Framework for Growth APP",
   "main": "index.js",
   "scripts": {
@@ -19,8 +19,5 @@
     "url": "https://github.com/phodal/dore/issues"
   },
   "homepage": "https://github.com/phodal/dore#readme",
-  "devDependencies": {
-    "esdoc": "^1.0.4",
-    "esdoc-standard-plugin": "^1.0.0"
-  }
+  "devDependencies": {}
 }

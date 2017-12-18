@@ -9,9 +9,9 @@ angular
       $scope.state = event.detail.data;
       $scope.$apply();
     });
-    $ionicPlatform.on('STATE', function(event) {
-      $scope.state = event.detail.data;
-      $scope.$apply();
+
+    $ionicPlatform.on('ANDROID_BACK', function (event) {
+      DoreClient.showToast('ANDROID_BACK');
     });
 
     DoreClient.getAppVersion().then(function(data) {
@@ -38,19 +38,16 @@ angular
       DoreClient.paste();
     };
 
-    $scope.getBadge = function() {
-      DoreClient.getBadge();
+    $scope.getBadge = function () {
+      DoreClient.getBadge().then(function (data) {
+        $scope.badge = data.badge;
+        $scope.$apply();
+      })
     };
     $scope.setBadge = function() {
       DoreClient.setBadge(19);
     };
-    $scope.addBadge = function() {
-      DoreClient.addBadge(1);
-    };
-    $scope.minusBadge = function() {
-      DoreClient.minusBadge(1);
-    };
-    $scope.showDatePicker = function() {
+    $scope.showDatePicker = function () {
       var options = {
         date: '2017-10-22 12:12:12',
         maxDate: '2022-10-22 12:12:12'
@@ -120,11 +117,26 @@ angular
     $scope.vibrationCancel = function() {
       DoreClient.vibrationCancel();
     };
-    $scope.getBrightness = function() {
-      DoreClient.getBrightness();
+    $scope.getBrightness = function () {
+      DoreClient.getBrightnessLevel().then(function(brightness) {
+        $scope.brightness = brightness;
+        $scope.$apply();
+      })
     };
-    $scope.setBrightness = function() {
-      DoreClient.setBrightness(0.2);
+    $scope.checkPermissions = function () {
+      DoreClient.checkPermissions('camera').then(function(response) {
+        DoreClient.showToast(JSON.stringify(response));
+      })
+    };
+    $scope.setBrightness = function () {
+      DoreClient.requestPermissions('camera').then(function(response) {
+        DoreClient.showToast(JSON.stringify(response));
+      })
+    };
+    $scope.setBrightness = function () {
+      DoreClient.checkMultiple(['camera', 'photo']).then(function(response) {
+        DoreClient.showToast(JSON.stringify(response));
+      })
     };
     $scope.console = console //  can use inline console function after register
   })

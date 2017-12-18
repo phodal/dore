@@ -4,6 +4,8 @@ import Toast from 'dore-toast';
 import Orientation from 'react-native-orientation';
 import RNIconBadge from 'dore-icon-badge'
 import RNDeviceInfo from "react-native-device-info";
+import DeviceBrightness from 'react-native-device-brightness';
+import Permissions from 'react-native-permissions'
 
 import Dore from 'dore';
 
@@ -32,6 +34,12 @@ export default class ExampleWebView extends Component {
     }, {
       name: 'DeviceInfo',
       class: RNDeviceInfo
+    }, {
+      name: 'Brightness',
+      class: DeviceBrightness
+    }, {
+      name: 'Permissions',
+      class: Permissions
     }]);
   }
 
@@ -40,7 +48,7 @@ export default class ExampleWebView extends Component {
   };
 
   componentDidMount() {
-    Dore.addHandler();
+    Dore.addHandler(this.webView);
   }
 
   componentWillUnmount() {
