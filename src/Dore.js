@@ -18,6 +18,7 @@ import BrightnessBridge from './bridge/BrightnessBridge';
 import PermissionsBridge from './bridge/PermissionsBridge';
 
 import ConsoleBridge from './bridge/ConsoleBridge';
+import ScreenshotBridge from "./bridge/ScreenshotBridge";
 
 const Dore = {};
 
@@ -95,6 +96,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'CONSOLE': {
       return ConsoleBridge(payload);
+    }
+    case 'SCREENSHOT': {
+      return ScreenshotBridge(payload, webView, Dore.Capture);
     }
   }
 };

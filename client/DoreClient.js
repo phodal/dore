@@ -1,19 +1,19 @@
 /*global define */
-(function(global, factory) {
+(function (global, factory) {
   'use strict';
   if (typeof module === 'object' && typeof module.exports === 'object') {
     module.exports = global.document
       ? factory(global, true)
-      : function(w) {
-          if (!w.document) {
-            throw new Error('jQuery requires a window with a document');
-          }
-          return factory(w);
-        };
+      : function (w) {
+        if (!w.document) {
+          throw new Error('jQuery requires a window with a document');
+        }
+        return factory(w);
+      };
   } else {
     factory(global);
   }
-})(typeof window !== 'undefined' ? window : this, function(window, noGlobal) {
+})(typeof window !== 'undefined' ? window : this, function (window, noGlobal) {
 
   function postMessage(action, payload) {
     var message = JSON.stringify({
@@ -28,7 +28,7 @@
   }
 
   function getAsyncData(action, payload) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       function listener(event) {
         event.target.removeEventListener('message', listener, false);
         resolve(JSON.parse(event.data));
@@ -42,7 +42,7 @@
         })
       );
 
-      setTimeout(function() {
+      setTimeout(function () {
         reject('timeout');
       }, 3000);
     });
@@ -57,45 +57,45 @@
       invoke(options.action, options.payload);
     },
     getAsyncData: function (options, cb) {
-      getAsyncData(options.action, options.payload).then(function(results){
+      getAsyncData(options.action, options.payload).then(function (results) {
         cb(results);
       })
     },
     getAppVersion: function () {
       return getAsyncData('DEVICE_INFO', {type: 'APP_VERSION'});
     },
-    getUniqueID: function() {
-      return getAsyncData('DEVICE_INFO', { type: 'DEVICE_ID' });
+    getUniqueID: function () {
+      return getAsyncData('DEVICE_INFO', {type: 'DEVICE_ID'});
     },
-    getBrand: function() {
-      return getAsyncData('DEVICE_INFO', { type: 'BRAND' });
+    getBrand: function () {
+      return getAsyncData('DEVICE_INFO', {type: 'BRAND'});
     },
-    getModel: function() {
-      return getAsyncData('DEVICE_INFO', { type: 'MODEL' });
+    getModel: function () {
+      return getAsyncData('DEVICE_INFO', {type: 'MODEL'});
     },
-    getSystemName: function() {
-      return getAsyncData('DEVICE_INFO', { type: 'SYSTEM_NAME' });
+    getSystemName: function () {
+      return getAsyncData('DEVICE_INFO', {type: 'SYSTEM_NAME'});
     },
-    isEmulator: function() {
-      return getAsyncData('DEVICE_INFO', { type: 'IS_EMULATOR' });
+    isEmulator: function () {
+      return getAsyncData('DEVICE_INFO', {type: 'IS_EMULATOR'});
     },
-    isTablet: function() {
-      return getAsyncData('DEVICE_INFO', { type: 'IS_TABLET' });
+    isTablet: function () {
+      return getAsyncData('DEVICE_INFO', {type: 'IS_TABLET'});
     },
-    showToast: function(message, duration, position) {
+    showToast: function (message, duration, position) {
       return invoke('TOAST', {
-        options: { duration: duration, position: position },
+        options: {duration: duration, position: position},
         message: message
       });
     },
-    showDatePicker: function(options) {
+    showDatePicker: function (options) {
       options.TYPE = 'DATE_PICKER';
       return getAsyncData('DATE_PICKER', options);
     },
-    setBadge: function(badgeNumber) {
-      return invoke('BADGE', { type: 'SET_BADGE', badgeNumber: badgeNumber });
+    setBadge: function (badgeNumber) {
+      return invoke('BADGE', {type: 'SET_BADGE', badgeNumber: badgeNumber});
     },
-    getBadge: function(badgeNumber) {
+    getBadge: function (badgeNumber) {
       return getAsyncData('BADGE', {
         type: 'GET_BADGE',
         badgeNumber: badgeNumber
@@ -104,31 +104,31 @@
     clearBadge: function () {
       return invoke('BADGE', {type: 'CLEAR_BADGE'});
     },
-    hideKeyboard: function() {
-      return invoke('KEYBOARD', { type: 'DISMISS' });
+    hideKeyboard: function () {
+      return invoke('KEYBOARD', {type: 'DISMISS'});
     },
-    getCurrentPosition: function(text) {
+    getCurrentPosition: function (text) {
       return getAsyncData('GEOLOCATION', {
         type: 'CURRENT_POSITION',
         text: text
       });
     },
-    watchPosition: function(text) {
-      return invoke('GEOLOCATION', { type: 'WATCH_POSITION', text: text });
+    watchPosition: function (text) {
+      return invoke('GEOLOCATION', {type: 'WATCH_POSITION', text: text});
     },
-    clearWatch: function(text) {
-      return invoke('GEOLOCATION', { type: 'CLEAR_WATCH', text: text });
+    clearWatch: function (text) {
+      return invoke('GEOLOCATION', {type: 'CLEAR_WATCH', text: text});
     },
-    stopObserving: function(text) {
-      return invoke('GEOLOCATION', { type: 'STOP_OBSERVING', text: text });
+    stopObserving: function (text) {
+      return invoke('GEOLOCATION', {type: 'STOP_OBSERVING', text: text});
     },
-    copy: function(text) {
-      return invoke('CLIPBOARD', { type: 'COPY', text: text });
+    copy: function (text) {
+      return invoke('CLIPBOARD', {type: 'COPY', text: text});
     },
-    paste: function() {
-      return invoke('CLIPBOARD', { type: 'PASTE' });
+    paste: function () {
+      return invoke('CLIPBOARD', {type: 'PASTE'});
     },
-    open: function(text) {
+    open: function (text) {
       return invoke('OPEN_LINK', text);
     },
     getOrientation: function () {
@@ -182,9 +182,12 @@
     checkMultiple: function (permission, options) {
       return getAsyncData('PERMISSIONS', {type: 'CHECK_MULTIPLE', permission: permission, options: options});
     },
-     console: {
+    captureScreen: function (options) {
+      return getAsyncData('SCREENSHOT', {type: 'CAPTURE', options: options});
+    },
+    console: {
       // assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
-      assert: function(test, message, ...optionalParams) {
+      assert: function (test, message, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'assert',
           test,
@@ -193,20 +196,20 @@
         });
       },
       // clear(): void;
-      clear: function() {
+      clear: function () {
         return invoke('CONSOLE', {
           type: 'clear'
         });
       },
       // count(countTitle?: string): void;
-      count: function(countTitle) {
+      count: function (countTitle) {
         return invoke('CONSOLE', {
           type: 'count',
           countTitle
         });
       },
       // debug(message?: any, ...optionalParams: any[]): void;
-      debug: function(message, ...optionalParams) {
+      debug: function (message, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'debug',
           message,
@@ -214,7 +217,7 @@
         });
       },
       // dir(value?: any, ...optionalParams: any[]): void;
-      dir: function(value, ...optionalParams) {
+      dir: function (value, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'dir',
           value,
@@ -222,14 +225,14 @@
         });
       },
       // dirxml(value: any): void;
-      dirxml: function(value) {
+      dirxml: function (value) {
         return invoke('CONSOLE', {
           type: 'dirxml',
           value
         });
       },
       // error(message?: any, ...optionalParams: any[]): void;
-      error: function(message, ...optionalParams) {
+      error: function (message, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'error',
           message,
@@ -237,7 +240,7 @@
         });
       },
       // exception(message?: string, ...optionalParams: any[]): void;
-      exception: function(message, ...optionalParams) {
+      exception: function (message, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'exception',
           message,
@@ -245,7 +248,7 @@
         });
       },
       // group(groupTitle?: string, ...optionalParams: any[]): void;
-      group: function(groupTitle, ...optionalParams) {
+      group: function (groupTitle, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'group',
           groupTitle,
@@ -253,7 +256,7 @@
         });
       },
       // groupCollapsed(groupTitle?: string, ...optionalParams: any[]): void;
-      groupCollapsed: function(groupTitle, ...optionalParams) {
+      groupCollapsed: function (groupTitle, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'groupCollapsed',
           groupTitle,
@@ -261,13 +264,13 @@
         });
       },
       // groupEnd(): void;
-      groupEnd: function() {
+      groupEnd: function () {
         return invoke('CONSOLE', {
           type: 'groupEnd'
         });
       },
       // info(message?: any, ...optionalParams: any[]): void;
-      info: function(message, ...optionalParams) {
+      info: function (message, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'info',
           message,
@@ -275,7 +278,7 @@
         });
       },
       // log(message?: any, ...optionalParams: any[]): void;
-      log: function(message, ...optionalParams) {
+      log: function (message, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'log',
           message,
@@ -283,55 +286,55 @@
         });
       },
       // msIsIndependentlyComposed(element: Element): boolean;
-      msIsIndependentlyComposed: function(element) {
+      msIsIndependentlyComposed: function (element) {
         return invoke('CONSOLE', {
           type: 'msIsIndependentlyComposed',
           element
         });
       },
       // profile(reportName?: string): void;
-      profile: function(reportName) {
+      profile: function (reportName) {
         return invoke('CONSOLE', {
           type: 'profile',
           reportName
         });
       },
       // profileEnd(): void;
-      profileEnd: function() {
+      profileEnd: function () {
         return invoke('CONSOLE', {
           type: 'profileEnd'
         });
       },
       // select(element: Element): void;
-      select: function(element) {
+      select: function (element) {
         return invoke('CONSOLE', {
           type: 'select',
           element
         });
       },
       // table(...data: any[]): void;
-      table: function(data) {
+      table: function (data) {
         return invoke('CONSOLE', {
           type: 'table',
           data
         });
       },
       // time(timerName?: string): void;
-      time: function(timerName) {
+      time: function (timerName) {
         return invoke('CONSOLE', {
           type: 'time',
           timerName
         });
       },
       // timeEnd(timerName?: string): void;
-      timeEnd: function(timerName) {
+      timeEnd: function (timerName) {
         return invoke('CONSOLE', {
           type: 'timeEnd',
           timerName
         });
       },
       // trace(message?: any, ...optionalParams: any[]): void;
-      trace: function(message, optionalParams) {
+      trace: function (message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'trace',
           message,
@@ -339,14 +342,15 @@
         });
       },
       // warn(message?: any, ...optionalParams: any[]): void;
-      warn: function(message, optionalParams) {
+      warn: function (message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'warn',
           message,
           optionalParams
         });
       }
-  }};
+    }
+  };
 
   function awaitPostMessage() {
     var isReactNativePostMessageReady = !!window.originalPostMessage;
@@ -360,16 +364,16 @@
       Object.defineProperty(window, 'postMessage', {
         configurable: true,
         enumerable: true,
-        get: function() {
+        get: function () {
           return currentPostMessageFn;
         },
-        set: function(fn) {
+        set: function (fn) {
           currentPostMessageFn = fn;
           isReactNativePostMessageReady = true;
           setTimeout(sendQueue, 0);
         }
       });
-      window.postMessage.toString = function() {
+      window.postMessage.toString = function () {
         return String(originalPostMessage);
       };
     }
@@ -385,7 +389,7 @@
     window.console = DoreClient.console
   }
   if (typeof define === 'function' && define.amd) {
-    define('DoreClient', [], function() {
+    define('DoreClient', [], function () {
       return DoreClient;
     });
   }
