@@ -14,7 +14,7 @@ Screenshots:
 
 Workflow:
 
-![Workflow](./doc.workflow.jpeg)
+![Workflow](./doc/workflow.jpeg)
 
 Features
 ---
