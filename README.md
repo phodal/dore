@@ -16,6 +16,10 @@ Workflow:
 
 ![Workflow](./doc/workflow.jpeg)
 
+微信群：
+
+![QRCode](./doc/wechat.jpg)
+
 Features
 ---
 
