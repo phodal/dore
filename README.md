@@ -204,6 +204,48 @@ $scope.setBrightness = function () {
 };
 ```
 
+### Clipboard
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| copy                 |       -       |                       |
+| paste                |    promise    | { brightness: 'xx' }  |
+
+copy:
+
+```
+DoreClient.copy($scope.text);
+```
+
+paste:
+
+```
+$ionicPlatform.on('PASTE', function(event) {
+  $scope.copyText = event.detail.data;
+  $scope.$apply();
+});
+DoreClient.paste();
+```
+
+### DatePicker
+
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| showDatePicker       |    promise    |    { date: 'xx' }     |
+
+
+```
+var options = {
+  date: '2017-10-22 12:12:12',
+  maxDate: '2022-10-22 12:12:12'
+};
+DoreClient.showDatePicker(options).then(function(data) {
+  $scope.date = data.date;
+  $scope.$apply();
+});
+```
+
 ### DeviceInfo
 
 | function         | return type   |    return             |
@@ -232,6 +274,9 @@ $scope.isTablet = function() {
   });
 };
 ```
+
+
+
 All Examples
 ---
 
