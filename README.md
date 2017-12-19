@@ -48,6 +48,7 @@ Features
  - fs
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - QRCode
+ - ScreenShot ([cordova](https://github.com/gitawego/cordova-screenshot), [RN](https://github.com/gre/react-native-view-shot))
  - Share
  - SMS
  - Storage
