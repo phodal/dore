@@ -144,6 +144,11 @@ angular
         DoreClient.showToast(JSON.stringify(response));
       })
     };
+    $scope.captureScreen = function () {
+      DoreClient.captureScreen().then(function(response) {
+        DoreClient.showToast(JSON.stringify(response));
+      })
+    };
     $scope.console = console //  can use inline console function after register
   })
 

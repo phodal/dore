@@ -6,6 +6,7 @@ import RNIconBadge from 'dore-icon-badge'
 import RNDeviceInfo from "react-native-device-info";
 import DeviceBrightness from 'react-native-device-brightness';
 import Permissions from 'react-native-permissions'
+import { captureScreen } from "react-native-view-shot";
 
 import Dore from 'dore';
 
@@ -40,6 +41,9 @@ export default class ExampleWebView extends Component {
     }, {
       name: 'Permissions',
       class: Permissions
+    }, {
+      name: 'Capture',
+      class: captureScreen
     }]);
   }
 

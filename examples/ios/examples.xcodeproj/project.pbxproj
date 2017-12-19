@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -31,6 +30,7 @@
 		AEEB1BCA551B4ADF9AD7629C /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71A6211E5748538A0726B7 /* libReactNativePermissions.a */; };
 		DA605C1EAC8444EAAB913772 /* libRNDeviceBrightness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9E2C8C09544F4B02C1E12 /* libRNDeviceBrightness.a */; };
 		EBC93D30060F4644AFE86309 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */; };
+		46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -382,6 +382,8 @@
 		BFF9CDF31FE7510900C16E87 /* RNNoTagDatepicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNNoTagDatepicker.xcodeproj; path = "../node_modules/react-native-notag-datepicker/ios/RNNoTagDatepicker.xcodeproj"; sourceTree = "<group>"; };
 		C5467694081D4D139A05092F /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
+		4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */ = {isa = PBXFileReference; name = "RNViewShot.xcodeproj"; path = "../node_modules/react-native-view-shot/ios/RNViewShot.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */ = {isa = PBXFileReference; name = "libRNViewShot.a"; path = "libRNViewShot.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -409,6 +411,7 @@
 				EBC93D30060F4644AFE86309 /* libRCTOrientation.a in Frameworks */,
 				DA605C1EAC8444EAAB913772 /* libRNDeviceBrightness.a in Frameworks */,
 				AEEB1BCA551B4ADF9AD7629C /* libReactNativePermissions.a in Frameworks */,
+				46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -633,6 +636,7 @@
 				C5467694081D4D139A05092F /* RCTOrientation.xcodeproj */,
 				2C9AA3E1B3EF4FCD86DE9D2E /* RNDeviceBrightness.xcodeproj */,
 				14DC5D1054B046DBB34F8646 /* ReactNativePermissions.xcodeproj */,
+				4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1206,11 +1210,13 @@
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-view-shot/ios",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 				);
@@ -1238,11 +1244,13 @@
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-device-brightness/RNDeviceBrightness",
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
+					"$(SRCROOT)/../node_modules/react-native-view-shot/ios",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 				);

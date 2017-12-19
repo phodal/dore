@@ -3,6 +3,7 @@ package com.examples;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import fr.greweb.reactnativeviewshot.RNViewShotPackage;
 import org.capslock.RNDeviceBrightness.RNDeviceBrightness;
 import com.hoyup.rniconbadge.RNIconBadge;
 import com.github.yamill.orientation.OrientationPackage;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNViewShotPackage(),
             new RNDeviceBrightness(),
             new RNIconBadge(),
             new OrientationPackage(),
