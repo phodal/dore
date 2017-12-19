@@ -145,6 +145,8 @@ APIs
 
 ### App State
 
+state value: ``active``, ``background``, ``inactive``
+
 ```
 DoreClient.addStateListener();
 $ionicPlatform.on('STATE', function(event) {
@@ -166,9 +168,9 @@ $ionicPlatform.on('ANDROID_BACK', function (event) {
 
 | function         | return type   |    return             |
 -------------------|---------------|-----------------------|
-| setBadge         |        -      |  -   |
-| getBadge         |  promise      | { badge: 'xx' }     |
-| clearBadge       |   -           |     -     |
+| setBadge         |        -      |        -              |
+| getBadge         |  promise      | { badge: 'xx' }       |
+| clearBadge       |   -           |         -             |
 
 ```
 $scope.getBadge = function () {
@@ -189,7 +191,7 @@ $scope.clearBadge = function() {
 
 | function             | return type   |    return             |
 -----------------------|---------------|-----------------------|
-| getBrightnessLevel   |  promise      | { brightness: 'xx' }  |
+| getBrightnessLevel   |  promise      |      float            |
 | setBrightnessLevel   |       -       |      -                |
 
 ```
@@ -209,7 +211,7 @@ $scope.setBrightness = function () {
 | function             | return type   |    return             |
 -----------------------|---------------|-----------------------|
 | copy                 |       -       |                       |
-| paste                |    promise    | { brightness: 'xx' }  |
+| paste                |      event    |  window.event         |
 
 copy:
 
@@ -275,134 +277,71 @@ $scope.isTablet = function() {
 };
 ```
 
+### Geolocation
 
 
-All Examples
----
-
-### App State Example
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| getCurrentPosition   |    promise    |         json          |
+| watchPosition        |    event      |         event         |
+| clearWatch           |       -       |           -           |
+| stopObserving        |       -       |           -           |
 
 ```
-DoreClient.addStateListener();
-$ionicPlatform.on('STATE', function (event) {
-  $scope.state = event.detail.data;
-  $scope.$apply();
-});
+$scope.getCurrentPosition = function() {
+  DoreClient.getCurrentPosition().then(function(data) {
+    $scope.location = data;
+    $scope.$apply();
+  });
+};
+
+$scope.watchPosition = function() {
+  $ionicPlatform.on('WATCH_POSITION', function(event) {
+    $scope.wPosition = event.detail.data;
+    $scope.$apply();
+  });
+  DoreClient.watchPosition();
+};
+
+$scope.clearWatch = function() {
+  DoreClient.clearWatch();
+};
+$scope.stopObserving = function() {
+  DoreClient.stopObserving();
+};
 ```
 
-```javascript
-angular.module('starter.controllers', [])
+### Keyboard
 
-  .controller('DashCtrl', function ($scope, DoreClient, $ionicPlatform) {
-    $scope.version = null;
-    $scope.text = 'Text Copy';
-    $scope.copyText = '';
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| hideKeyboard         |     -         |     -                 |
 
-    DoreClient.addStateListener();
-    $ionicPlatform.on('STATE', function (event) {
-      $scope.state = event.detail.data;
-      $scope.$apply();
-    });
+### NetInfo
 
-    DoreClient.getAppVersion().then(function (data) {
-      $scope.version = data.version;
-    });
-    $scope.showToast = function () {
-      DoreClient.showToast('this is a toast')
-    };
-    $scope.showToastCenter = function () {
-      DoreClient.showToast('this is a toast', 'long', 'center')
-    };
+| function                    | return type   |    return             |
+------------------------------|---------------|-----------------------|
+| getConnectionInfo           |    promise    |     json              |
+| addNetInfoEventListener     |     event     |     event             |
+| removeNetInfoEventListener  |     -         |     -                 |
 
-    $scope.open = function () {
-      DoreClient.open('https://www.phodal.com/')
-    };
-
-    $scope.copy = function () {
-      DoreClient.copy($scope.text);
-    };
-    $scope.paste = function () {
-      $ionicPlatform.on('PASTE', function (event) {
-        $scope.copyText = event.detail.data;
-        $scope.$apply();
-      });
-      DoreClient.paste();
-    };
-
-    $scope.getBadge = function () {
-      DoreClient.getBadge()
-    };
-    $scope.setBadge = function () {
-      DoreClient.setBadge(19)
-    };
-    $scope.addBadge = function () {
-      DoreClient.addBadge()
-    };
-    $scope.minusBadge = function () {
-      DoreClient.minusBadge()
-    };
-    $scope.showDatePicker = function () {
-      var options = {
-        date: '2017-10-22 12:12:12',
-        maxDate: '2022-10-22 12:12:12'
-      };
-      DoreClient.showDatePicker(options).then(function (data) {
-        $scope.date = data.date;
-      })
-    };
-
-    $scope.getCurrentPosition = function () {
-      DoreClient.getCurrentPosition().then(function (data) {
-        $scope.location = data;
-      })
-    };
-    $scope.watchPosition = function () {
-      $ionicPlatform.on('WATCH_POSITION', function (event) {
-        $scope.wPosition = event.detail.data;
-        $scope.$apply();
-      });
-      DoreClient.watchPosition()
-    };
-    $scope.clearWatch = function () {
-      DoreClient.clearWatch()
-    };
-    $scope.stopObserving = function () {
-      DoreClient.stopObserving()
-    };
-    $scope.getOrientation = function () {
-      DoreClient.getOrientation().then(function (data) {
-        console.log(data);
-        $scope.orientation = data;
-      })
-    };
-    $scope.lockToLandscape = function () {
-      DoreClient.lockToLandscape();
-    };
-    $scope.lockToPortrait = function () {
-      DoreClient.lockToPortrait();
-    };
-    $scope.getConnectionInfo = function () {
-      DoreClient.getConnectionInfo().then(function (data) {
-        $scope.connectionInfo = data;
-      })
-    };
-    $scope.addEventListener = function () {
-      $ionicPlatform.on('CONNECTION_CHANGE', function (event) {
-        $scope.wConnectionInfo = event.detail.data;
-        $scope.$apply();
-      });
-      DoreClient.addNetInfoEventListener();
-    };
-    $scope.removeEventListener = function () {
-      DoreClient.removeNetInfoEventListener();
-    };
-    $scope.hideStatusBar = function () {
-      DoreClient.hideStatusBar();
-    };
-    $scope.showStatusBar = function () {
-      DoreClient.showStatusBar();
-    };
-  })
+```
+$scope.getConnectionInfo = function() {
+  DoreClient.getConnectionInfo().then(function(data) {
+    $scope.connectionInfo = data;
+    $scope.$apply();
+  });
+};
+$scope.addEventListener = function() {
+  $ionicPlatform.on('CONNECTION_CHANGE', function(event) {
+    $scope.wConnectionInfo = event.detail.data;
+    $scope.$apply();
+  });
+  DoreClient.addNetInfoEventListener();
+};
+$scope.removeEventListener = function() {
+  DoreClient.removeNetInfoEventListener();
+};
 ```
 
 Development
