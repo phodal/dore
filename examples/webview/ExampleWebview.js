@@ -82,6 +82,5 @@ export default class ExampleWebView extends Component {
         />
       </View>
     )
-
   }
 }
