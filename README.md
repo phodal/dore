@@ -135,6 +135,23 @@ $scope.showToast = function () {
 };
 ```
 
+APIs
+---
+
+
+### DeviceInfo
+
+| function         | return type   |    return             |
+-------------------|---------------|-----------------------|
+| getAppVersion    |  promise      | { version: 'xx' }     |
+| getUniqueID      |  promise      | { uniqueID: 'xx' }    |
+| getBrand         |  promise      | { brand: 'xx' }       |
+| getModel         |  promise      | { model: 'xx' }       |
+| getSystemName    |  promise      | { systemName: 'xx' }  |
+| isEmulator       |  promise      | boolean               |
+| isTablet         |  promise      | boolean               |
+ 
+
 All Examples
 ---
 
