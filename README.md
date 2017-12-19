@@ -37,6 +37,7 @@ Features
  - NetInfo
  - Orientation
  - Permissions (by [react-native-permissions](https://github.com/yonahforst/react-native-permissions))
+ - ScreenShot ([cordova](https://github.com/gitawego/cordova-screenshot), [RN](https://github.com/gre/react-native-view-shot))
  - State
  - StatusBar
  - Toast (by [dore-toast](https://github.com/GrowthStudio/dore-toast))
@@ -52,7 +53,6 @@ Features
  - fs
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - QRCode
- - ScreenShot ([cordova](https://github.com/gitawego/cordova-screenshot), [RN](https://github.com/gre/react-native-view-shot))
  - Share
  - SMS
  - Storage
@@ -393,6 +393,30 @@ $scope.checkMultiple = function () {
 };
 ```
 
+### Screenshot
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| captureScreen        |     string    |     URI               |
+
+
+install: 
+
+```
+yarn add react-native-view-shot
+react-native link react-native-view-shot
+```
+
+inject:
+
+```
+import { captureScreen } from "react-native-view-shot";
+
+Dore.inject([{
+  name: 'Capture',
+  class: captureScreen
+}]);
+```
 
 Development
 ---
