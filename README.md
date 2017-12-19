@@ -344,6 +344,56 @@ $scope.removeEventListener = function() {
 };
 ```
 
+### Orientation
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| getOrientation       |     promise   |    string             |
+| lockToLandscape      |        -      |     -                 |
+| lockToPortrait       |        -      |     -                 |
+
+```
+$scope.lockToLandscape = function() {
+  DoreClient.lockToLandscape();
+};
+$scope.lockToPortrait = function() {
+  DoreClient.lockToPortrait();
+};
+$scope.getConnectionInfo = function() {
+  DoreClient.getConnectionInfo().then(function(data) {
+    $scope.connectionInfo = data;
+    $scope.$apply();
+  });
+};
+```
+
+### Permissions
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| checkPermissions     |     promise   |      JSON             |
+| requestPermissions   |     promise   |      JSON             |
+| checkMultiple        |     promise   |      JSON             |
+
+```
+$scope.checkPermissions = function () {
+  DoreClient.checkPermissions('camera').then(function(response) {
+    DoreClient.showToast(JSON.stringify(response));
+  })
+};
+$scope.requestPermissions = function () {
+  DoreClient.requestPermissions('camera').then(function(response) {
+    DoreClient.showToast(JSON.stringify(response));
+  })
+};
+$scope.checkMultiple = function () {
+  DoreClient.checkMultiple(['camera', 'photo']).then(function(response) {
+    DoreClient.showToast(JSON.stringify(response));
+  })
+};
+```
+
+
 Development
 ---
  
