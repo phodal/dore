@@ -138,6 +138,66 @@ $scope.showToast = function () {
 APIs
 ---
 
+### App State
+
+```
+DoreClient.addStateListener();
+$ionicPlatform.on('STATE', function(event) {
+  DoreClient.showToast(event.detail.data);
+});
+```
+
+### Back（ Android Only)
+
+example:
+
+```
+$ionicPlatform.on('ANDROID_BACK', function (event) {
+  DoreClient.showToast('ANDROID_BACK');
+});
+```
+
+### Badge
+
+| function         | return type   |    return             |
+-------------------|---------------|-----------------------|
+| setBadge         |        -      |  -   |
+| getBadge         |  promise      | { badge: 'xx' }     |
+| clearBadge       |   -           |     -     |
+
+```
+$scope.getBadge = function () {
+  DoreClient.getBadge().then(function (data) {
+    $scope.badge = data.badge;
+    $scope.$apply();
+  })
+};
+$scope.setBadge = function() {
+  DoreClient.setBadge(19);
+};
+$scope.clearBadge = function() {
+  DoreClient.clearBadge();
+};
+```
+
+### Brightness
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| getBrightnessLevel   |  promise      | { brightness: 'xx' }  |
+| setBrightnessLevel   |       -       |      -                |
+
+```
+$scope.getBrightness = function () {
+  DoreClient.getBrightnessLevel().then(function(brightness) {
+    $scope.brightness = brightness;
+    $scope.$apply();
+  })
+};
+$scope.setBrightness = function () {
+  DoreClient.setBrightnessLevel(0.2);
+};
+```
 
 ### DeviceInfo
 
