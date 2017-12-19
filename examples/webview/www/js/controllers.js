@@ -131,12 +131,12 @@ angular
         DoreClient.showToast(JSON.stringify(response));
       })
     };
-    $scope.setBrightness = function () {
+    $scope.requestPermissions = function () {
       DoreClient.requestPermissions('camera').then(function(response) {
         DoreClient.showToast(JSON.stringify(response));
       })
     };
-    $scope.setBrightness = function () {
+    $scope.checkMultiple = function () {
       DoreClient.checkMultiple(['camera', 'photo']).then(function(response) {
         DoreClient.showToast(JSON.stringify(response));
       })
