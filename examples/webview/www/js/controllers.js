@@ -126,6 +126,9 @@ angular
         $scope.$apply();
       })
     };
+    $scope.setBrightness = function () {
+      DoreClient.setBrightnessLevel(0.2);
+    };
     $scope.checkPermissions = function () {
       DoreClient.checkPermissions('camera').then(function(response) {
         DoreClient.showToast(JSON.stringify(response));
