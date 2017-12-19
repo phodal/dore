@@ -211,7 +211,22 @@ $scope.setBrightness = function () {
 | isEmulator       |  promise      | boolean               |
 | isTablet         |  promise      | boolean               |
  
-
+examples: 
+ 
+```
+$scope.getAppVersion = function() {
+  DoreClient.getAppVersion().then(function(data) {
+    $scope.version = data.version;
+    $scope.$apply();
+  });
+};
+$scope.isTablet = function() {
+  DoreClient.isTablet().then(function(data) {
+    $scope.isTablet = data;
+    $scope.$apply();
+  });
+};
+```
 All Examples
 ---
 
