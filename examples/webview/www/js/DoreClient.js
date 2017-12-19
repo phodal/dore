@@ -5,11 +5,11 @@
     module.exports = global.document
       ? factory(global, true)
       : function(w) {
-        if (!w.document) {
-          throw new Error('jQuery requires a window with a document');
-        }
-        return factory(w);
-      };
+          if (!w.document) {
+            throw new Error('jQuery requires a window with a document');
+          }
+          return factory(w);
+        };
   } else {
     factory(global);
   }
@@ -101,8 +101,8 @@
         badgeNumber: badgeNumber
       });
     },
-    cleanBadge: function () {
-      return invoke('BADGE', {type: 'CLEAN_BADGE'});
+    clearBadge: function () {
+      return invoke('BADGE', {type: 'CLEAR_BADGE'});
     },
     hideKeyboard: function() {
       return invoke('KEYBOARD', { type: 'DISMISS' });
@@ -182,7 +182,7 @@
     checkMultiple: function (permission, options) {
       return getAsyncData('PERMISSIONS', {type: 'CHECK_MULTIPLE', permission: permission, options: options});
     },
-    console: {
+     console: {
       // assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
       assert: function(test, message, ...optionalParams) {
         return invoke('CONSOLE', {
@@ -346,7 +346,7 @@
           optionalParams
         });
       }
-    }};
+  }};
 
   function awaitPostMessage() {
     var isReactNativePostMessageReady = !!window.originalPostMessage;

@@ -47,6 +47,9 @@ angular
     $scope.setBadge = function() {
       DoreClient.setBadge(19);
     };
+    $scope.clearBadge = function() {
+      DoreClient.clearBadge();
+    };
     $scope.showDatePicker = function () {
       var options = {
         date: '2017-10-22 12:12:12',
