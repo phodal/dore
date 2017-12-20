@@ -210,7 +210,7 @@
           type: 'assert',
           test: test,
           message: message,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // clear(): void;
@@ -231,7 +231,7 @@
         return invoke('CONSOLE', {
           type: 'debug',
           message: message,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // dir(value?: any, optionalParams: any[]): void;
@@ -239,7 +239,7 @@
         return invoke('CONSOLE', {
           type: 'dir',
           value: value,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // dirxml(value: any): void;
@@ -254,7 +254,7 @@
         return invoke('CONSOLE', {
           type: 'error',
           message: message,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // exception(message?: string, optionalParams: any[]): void;
@@ -262,7 +262,7 @@
         return invoke('CONSOLE', {
           type: 'exception',
           message: message,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // group(groupTitle?: string, optionalParams: any[]): void;
@@ -270,7 +270,7 @@
         return invoke('CONSOLE', {
           type: 'group',
           groupTitle: groupTitle,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // groupCollapsed(groupTitle?: string, optionalParams: any[]): void;
@@ -278,7 +278,7 @@
         return invoke('CONSOLE', {
           type: 'groupCollapsed',
           groupTitle: groupTitle,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // groupEnd(): void;
@@ -292,7 +292,7 @@
         return invoke('CONSOLE', {
           type: 'info',
           message: message,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // log(message?: any, optionalParams: any[]): void;
@@ -300,7 +300,7 @@
         return invoke('CONSOLE', {
           type: 'log',
           message: message,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // msIsIndependentlyComposed(element: Element): boolean;
@@ -356,7 +356,7 @@
         return invoke('CONSOLE', {
           type: 'trace',
           message: message,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       },
       // warn(message?: any, optionalParams: any[]): void;
@@ -364,7 +364,7 @@
         return invoke('CONSOLE', {
           type: 'warn',
           message: message,
-          optionalParams: optionalParams
+          optionalParams: optionalParams || []
         });
       }
     }
