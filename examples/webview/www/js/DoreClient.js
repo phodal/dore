@@ -185,6 +185,12 @@
     captureScreen: function (options) {
       return getAsyncData('SCREENSHOT', {type: 'CAPTURE', options: options});
     },
+    setAsyncStorage: function (key, data) {
+      return invoke('ASYNC_STORAGE', {type: 'SET', key: key, data: data});
+    },
+    getAsyncStorage: function (key) {
+      return getAsyncData('ASYNC_STORAGE', {type: 'GET', key: key});
+    },
     console: {
       // assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
       assert: function (test, message, ...optionalParams) {

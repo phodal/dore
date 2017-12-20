@@ -195,6 +195,15 @@ angular
 
       foo();
     }
+    $scope.setAsyncStorage = function (key, data) {
+      DoreClient.setAsyncStorage(key, data);
+    };
+
+    $scope.getAsyncStorage = function (key) {
+      DoreClient.getAsyncStorage(key).then(function(response){
+        $scope.storage = response;
+      })
+    };
   })
 
   .controller('DeviceCtrl', function ($scope) {

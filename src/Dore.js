@@ -105,8 +105,8 @@ Dore.handleMessage = (event, webView) => {
     case 'STORAGE': {
       return StorageBridge(payload, webView, Dore.Storage);
     }
-    case 'ASYNCSTORAGE': {
-      return AsyncStorageBridge(payload, webView, Dore.Storage);
+    case 'ASYNC_STORAGE': {
+      return AsyncStorageBridge(payload, webView);
     }
   }
 };

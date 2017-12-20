@@ -17,7 +17,7 @@ let AsyncStorageBridge = (payload, webView) => {
       if (result === null) {
         webView.postMessage(null);
       } else {
-        webView.postMessage(response);
+        webView.postMessage(result);
       }
     });
   } else if (payload.type === 'SET') {

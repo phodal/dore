@@ -175,6 +175,16 @@
       <ion-item ng-click="captureScreen()">
         captureScreen
       </ion-item>
+
+      <div class="item item-divider">
+        Storage
+      </div>
+      <ion-item ng-click="setAsyncStorage('test', 'hello')">
+        setAsyncStorage
+      </ion-item>
+      <ion-item ng-click="getAsyncStorage('test')">
+        getAsyncStorage: {{storage}}
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>
