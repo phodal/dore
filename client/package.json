@@ -1,6 +1,6 @@
 {
   "name": "dore-client",
-  "version": "0.0.2",
+  "version": "0.3.3",
   "description": "Dore Client",
   "main": "DoreClient.js",
   "scripts": {
