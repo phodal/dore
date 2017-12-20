@@ -50,12 +50,12 @@ Features
  - BLE 
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)
  - Camera
- - Flashlight
+ - Flashlight (https://github.com/ludo/react-native-torch)
  - fs
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - QRCode
- - Share
- - SMS
+ - Share 
+ - SMS (https://github.com/tkporter/react-native-sms)
  - Storage
  - more+
  

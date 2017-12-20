@@ -7,8 +7,8 @@ import {AsyncStorage} from 'react-native';
  *
  * @example
  *
- * DoreClient.getStorage('')
- * DoreClient.saveStorage('')
+ * DoreClient.getAsyncStorage('')
+ * DoreClient.saveAsyncStorage('')
  *
  */
 let AsyncStorageBridge = (payload, webView) => {
