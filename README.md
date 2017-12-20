@@ -25,7 +25,7 @@ Features
 
 ### Support:
 
- - AsyncSTORAGE
+ - AsyncStorage
  - BackHandler (Android)
  - Badge (by [react-native-icon-badge](https://github.com/uuau99999/react-native-icon-badge)
  - Brightness （by [react-native-device-brightness](https://github.com/Calvin-Huang/react-native-device-brightness))
@@ -46,7 +46,7 @@ Features
  
 ### Todo 
  
- - APP Availability (https://github.com/ohh2ahh/AppAvailability)
+ - APP Availability (https://github.com/redpandatronicsuk/react-native-check-app-install)
  - Battery (https://github.com/oojr/react-native-battery)
  - BLE 
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)

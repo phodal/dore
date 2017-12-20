@@ -191,6 +191,18 @@
     getAsyncStorage: function (key) {
       return getAsyncData('ASYNC_STORAGE', {type: 'GET', key: key});
     },
+    getAppList: function () {
+      return getAsyncData('AVAILABILITY', {type: 'GET_LIST'});
+    },
+    isAppInstalled: function (key) {
+      return getAsyncData('AVAILABILITY', {type: 'IS_INSTALLED', key: key});
+    },
+    isAppInstalledAndroid: function (key) {
+      return getAsyncData('AVAILABILITY', {type: 'IS_INSTALLED_ANDROID', key: key});
+    },
+    checkURLScheme: function (key) {
+      return getAsyncData('AVAILABILITY', {type: 'URL_SCHEME', key: key});
+    },
     console: {
       // assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
       assert: function (test, message, ...optionalParams) {

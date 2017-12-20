@@ -21,6 +21,7 @@ import ConsoleBridge from './bridge/ConsoleBridge';
 import ScreenshotBridge from "./bridge/ScreenshotBridge";
 import StorageBridge from "./bridge/StorageBridge";
 import AsyncStorageBridge from "./bridge/AsyncStorageBridge";
+import AvailabilityBridge from "./bridge/AvailabilityBridge";
 
 const Dore = {};
 
@@ -107,6 +108,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'ASYNC_STORAGE': {
       return AsyncStorageBridge(payload, webView);
+    }
+    case 'AVAILABILITY': {
+      return AvailabilityBridge(payload, webView);
     }
   }
 };
