@@ -334,7 +334,7 @@
         });
       },
       // trace(message?: any, ...optionalParams: any[]): void;
-      trace: function (message, optionalParams) {
+      trace: function (message, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'trace',
           message,
@@ -342,7 +342,7 @@
         });
       },
       // warn(message?: any, ...optionalParams: any[]): void;
-      warn: function (message, optionalParams) {
+      warn: function (message, ...optionalParams) {
         return invoke('CONSOLE', {
           type: 'warn',
           message,

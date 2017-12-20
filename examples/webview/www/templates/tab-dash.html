@@ -139,10 +139,36 @@
       <div class="item item-divider">
         Console
       </div>
-      <ion-item ng-click="console.log('try use log')">
-        log
+      <ion-item
+        ng-click="console.log('output text inline console');">
+        log inline
       </ion-item>
-
+      <ion-item ng-click="outputSingleObject()">
+        Outputting a single object
+      </ion-item>
+      <ion-item ng-click="outputMultipleObjects()">
+        Outputting multiple objects
+      </ion-item>
+      <ion-item ng-click="stringSubstitutions()">
+        Using string substitutions
+      </ion-item>
+      <ion-item ng-click="stylingConsoleOutput()">
+        Styling console output
+      </ion-item>
+      <ion-item ng-click="groupInTheConsole()">
+        Using groups in the console
+      </ion-item>
+      <ion-item ng-click="timers()">
+        Timers
+      </ion-item>
+      <ion-item ng-click="stackTraces()">
+        Stack traces
+      </ion-item>
+      <ion-item ng-click="console.clear()">
+        clear
+      </ion-item>
+      <ion-item ng-click="">
+      </ion-item>
       <div class="item item-divider">
         captureScreen
       </div>
