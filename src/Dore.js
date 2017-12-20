@@ -102,7 +102,7 @@ Dore.handleMessage = (event, webView) => {
       return ScreenshotBridge(payload, webView, Dore.Capture);
     }
     case 'STORAGE': {
-      return StorageBridge(payload, webView, Dore.Capture);
+      return StorageBridge(payload, webView, Dore.Storage);
     }
   }
 };

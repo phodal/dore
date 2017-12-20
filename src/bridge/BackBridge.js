@@ -12,8 +12,6 @@ import WebViewEventHelper from '../helper/WebViewEventHelper';
  * });
  *
  */
-let BackBridge = {};
-
 let bridgeWebView = null;
 let handler = () => {
   if (bridgeWebView) {
@@ -21,12 +19,14 @@ let handler = () => {
   }
 };
 
-BackBridge.addListener = (webView) => {
-  bridgeWebView = webView;
-  BackHandler.addEventListener('hardwareBackPress', handler);
-};
-BackBridge.removeListener = () => {
-  BackHandler.removeEventListener('hardwareBackPress', handler);
+let BackBridge = {
+  addListener: (webView) => {
+    bridgeWebView = webView;
+    BackHandler.addEventListener('hardwareBackPress', handler);
+  },
+  removeListener: () => {
+    BackHandler.removeEventListener('hardwareBackPress', handler);
+  }
 };
 
 export default BackBridge
