@@ -25,6 +25,7 @@ Features
 
 ### Support:
 
+ - AsyncSTORAGE
  - BackHandler (Android)
  - Badge (by [react-native-icon-badge](https://github.com/uuau99999/react-native-icon-badge)
  - Brightness （by [react-native-device-brightness](https://github.com/Calvin-Huang/react-native-device-brightness))
@@ -152,6 +153,21 @@ DoreClient.addStateListener();
 $ionicPlatform.on('STATE', function(event) {
   DoreClient.showToast(event.detail.data);
 });
+```
+
+### AsyncSTORAGE
+
+| function         | return type   |    return             |
+-------------------|---------------|-----------------------|
+| setAsyncStorage  |        -      |        -              |
+| getAsyncStorage  |  promise      |    string             |
+
+```
+DoreClient.setAsyncStorage(key, data);
+
+DoreClient.getAsyncStorage(key).then(function(response){
+  
+})
 ```
 
 ### Back（ Android Only)
