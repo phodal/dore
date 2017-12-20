@@ -19,6 +19,7 @@ import PermissionsBridge from './bridge/PermissionsBridge';
 
 import ConsoleBridge from './bridge/ConsoleBridge';
 import ScreenshotBridge from "./bridge/ScreenshotBridge";
+import StorageBridge from "./bridge/StorageBridge";
 
 const Dore = {};
 
@@ -99,6 +100,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'SCREENSHOT': {
       return ScreenshotBridge(payload, webView, Dore.Capture);
+    }
+    case 'STORAGE': {
+      return StorageBridge(payload, webView, Dore.Capture);
     }
   }
 };
