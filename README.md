@@ -58,6 +58,8 @@ Features
  - Share 
  - SMS (https://github.com/tkporter/react-native-sms)
  - Storage
+ - SQLite (https://github.com/andpor/react-native-sqlite-storage)
+ - TTS (https://github.com/naoufal/react-native-speech)
  - more+
  
 Usage
