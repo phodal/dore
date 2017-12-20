@@ -163,11 +163,15 @@ $ionicPlatform.on('STATE', function(event) {
 | getAsyncStorage  |  promise      |    string             |
 
 ```
-DoreClient.setAsyncStorage(key, data);
+$scope.setAsyncStorage = function (key, data) {
+  DoreClient.setAsyncStorage(key, data);
+};
 
-DoreClient.getAsyncStorage(key).then(function(response){
-  
-})
+$scope.getAsyncStorage = function (key) {
+  DoreClient.getAsyncStorage(key).then(function(response){
+    $scope.storage = response.data;
+  })
+};
 ```
 
 ### Back（ Android Only)

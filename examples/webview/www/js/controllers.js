@@ -201,7 +201,7 @@ angular
 
     $scope.getAsyncStorage = function (key) {
       DoreClient.getAsyncStorage(key).then(function(response){
-        $scope.storage = response;
+        $scope.storage = response.data;
       })
     };
   })
