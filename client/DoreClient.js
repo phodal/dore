@@ -204,13 +204,13 @@
       return getAsyncData('AVAILABILITY', {type: 'URL_SCHEME', key: key});
     },
     console: {
-      // assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
-      assert: function (test, message, ...optionalParams) {
+      // assert(test?: boolean, message?: string, optionalParams: any[]): void;
+      assert: function (test, message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'assert',
-          test,
-          message,
-          optionalParams
+          test: test,
+          message: message,
+          optionalParams: optionalParams
         });
       },
       // clear(): void;
@@ -223,62 +223,62 @@
       count: function (countTitle) {
         return invoke('CONSOLE', {
           type: 'count',
-          countTitle
+          countTitle: countTitle
         });
       },
-      // debug(message?: any, ...optionalParams: any[]): void;
-      debug: function (message, ...optionalParams) {
+      // debug(message?: any, optionalParams: any[]): void;
+      debug: function (message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'debug',
-          message,
-          optionalParams
+          message: message,
+          optionalParams: optionalParams
         });
       },
-      // dir(value?: any, ...optionalParams: any[]): void;
-      dir: function (value, ...optionalParams) {
+      // dir(value?: any, optionalParams: any[]): void;
+      dir: function (value, optionalParams) {
         return invoke('CONSOLE', {
           type: 'dir',
-          value,
-          optionalParams
+          value: value,
+          optionalParams: optionalParams
         });
       },
       // dirxml(value: any): void;
       dirxml: function (value) {
         return invoke('CONSOLE', {
           type: 'dirxml',
-          value
+          value: value
         });
       },
-      // error(message?: any, ...optionalParams: any[]): void;
-      error: function (message, ...optionalParams) {
+      // error(message?: any, optionalParams: any[]): void;
+      error: function (message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'error',
-          message,
-          optionalParams
+          message: message,
+          optionalParams: optionalParams
         });
       },
-      // exception(message?: string, ...optionalParams: any[]): void;
-      exception: function (message, ...optionalParams) {
+      // exception(message?: string, optionalParams: any[]): void;
+      exception: function (message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'exception',
-          message,
-          optionalParams
+          message: message,
+          optionalParams: optionalParams
         });
       },
-      // group(groupTitle?: string, ...optionalParams: any[]): void;
-      group: function (groupTitle, ...optionalParams) {
+      // group(groupTitle?: string, optionalParams: any[]): void;
+      group: function (groupTitle, optionalParams) {
         return invoke('CONSOLE', {
           type: 'group',
-          groupTitle,
-          optionalParams
+          groupTitle: groupTitle,
+          optionalParams: optionalParams
         });
       },
-      // groupCollapsed(groupTitle?: string, ...optionalParams: any[]): void;
-      groupCollapsed: function (groupTitle, ...optionalParams) {
+      // groupCollapsed(groupTitle?: string, optionalParams: any[]): void;
+      groupCollapsed: function (groupTitle, optionalParams) {
         return invoke('CONSOLE', {
           type: 'groupCollapsed',
-          groupTitle,
-          optionalParams
+          groupTitle: groupTitle,
+          optionalParams: optionalParams
         });
       },
       // groupEnd(): void;
@@ -287,34 +287,34 @@
           type: 'groupEnd'
         });
       },
-      // info(message?: any, ...optionalParams: any[]): void;
-      info: function (message, ...optionalParams) {
+      // info(message?: any, optionalParams: any[]): void;
+      info: function (message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'info',
-          message,
-          optionalParams
+          message: message,
+          optionalParams: optionalParams
         });
       },
-      // log(message?: any, ...optionalParams: any[]): void;
-      log: function (message, ...optionalParams) {
+      // log(message?: any, optionalParams: any[]): void;
+      log: function (message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'log',
-          message,
-          optionalParams
+          message: message,
+          optionalParams: optionalParams
         });
       },
       // msIsIndependentlyComposed(element: Element): boolean;
       msIsIndependentlyComposed: function (element) {
         return invoke('CONSOLE', {
           type: 'msIsIndependentlyComposed',
-          element
+          element: element
         });
       },
       // profile(reportName?: string): void;
       profile: function (reportName) {
         return invoke('CONSOLE', {
           type: 'profile',
-          reportName
+          reportName: reportName
         });
       },
       // profileEnd(): void;
@@ -327,44 +327,44 @@
       select: function (element) {
         return invoke('CONSOLE', {
           type: 'select',
-          element
+          element: element
         });
       },
-      // table(...data: any[]): void;
+      // table(data: any[]): void;
       table: function (data) {
         return invoke('CONSOLE', {
           type: 'table',
-          data
+          data: data
         });
       },
       // time(timerName?: string): void;
       time: function (timerName) {
         return invoke('CONSOLE', {
           type: 'time',
-          timerName
+          timerName: timerName
         });
       },
       // timeEnd(timerName?: string): void;
       timeEnd: function (timerName) {
         return invoke('CONSOLE', {
           type: 'timeEnd',
-          timerName
+          timerName: timerName
         });
       },
-      // trace(message?: any, ...optionalParams: any[]): void;
-      trace: function (message, ...optionalParams) {
+      // trace(message?: any, optionalParams: any[]): void;
+      trace: function (message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'trace',
-          message,
-          optionalParams
+          message: message,
+          optionalParams: optionalParams
         });
       },
-      // warn(message?: any, ...optionalParams: any[]): void;
-      warn: function (message, ...optionalParams) {
+      // warn(message?: any, optionalParams: any[]): void;
+      warn: function (message, optionalParams) {
         return invoke('CONSOLE', {
           type: 'warn',
-          message,
-          optionalParams
+          message: message,
+          optionalParams: optionalParams
         });
       }
     }

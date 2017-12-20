@@ -151,16 +151,16 @@ angular
     };
     $scope.console = console; //  can use inline console function after register
     $scope.outputSingleObject = function () {
-      let someObject = {str: "Some text", id: 5};
+      var someObject = {str: "Some text", id: 5};
       console.log(someObject);
     };
     $scope.outputMultipleObjects = function () {
-      let car = "Dodge Charger";
-      let someObject = {str: "Some text", id: 5};
+      var car = "Dodge Charger";
+      var someObject = {str: "Some text", id: 5};
       console.info("My first car was a", car, ". The object is:", someObject);
     };
     $scope.stringSubstitutions = function () {
-      for (let i = 0; i < 5; i++) {
+      for (var i = 0; i < 5; i++) {
         console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
       }
     };
