@@ -229,6 +229,10 @@ $ionicPlatform.on('PASTE', function(event) {
 DoreClient.paste();
 ```
 
+### Console
+
+> send WebView console to React Native
+
 ### DatePicker
 
 
@@ -416,6 +420,55 @@ Dore.inject([{
   name: 'Capture',
   class: captureScreen
 }]);
+```
+
+Usage
+
+```
+DoreClient.captureScreen().then(function(response) {
+  
+})
+```
+
+### StatusBar
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| hideStatusBar        |     -         |       -               |
+| showStatusBar        |     -         |       -               |
+
+```
+DoreClient.hideStatusBar();
+DoreClient.showStatusBar();
+```
+
+
+### Toast
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| show                 |     -         |       -               |
+
+``DoreClient.showToast(String,  duration: short | long ,  position: 'center' | 'top')``
+
+```
+DoreClient.showToast('this is a toast');
+
+DoreClient.showToast('this is a toast', 'long', 'center');
+```
+
+### Vibration
+
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| vibrate              |     -         |       -               |
+| show                 |     -         |       -               |
+
+```
+DoreClient.vibrationVibrate(1000);
+
+DoreClient.vibrationCancel();
 ```
 
 Development
