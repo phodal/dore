@@ -260,21 +260,24 @@ DoreClient.paste();
 ```
     $scope.console = console; //  can use inline console function after register
     $scope.outputSingleObject = function () {
-      let someObject = {str: "Some text", id: 5};
+      var someObject = {str: "Some text", id: 5};
       console.log(someObject);
     };
     $scope.outputMultipleObjects = function () {
-      let car = "Dodge Charger";
-      let someObject = {str: "Some text", id: 5};
-      console.info("My first car was a", car, ". The object is:", someObject);
+      var car = "Dodge Charger";
+      var someObject = {str: "Some text", id: 5};
+      var optionalParams = [car, ". The object is:", someObject];
+      console.info("My first car was a", optionalParams);
     };
     $scope.stringSubstitutions = function () {
-      for (let i = 0; i < 5; i++) {
-        console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
+      for (var i = 0; i < 5; i++) {
+        var optionalParams = [ "Bob", i + 1];
+        console.log("Hello, %s. You've called me %d times.", optionalParams);
       }
     };
     $scope.stylingConsoleOutput = function () {
-      console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+      var optionalParams = ["color: yellow; font-style: italic; background-color: blue;padding: 2px"];
+      console.log("This is %cMy stylish message", optionalParams);
     };
     $scope.groupInTheConsole = function () {
       console.log("This is the outer level");
@@ -303,7 +306,8 @@ DoreClient.paste();
       }
 
       foo();
-    }
+    };
+
 ```
 ### DatePicker
 
