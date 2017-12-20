@@ -19,6 +19,7 @@
   "dependencies": {
     "dore": "0.3.3",
     "dore-icon-badge": "1.2.1",
+    "dore-open": "../../dore-open/",
     "dore-toast": "^1.0.8",
     "react": "16.0.0",
     "react-native": "0.50.3",

@@ -7,6 +7,7 @@ import RNDeviceInfo from "react-native-device-info";
 import DeviceBrightness from 'react-native-device-brightness';
 import Permissions from 'react-native-permissions'
 import { captureScreen } from "react-native-view-shot";
+import DoreOpen from "dore-open";
 
 import Dore from 'dore';
 
@@ -68,6 +69,7 @@ export default class ExampleWebView extends Component {
   };
 
   render() {
+    DoreOpen.open('./www/index.html');
     const source = require('./www/index.html');
 
     return (

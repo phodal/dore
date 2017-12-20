@@ -137,6 +137,7 @@ android {
 }
 
 dependencies {
+    compile project(':dore-open')
     compile project(':react-native-view-shot')
     compile project(':react-native-device-brightness')
     compile project(':dore-icon-badge')

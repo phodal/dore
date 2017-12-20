@@ -3,6 +3,7 @@ package com.examples;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.phodal.dore.open.DoreOpenPackage;
 import fr.greweb.reactnativeviewshot.RNViewShotPackage;
 import org.capslock.RNDeviceBrightness.RNDeviceBrightness;
 import com.hoyup.rniconbadge.RNIconBadge;
@@ -29,6 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new DoreOpenPackage(),
             new RNViewShotPackage(),
             new RNDeviceBrightness(),
             new RNIconBadge(),

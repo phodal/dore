@@ -1,4 +1,6 @@
 rootProject.name = 'examples'
+include ':dore-open'
+project(':dore-open').projectDir = new File(rootProject.projectDir, '../node_modules/dore-open/android')
 include ':react-native-view-shot'
 project(':react-native-view-shot').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-view-shot/android')
 include ':react-native-device-brightness'
