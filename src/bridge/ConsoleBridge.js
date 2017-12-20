@@ -5,7 +5,7 @@ let ConsoleBridge = function (payload) {
     // assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
     case 'assert':
       if (typeof console.assert === 'function') {
-        console.assert(payload.test, payload.message);
+        console.assert(payload.test, payload.message, ...payload.optionalParams);
       }
       break;
     // clear(): void;
@@ -23,13 +23,13 @@ let ConsoleBridge = function (payload) {
     // debug(message?: any, ...optionalParams: any[]): void;
     case 'debug':
       if (typeof console.debug === 'function') {
-        console.debug(payload.message);
+        console.debug(payload.message, ...payload.optionalParams);
       }
       break;
     // dir(value?: any, ...optionalParams: any[]): void;
     case 'dir':
       if (typeof console.dir === 'function') {
-        console.dir(payload.value);
+        console.dir(payload.value, ...payload.optionalParams);
       }
       break;
     // dirxml(value: any): void;
@@ -41,25 +41,25 @@ let ConsoleBridge = function (payload) {
     // error(message?: any, ...optionalParams: any[]): void;
     case 'error':
       if (typeof console.error === 'function') {
-        console.error(payload.message);
+        console.error(payload.message, ...payload.optionalParams);
       }
       break;
     // exception(message?: string, ...optionalParams: any[]): void;
     case 'exception':
       if (typeof console.exception === 'function') {
-        console.exception(payload.message);
+        console.exception(payload.message, ...payload.optionalParams);
       }
       break;
     // group(groupTitle?: string, ...optionalParams: any[]): void;
     case 'group':
       if (typeof console.group === 'function') {
-        console.group(payload.groupTitle);
+        console.group(payload.groupTitle, ...payload.optionalParams);
       }
       break;
     // groupCollapsed(groupTitle?: string, ...optionalParams: any[]): void;
     case 'groupCollapsed':
       if (typeof console.groupCollapsed === 'function') {
-        console.groupCollapsed(payload.groupTitle);
+        console.groupCollapsed(payload.groupTitle, ...payload.optionalParams);
       }
       break;
     // groupEnd(): void;
@@ -71,13 +71,13 @@ let ConsoleBridge = function (payload) {
     // info(message?: any, ...optionalParams: any[]): void;
     case 'info':
       if (typeof console.info === 'function') {
-        console.info(payload.message);
+        console.info(payload.message, ...payload.optionalParams);
       }
       break;
     // log(message?: any, ...optionalParams: any[]): void;
     case 'log':
       if (typeof console.log === 'function') {
-        console.log(payload.message);
+        console.log(payload.message, ...payload.optionalParams);
       }
       break;
     // msIsIndependentlyComposed(element: Element): boolean;
@@ -125,13 +125,13 @@ let ConsoleBridge = function (payload) {
     // trace(message?: any, ...optionalParams: any[]): void;
     case 'trace':
       if (typeof console.trace === 'function') {
-        console.trace(payload.message);
+        console.trace(payload.message, ...payload.optionalParams);
       }
       break;
     // warn(message?: any, ...optionalParams: any[]): void;
     case 'warn':
       if (typeof console.warn === 'function') {
-        console.warn(payload.message);
+        console.warn(payload.message, ...payload.optionalParams);
       }
       break;
   }
