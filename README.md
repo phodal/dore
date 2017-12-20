@@ -47,6 +47,7 @@ Features
 ### Todo 
  
  - APP Availability (https://github.com/ohh2ahh/AppAvailability)
+ - Battery (https://github.com/oojr/react-native-battery)
  - BLE 
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)
  - Camera
