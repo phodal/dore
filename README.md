@@ -229,10 +229,58 @@ $ionicPlatform.on('PASTE', function(event) {
 DoreClient.paste();
 ```
 
-### Console
+### Console ([MDN Console](https://developer.mozilla.org/en-US/docs/Web/API/Console))
 
 > send WebView console to React Native
 
+```
+    $scope.console = console; //  can use inline console function after register
+    $scope.outputSingleObject = function () {
+      let someObject = {str: "Some text", id: 5};
+      console.log(someObject);
+    };
+    $scope.outputMultipleObjects = function () {
+      let car = "Dodge Charger";
+      let someObject = {str: "Some text", id: 5};
+      console.info("My first car was a", car, ". The object is:", someObject);
+    };
+    $scope.stringSubstitutions = function () {
+      for (let i = 0; i < 5; i++) {
+        console.log("Hello, %s. You've called me %d times.", "Bob", i + 1);
+      }
+    };
+    $scope.stylingConsoleOutput = function () {
+      console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+    };
+    $scope.groupInTheConsole = function () {
+      console.log("This is the outer level");
+      console.group();
+      console.log("Level 2");
+      console.group();
+      console.log("Level 3");
+      console.warn("More of level 3");
+      console.groupEnd();
+      console.log("Back to level 2");
+      console.groupEnd();
+      console.debug("Back to the outer level");
+    };
+    $scope.timers = function () {
+      console.time("answer time");
+      alert("Click to continue");
+      console.timeEnd("answer time");
+    };
+    $scope.stackTraces = function () {
+      function foo() {
+        function bar() {
+          console.trace();
+        }
+
+        bar();
+      }
+
+      foo();
+    }
+```
 ### DatePicker
 
 
