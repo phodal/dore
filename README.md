@@ -56,6 +56,7 @@ Features
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - QRCode
  - Share 
+ - Shake (https://github.com/jadsonlourenco/react-native-shake-event)
  - SMS (https://github.com/tkporter/react-native-sms)
  - Storage
  - SQLite (https://github.com/andpor/react-native-sqlite-storage)
