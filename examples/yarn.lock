@@ -1458,8 +1458,8 @@ dore-icon-badge@1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/dore-icon-badge/-/dore-icon-badge-1.2.1.tgz#f7602e3ce369838b0e2a8cb9050b0cc571d0f86b"
 
-dore-open@../../dore-open/:
-  version "0.0.1"
+dore-open@../../dore-open:
+  version "0.0.2"
 
 dore-toast@^1.0.8:
   version "1.0.8"
