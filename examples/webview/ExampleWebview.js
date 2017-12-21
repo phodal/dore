@@ -69,7 +69,7 @@ export default class ExampleWebView extends Component {
   };
 
   render() {
-    DoreOpen.open('./www/index.html');
+    DoreOpen.open('./sample.pdf');
     const source = require('./www/index.html');
 
     return (
