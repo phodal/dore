@@ -1462,9 +1462,9 @@ dore-toast@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/dore-toast/-/dore-toast-1.0.8.tgz#25c3a8a7d6ddcbfdb190e82660a4ded55fd72680"
 
-dore@0.3.3:
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/dore/-/dore-0.3.3.tgz#f7f7a7052922ff5ef69dc2b13460131c147e88c3"
+dore@0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/dore/-/dore-0.3.4.tgz#00074af7708624eec4bed3195dea47f6b40cc019"
 
 duplexer2@0.0.2:
   version "0.0.2"
