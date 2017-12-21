@@ -24,7 +24,8 @@ Features
 ---
 
 ### Support:
-
+ 
+ - AppAvailability ([react-native-check-app-install](https://github.com/redpandatronicsuk/react-native-check-app-install))
  - AsyncStorage
  - BackHandler (Android)
  - Badge (by [react-native-icon-badge](https://github.com/uuau99999/react-native-icon-badge)
@@ -45,8 +46,7 @@ Features
  - Vibration
  
 ### Todo 
- 
- - APP Availability (https://github.com/redpandatronicsuk/react-native-check-app-install)
+
  - Battery (https://github.com/oojr/react-native-battery)
  - BLE 
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)
@@ -147,6 +147,41 @@ $scope.showToast = function () {
 
 APIs
 ---
+
+### AppAvailability
+
+
+| function         | return type   |    return             |
+-------------------|---------------|-----------------------|
+| isAppInstalled   |  promise      |    string             |
+| isAppInstalledAndroid  |  promise      |    string             |
+| checkURLScheme  |  promise      |    string             |
+
+install:
+
+```
+yarn add react-native-check-app-install
+react-native link
+```
+
+inject:
+
+```
+import { AppInstalledChecker } from "react-native-check-app-install";
+
+Dore.inject([{
+      name: 'AppInstalledChecker',
+      class: AppInstalledChecker
+    }]);
+```
+
+examples:
+
+```
+DoreClient.checkURLScheme('whatsapp').then(function(response){
+  $scope.isAppInstalled = response;
+})
+```
 
 ### App State
 
