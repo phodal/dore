@@ -10,10 +10,10 @@ import GeolocationBridge from './bridge/GeolocationBridge';
 import OrientationBridge from './bridge/OrientationBridge';
 import NetInfoBridge from './bridge/NetInfoBridge';
 import StatusBarBridge from './bridge/StatusBarBridge';
-import StateBridge from './bridge/StateBridge';
+import AppStateEvent from './events/AppStateEvent';
 import VibrationBridge from './bridge/VibrationBridge';
 
-import BackBridge from './bridge/BackBridge';
+import BackEvent from './events/BackEvent';
 import BrightnessBridge from './bridge/BrightnessBridge';
 import PermissionsBridge from './bridge/PermissionsBridge';
 
@@ -33,11 +33,11 @@ Dore.inject = modules => {
 };
 
 Dore.addHandler = (webView) => {
-  BackBridge.addListener(webView);
+  BackEvent.addListener(webView);
 };
 
 Dore.removeHandler = () => {
-  BackBridge.removeListener();
+  BackEvent.removeListener();
 };
 
 Dore.handleMessage = (event, webView) => {
@@ -86,7 +86,7 @@ Dore.handleMessage = (event, webView) => {
       return StatusBarBridge(payload);
     }
     case 'STATE': {
-      return StateBridge(payload, webView);
+      return AppStateEvent(payload, webView);
     }
     case 'VIBRATION': {
       return VibrationBridge(payload, webView, Dore.Vibration)
