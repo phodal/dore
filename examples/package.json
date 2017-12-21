@@ -22,6 +22,7 @@
     "dore-toast": "^1.0.8",
     "react": "16.0.0",
     "react-native": "0.50.3",
+    "react-native-check-app-install": "^0.0.4",
     "react-native-device-brightness": "^1.2.0",
     "react-native-device-info": "^0.13.0",
     "react-native-notag-datepicker": "^0.0.1",

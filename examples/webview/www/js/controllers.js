@@ -207,6 +207,11 @@ angular
         $scope.storage = response.data;
       })
     };
+    $scope.getAppList = function (key) {
+      DoreClient.getAppList().then(function(response){
+        $scope.app_list = response.data;
+      })
+    };
   })
 
   .controller('DeviceCtrl', function ($scope) {

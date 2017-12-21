@@ -110,7 +110,7 @@ Dore.handleMessage = (event, webView) => {
       return AsyncStorageBridge(payload, webView);
     }
     case 'AVAILABILITY': {
-      return AvailabilityBridge(payload, webView);
+      return AvailabilityBridge(payload, webView, Dore.AppInstalledChecker);
     }
   }
 };

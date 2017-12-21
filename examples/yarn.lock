@@ -3474,6 +3474,10 @@ react-devtools-core@^2.5.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-check-app-install@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-check-app-install/-/react-native-check-app-install-0.0.4.tgz#336b842e9816c9af373498fe397072ec9c54ed40"
+
 react-native-device-brightness@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-native-device-brightness/-/react-native-device-brightness-1.2.0.tgz#f6498ca5af4c6283212f74aa2f05d1cff0596af0"

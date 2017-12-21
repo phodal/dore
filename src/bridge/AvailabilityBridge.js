@@ -10,13 +10,7 @@
  *
  */
 let AvailabilityBridge = (payload, webView, AppInstalledChecker) => {
-  if (payload.type === 'GET_LIST') {
-    AppInstalledChecker
-      .getAppList()
-      .then((results) => {
-        webView.postMessage(JSON.stringify({apps: results}));
-      });
-  }if (payload.type === 'IS_INSTALLED') {
+  if (payload.type === 'IS_INSTALLED') {
     AppInstalledChecker
       .isAppInstalled(payload.name)
       .then((isInstalled) => {
