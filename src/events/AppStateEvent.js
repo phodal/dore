@@ -3,7 +3,7 @@ import WebViewEventHelper from "../helper/WebViewEventHelper";
 
 let stateWebView
 
-let StateBridge = (payload, webView) => {
+let AppStateEvent = (payload, webView) => {
   stateWebView = webView;
   let handleAppStateChange = (state) => {
     if (stateWebView) {
@@ -18,4 +18,4 @@ let StateBridge = (payload, webView) => {
   }
 };
 
-export default StateBridge
+export default AppStateEvent

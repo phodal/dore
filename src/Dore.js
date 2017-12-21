@@ -22,6 +22,7 @@ import ScreenshotBridge from "./bridge/ScreenshotBridge";
 import StorageBridge from "./bridge/StorageBridge";
 import AsyncStorageBridge from "./bridge/AsyncStorageBridge";
 import AvailabilityBridge from "./bridge/AvailabilityBridge";
+import ShakeEvent from "./events/ShakeEvent";
 
 const Dore = {};
 
@@ -111,6 +112,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'AVAILABILITY': {
       return AvailabilityBridge(payload, webView, Dore.AppInstalledChecker);
+    }
+    case 'SHAKE': {
+      return ShakeEvent(payload, webView, Dore.Shake);
     }
   }
 };
