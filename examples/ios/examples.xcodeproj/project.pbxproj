@@ -25,10 +25,10 @@
 		440A62F25E024B1198020D62 /* libRNNoTagDatepicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFB08140E5C456888BD3709 /* libRNNoTagDatepicker.a */; };
 		46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		7831293ADCF24CC5AB033501 /* libDoreOpen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C26A44CDF554138B39A1A1B /* libDoreOpen.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		872F254A54AE4421BF0CC35D /* libRCTToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 125FAFE5CCF04DB384AD52A3 /* libRCTToast.a */; };
 		8A9758AC82AD4E9082D3F1BB /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A48A991F21BB4047977ECB83 /* libRNDeviceInfo.a */; };
-		8F207BE760524F79B748DEC9 /* libDoreOpen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E71419D4D84E3F8F932899 /* libDoreOpen.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		AEEB1BCA551B4ADF9AD7629C /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71A6211E5748538A0726B7 /* libReactNativePermissions.a */; };
 		DA605C1EAC8444EAAB913772 /* libRNDeviceBrightness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9E2C8C09544F4B02C1E12 /* libRNDeviceBrightness.a */; };
@@ -183,6 +183,13 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
+		403CEF6B1FEC08C700AE7765 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3D8F5AFF3274858AACD9859 /* DoreOpen.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40AA2A891FEBFADC0073FC34;
+			remoteInfo = DoreOpen;
+		};
 		404E56B01FE5818B00966185 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -302,13 +309,6 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNViewShot;
 		};
-		40AA2B091FEBFC190073FC34 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D57A09508A2148A4A6885333 /* DoreOpen.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 40AA2A891FEBFADC0073FC34;
-			remoteInfo = DoreOpen;
-		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -391,6 +391,7 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		738E91CDF5CC4AF68234651C /* libRCTDoreOpen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTDoreOpen.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7C26A44CDF554138B39A1A1B /* libDoreOpen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libDoreOpen.a; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		9EFB08140E5C456888BD3709 /* libRNNoTagDatepicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNNoTagDatepicker.a; sourceTree = "<group>"; };
 		A0E9E2C8C09544F4B02C1E12 /* libRNDeviceBrightness.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceBrightness.a; sourceTree = "<group>"; };
@@ -401,8 +402,7 @@
 		BFF9CDF31FE7510900C16E87 /* RNNoTagDatepicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNNoTagDatepicker.xcodeproj; path = "../node_modules/react-native-notag-datepicker/ios/RNNoTagDatepicker.xcodeproj"; sourceTree = "<group>"; };
 		C5467694081D4D139A05092F /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
-		D57A09508A2148A4A6885333 /* DoreOpen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = DoreOpen.xcodeproj; path = "../node_modules/dore-open/iOS/DoreOpen.xcodeproj"; sourceTree = "<group>"; };
-		E8E71419D4D84E3F8F932899 /* libDoreOpen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libDoreOpen.a; sourceTree = "<group>"; };
+		E3D8F5AFF3274858AACD9859 /* DoreOpen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = DoreOpen.xcodeproj; path = "../node_modules/dore-open/iOS/DoreOpen.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -431,7 +431,7 @@
 				DA605C1EAC8444EAAB913772 /* libRNDeviceBrightness.a in Frameworks */,
 				AEEB1BCA551B4ADF9AD7629C /* libReactNativePermissions.a in Frameworks */,
 				46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */,
-				8F207BE760524F79B748DEC9 /* libDoreOpen.a in Frameworks */,
+				7831293ADCF24CC5AB033501 /* libDoreOpen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +553,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		403CEF681FEC08C700AE7765 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				403CEF6C1FEC08C700AE7765 /* libDoreOpen.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		404E56AA1FE5818B00966185 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,7 +573,7 @@
 				AC71A6211E5748538A0726B7 /* libReactNativePermissions.a */,
 				02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */,
 				738E91CDF5CC4AF68234651C /* libRCTDoreOpen.a */,
-				E8E71419D4D84E3F8F932899 /* libDoreOpen.a */,
+				7C26A44CDF554138B39A1A1B /* libDoreOpen.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -627,14 +635,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		40AA2B061FEBFC190073FC34 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				40AA2B0A1FEBFC190073FC34 /* libDoreOpen.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -676,7 +676,7 @@
 				2C9AA3E1B3EF4FCD86DE9D2E /* RNDeviceBrightness.xcodeproj */,
 				14DC5D1054B046DBB34F8646 /* ReactNativePermissions.xcodeproj */,
 				4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */,
-				D57A09508A2148A4A6885333 /* DoreOpen.xcodeproj */,
+				E3D8F5AFF3274858AACD9859 /* DoreOpen.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -786,8 +786,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 40AA2B061FEBFC190073FC34 /* Products */;
-					ProjectRef = D57A09508A2148A4A6885333 /* DoreOpen.xcodeproj */;
+					ProductGroup = 403CEF681FEC08C700AE7765 /* Products */;
+					ProjectRef = E3D8F5AFF3274858AACD9859 /* DoreOpen.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -1025,6 +1025,13 @@
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		403CEF6C1FEC08C700AE7765 /* libDoreOpen.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDoreOpen.a;
+			remoteRef = 403CEF6B1FEC08C700AE7765 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		404E56B11FE5818B00966185 /* libRCTBlob-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1142,13 +1149,6 @@
 			fileType = archive.ar;
 			path = libRNViewShot.a;
 			remoteRef = 40936C641FEAB627007987B0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		40AA2B0A1FEBFC190073FC34 /* libDoreOpen.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libDoreOpen.a;
-			remoteRef = 40AA2B091FEBFC190073FC34 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
