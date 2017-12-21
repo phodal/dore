@@ -3,6 +3,7 @@ package com.examples;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.rpt.reactnativecheckpackageinstallation.CheckPackageInstallationPackage;
 import fr.greweb.reactnativeviewshot.RNViewShotPackage;
 import org.capslock.RNDeviceBrightness.RNDeviceBrightness;
@@ -30,6 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNShakeEventPackage(),
             new CheckPackageInstallationPackage(),
             new RNViewShotPackage(),
             new RNDeviceBrightness(),

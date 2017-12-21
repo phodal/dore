@@ -1,3 +1,4 @@
+import {BackHandler} from 'react-native';
 import WebViewEventHelper from '../helper/WebViewEventHelper';
 
 /**
@@ -9,10 +10,10 @@ import WebViewEventHelper from '../helper/WebViewEventHelper';
  *
  */
 
-let ShakeEvent = (webView, Shake) => {
+let ShakeEvent = (payload, webView, Shake) => {
   if (payload.type === 'ADD_LISTENER') {
     Shake.addEventListener('shake', () => {
-      WebViewEventHelper.postEvent('SHAKE', JSON.stringify(state), webView);
+      WebViewEventHelper.postEvent('SHAKE', JSON.stringify({shake: true}), webView);
     });
   } if (payload.type === 'REMOVE_LISTENER') {
     Shake.removeEventListener('shake');

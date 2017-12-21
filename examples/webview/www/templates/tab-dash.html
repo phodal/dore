@@ -192,6 +192,16 @@
       <ion-item ng-click="checkURLScheme()">
         isAppInstalled: {{isAppInstalled}}
       </ion-item>
+
+      <div class="item item-divider">
+        Shake
+      </div>
+      <ion-item ng-click="addShakeListener()">
+        addShakeListener: {{shake}}
+      </ion-item>
+      <ion-item ng-click="removeShakeListener()">
+        removeShakeListener
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>

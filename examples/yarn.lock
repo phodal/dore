@@ -1462,9 +1462,9 @@ dore-toast@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/dore-toast/-/dore-toast-1.0.8.tgz#25c3a8a7d6ddcbfdb190e82660a4ded55fd72680"
 
-dore@0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/dore/-/dore-0.3.4.tgz#00074af7708624eec4bed3195dea47f6b40cc019"
+dore@0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/dore/-/dore-0.3.5.tgz#9400bf0f7beee41edce5d2647aaa992d69f017ec"
 
 duplexer2@0.0.2:
   version "0.0.2"
@@ -3497,6 +3497,12 @@ react-native-orientation@^3.1.0:
 react-native-permissions@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-1.0.6.tgz#504f01728191431ad4b82895c4a349981fb5802b"
+
+react-native-shake-event@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-shake-event/-/react-native-shake-event-4.0.1.tgz#b167e844b711eff50d44d029537fbb228b2ac6b2"
+  dependencies:
+    invariant "^2.2.2"
 
 react-native-view-shot@^2.2.0:
   version "2.2.0"

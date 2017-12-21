@@ -205,13 +205,25 @@ angular
     $scope.getAsyncStorage = function (key) {
       DoreClient.getAsyncStorage(key).then(function(response){
         $scope.storage = response.data;
+        $scope.$apply();
       })
     };
     $scope.checkURLScheme = function () {
       DoreClient.checkURLScheme('whatsapp').then(function(response){
         $scope.isAppInstalled = response;
+        $scope.$apply();
       })
     };
+    $scope.addShakeListener = function () {
+      $ionicPlatform.on('SHAKE', function (response) {
+        $scope.shake = response.detail.data;
+        $scope.$apply();
+      });
+      DoreClient.addShakeListener();
+    };
+    $scope.removeShakeListener = function () {
+      DoreClient.removeShakeListener();
+    }
   })
 
   .controller('DeviceCtrl', function ($scope) {

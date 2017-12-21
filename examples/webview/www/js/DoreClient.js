@@ -203,6 +203,12 @@
     checkURLScheme: function (key) {
       return getAsyncData('AVAILABILITY', {type: 'URL_SCHEME', key: key});
     },
+    addShakeListener: function () {
+      return invoke('SHAKE', {type: 'ADD_LISTENER'});
+    },
+    removeShakeListener: function () {
+      return invoke('SHAKE', {type: 'REMOVE_LISTENER'});
+    },
     console: {
       // assert(test?: boolean, message?: string, optionalParams: any[]): void;
       assert: function (test, message, optionalParams) {

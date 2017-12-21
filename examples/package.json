@@ -17,7 +17,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "dore": "0.3.4",
+    "dore": "0.3.5",
     "dore-icon-badge": "1.2.1",
     "dore-toast": "^1.0.8",
     "react": "16.0.0",
@@ -28,6 +28,7 @@
     "react-native-notag-datepicker": "^0.0.1",
     "react-native-orientation": "^3.1.0",
     "react-native-permissions": "^1.0.6",
+    "react-native-shake-event": "^4.0.1",
     "react-native-view-shot": "^2.2.0"
   }
 }
