@@ -207,9 +207,9 @@ angular
         $scope.storage = response.data;
       })
     };
-    $scope.getAppList = function (key) {
-      DoreClient.getAppList().then(function(response){
-        $scope.app_list = response.data;
+    $scope.checkURLScheme = function () {
+      DoreClient.checkURLScheme('whatsapp').then(function(response){
+        $scope.isAppInstalled = response;
       })
     };
   })
