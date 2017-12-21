@@ -1,4 +1,3 @@
-import {BackHandler} from 'react-native';
 import WebViewEventHelper from '../helper/WebViewEventHelper';
 
 /**
