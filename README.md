@@ -163,7 +163,7 @@ react-native link
 
 inject:
 
-```
+```javascript
 import { AppInstalledChecker } from "react-native-check-app-install";
 
 Dore.inject([{
@@ -174,7 +174,7 @@ Dore.inject([{
 
 examples:
 
-```
+```javascript
 DoreClient.checkURLScheme('whatsapp').then(function(response){
   $scope.isAppInstalled = response;
 })
@@ -184,7 +184,7 @@ DoreClient.checkURLScheme('whatsapp').then(function(response){
 
 state value: ``active``, ``background``, ``inactive``
 
-```
+```javascript
 DoreClient.addStateListener();
 $ionicPlatform.on('STATE', function(event) {
   DoreClient.showToast(event.detail.data);
@@ -198,7 +198,7 @@ $ionicPlatform.on('STATE', function(event) {
 | setAsyncStorage  |        -      |        -              |
 | getAsyncStorage  |  promise      |    string             |
 
-```
+```javascript
 $scope.setAsyncStorage = function (key, data) {
   DoreClient.setAsyncStorage(key, data);
 };
@@ -214,7 +214,7 @@ $scope.getAsyncStorage = function (key) {
 
 example:
 
-```
+```javascript
 $ionicPlatform.on('ANDROID_BACK', function (event) {
   DoreClient.showToast('ANDROID_BACK');
 });
@@ -228,7 +228,7 @@ $ionicPlatform.on('ANDROID_BACK', function (event) {
 | getBadge         |  promise      | { badge: 'xx' }       |
 | clearBadge       |   -           |         -             |
 
-```
+```javascript
 $scope.getBadge = function () {
   DoreClient.getBadge().then(function (data) {
     $scope.badge = data.badge;
@@ -250,7 +250,7 @@ $scope.clearBadge = function() {
 | getBrightnessLevel   |  promise      |      float            |
 | setBrightnessLevel   |       -       |      -                |
 
-```
+```javascript
 $scope.getBrightness = function () {
   DoreClient.getBrightnessLevel().then(function(brightness) {
     $scope.brightness = brightness;
@@ -271,13 +271,13 @@ $scope.setBrightness = function () {
 
 copy:
 
-```
+```javascript
 DoreClient.copy($scope.text);
 ```
 
 paste:
 
-```
+```javascript
 $ionicPlatform.on('PASTE', function(event) {
   $scope.copyText = event.detail.data;
   $scope.$apply();
@@ -289,7 +289,7 @@ DoreClient.paste();
 
 > send WebView console to React Native
 
-```
+```javascript
 $scope.console = console; //  can use inline console function after register
 $scope.outputSingleObject = function () {
   var someObject = {str: "Some text", id: 5};
@@ -348,7 +348,7 @@ $scope.stackTraces = function () {
 | showDatePicker       |    promise    |    { date: 'xx' }     |
 
 
-```
+```javascript
 var options = {
   date: '2017-10-22 12:12:12',
   maxDate: '2022-10-22 12:12:12'
@@ -373,7 +373,7 @@ DoreClient.showDatePicker(options).then(function(data) {
  
 examples: 
  
-```
+```javascript
 $scope.getAppVersion = function() {
   DoreClient.getAppVersion().then(function(data) {
     $scope.version = data.version;
@@ -398,7 +398,7 @@ $scope.isTablet = function() {
 | clearWatch           |       -       |           -           |
 | stopObserving        |       -       |           -           |
 
-```
+```javascript
 $scope.getCurrentPosition = function() {
   DoreClient.getCurrentPosition().then(function(data) {
     $scope.location = data;
@@ -428,6 +428,10 @@ $scope.stopObserving = function() {
 -----------------------|---------------|-----------------------|
 | hideKeyboard         |     -         |     -                 |
 
+```javascript
+DoreClient.hideKeyboard();
+````
+
 ### NetInfo
 
 | function                    | return type   |    return             |
@@ -436,7 +440,7 @@ $scope.stopObserving = function() {
 | addNetInfoEventListener     |     event     |     event             |
 | removeNetInfoEventListener  |     -         |     -                 |
 
-```
+```javascript
 $scope.getConnectionInfo = function() {
   DoreClient.getConnectionInfo().then(function(data) {
     $scope.connectionInfo = data;
@@ -463,7 +467,7 @@ $scope.removeEventListener = function() {
 | lockToLandscape      |        -      |     -                 |
 | lockToPortrait       |        -      |     -                 |
 
-```
+```javascript
 $scope.lockToLandscape = function() {
   DoreClient.lockToLandscape();
 };
@@ -486,7 +490,7 @@ $scope.getConnectionInfo = function() {
 | requestPermissions   |     promise   |      JSON             |
 | checkMultiple        |     promise   |      JSON             |
 
-```
+```javascript
 $scope.checkPermissions = function () {
   DoreClient.checkPermissions('camera').then(function(response) {
     DoreClient.showToast(JSON.stringify(response));
@@ -520,7 +524,7 @@ react-native link react-native-view-shot
 
 inject:
 
-```
+```javascript
 import { captureScreen } from "react-native-view-shot";
 
 Dore.inject([{
@@ -531,7 +535,7 @@ Dore.inject([{
 
 Usage
 
-```
+```javascript
 DoreClient.captureScreen().then(function(response) {
   
 })
@@ -544,7 +548,7 @@ DoreClient.captureScreen().then(function(response) {
 | hideStatusBar        |     -         |       -               |
 | showStatusBar        |     -         |       -               |
 
-```
+```javascript
 DoreClient.hideStatusBar();
 DoreClient.showStatusBar();
 ```
@@ -556,7 +560,7 @@ DoreClient.showStatusBar();
 | addShakeListener     |     event     |       -               |
 | removeShakeListener  |     -         |       -               |
 
-```
+```javascript
 $ionicPlatform.on('SHAKE', function (response) {
   $scope.shake = response.detail.data;
   $scope.$apply();
@@ -566,7 +570,7 @@ DoreClient.addShakeListener();
 
 Done:
 
-```
+```javascript
 DoreClient.removeShakeListener();
 ```
 
@@ -579,7 +583,7 @@ DoreClient.removeShakeListener();
 
 ``DoreClient.showToast(String,  duration: short | long ,  position: 'center' | 'top')``
 
-```
+```javascript
 DoreClient.showToast('this is a toast');
 
 DoreClient.showToast('this is a toast', 'long', 'center');
@@ -593,7 +597,7 @@ DoreClient.showToast('this is a toast', 'long', 'center');
 | vibrate              |     -         |       -               |
 | show                 |     -         |       -               |
 
-```
+```javascript
 DoreClient.vibrationVibrate(1000);
 
 DoreClient.vibrationCancel();
@@ -608,7 +612,7 @@ DoreClient, handle message in WebView
 
 Browser
 
-```
+```javascript
 $scope.vibrationVibrate = function () {
   DoreClient.vibrationVibrate([1000, 2000, 3000]);
 };
@@ -616,7 +620,7 @@ $scope.vibrationVibrate = function () {
 
 DoreClient
 
-```
+```javascript
 function invoke(action, payload) {
   function postMessage(action, payload) {
     var message = JSON.stringify({
@@ -640,15 +644,15 @@ Dore, handle message in React Native
 
 WebView
 
-```
-  onMessage = evt => {
-    Dore.handleMessage(evt, this.webView)
-  };
+```javascript
+onMessage = evt => {
+  Dore.handleMessage(evt, this.webView)
+};
 ```
 
 Dore
 
-```
+```javascript
 Dore.handleMessage = (event, webView) => {
   const action = eventData.action;
   switch (action) {
@@ -656,12 +660,13 @@ Dore.handleMessage = (event, webView) => {
       return VibrationBridge(payload)
     }
   }
+}
 ```
 
 Bridge
 
 
-```
+```javascript
 import { Vibration } from 'react-native';
 
 let VibrationBridge = (payload) => {
