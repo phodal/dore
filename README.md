@@ -26,6 +26,7 @@ Features
 ### Support:
  
  - AppAvailability ([react-native-check-app-install](https://github.com/redpandatronicsuk/react-native-check-app-install))
+ - AppState
  - AsyncStorage
  - BackHandler (Android)
  - Badge (by [react-native-icon-badge](https://github.com/uuau99999/react-native-icon-badge)
@@ -39,8 +40,8 @@ Features
  - NetInfo
  - Orientation
  - Permissions (by [react-native-permissions](https://github.com/yonahforst/react-native-permissions))
- - ScreenShot ([cordova](https://github.com/gitawego/cordova-screenshot), [RN](https://github.com/gre/react-native-view-shot))
- - State
+ - ScreenShot (by [react-native-view-shot](https://github.com/gre/react-native-view-shot))
+ - Shake (by [react-native-shake-event](https://github.com/jadsonlourenco/react-native-shake-event))
  - StatusBar
  - Toast (by [dore-toast](https://github.com/GrowthStudio/dore-toast))
  - Vibration
@@ -55,23 +56,16 @@ Features
  - fs
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - QRCode
- - Share 
- - Shake (https://github.com/jadsonlourenco/react-native-shake-event)
  - SMS (https://github.com/tkporter/react-native-sms)
  - Storage
  - SQLite (https://github.com/andpor/react-native-sqlite-storage)
  - TTS (https://github.com/naoufal/react-native-speech)
  - more+
- 
-Usage
----
-
-```bash
-yarn add dore
-```
 
 Example
 ---
+
+see in [examples](./examples)
 
 1.Import to your React-Native WebView
 
@@ -170,9 +164,9 @@ inject:
 import { AppInstalledChecker } from "react-native-check-app-install";
 
 Dore.inject([{
-      name: 'AppInstalledChecker',
-      class: AppInstalledChecker
-    }]);
+  name: 'AppInstalledChecker',
+  class: AppInstalledChecker
+}]);
 ```
 
 examples:
@@ -551,6 +545,27 @@ DoreClient.captureScreen().then(function(response) {
 ```
 DoreClient.hideStatusBar();
 DoreClient.showStatusBar();
+```
+
+### Shake
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| addShakeListener     |     event     |       -               |
+| removeShakeListener  |     -         |       -               |
+
+```
+$ionicPlatform.on('SHAKE', function (response) {
+  $scope.shake = response.detail.data;
+  $scope.$apply();
+});
+DoreClient.addShakeListener();
+```
+
+Done:
+
+```
+DoreClient.removeShakeListener();
 ```
 
 
