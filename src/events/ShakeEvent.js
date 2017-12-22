@@ -1,4 +1,3 @@
-import {BackHandler} from 'react-native';
 import WebViewEventHelper from '../helper/WebViewEventHelper';
 
 /**
@@ -7,6 +6,12 @@ import WebViewEventHelper from '../helper/WebViewEventHelper';
  * Dore Share Event Bridge
  *
  * @example
+ *
+ * $ionicPlatform.on('SHAKE', function (response) {
+ *   $scope.shake = response.detail.data;
+ *   $scope.$apply();
+ * });
+ * DoreClient.addShakeListener();
  *
  */
 
