@@ -134,12 +134,10 @@ export default class ExampleWebView extends Component {
 <script src="js/DoreClient.js"></script>
 ```
 
-3.use in JavaScript
+3.use in WebView
 
 ```javascript
-$scope.showToast = function () {
-  DoreClient.showToast('this is a toast')
-};
+DoreClient.showToast('Hello, world!')
 ```
 
 APIs
