@@ -51,16 +51,19 @@ Features
  - Battery (https://github.com/oojr/react-native-battery)
  - BLE 
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)
- - Camera
  - Flashlight (https://github.com/ludo/react-native-torch)
- - fs
+ - fs 
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
- - QRCode
  - SMS (https://github.com/tkporter/react-native-sms)
  - Storage
  - SQLite (https://github.com/andpor/react-native-sqlite-storage)
  - TTS (https://github.com/naoufal/react-native-speech)
  - more+
+
+### UI
+
+ - Camera
+ - QRCode
 
 Example
 ---
