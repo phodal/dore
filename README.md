@@ -49,21 +49,31 @@ Features
 ### Todo 
 
  - Battery (https://github.com/oojr/react-native-battery)
- - BLE 
+ - BLE (https://github.com/don/cordova-plugin-ble-central)
+ - BluetoothSerial (https://github.com/don/BluetoothSerial)
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)
+ - DeepLinking (https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking)
  - Flashlight (https://github.com/ludo/react-native-torch)
  - fs 
+ - NativeSettings (https://github.com/guyromb/Cordova-open-native-settings)
+ - NFC
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - SMS (https://github.com/tkporter/react-native-sms)
  - Storage
  - SQLite (https://github.com/andpor/react-native-sqlite-storage)
  - TTS (https://github.com/naoufal/react-native-speech)
+ - Wechat ([Cordova](https://github.com/xu-li/cordova-plugin-wechat) [RN](https://github.com/yorkie/react-native-wechat))
+ - Weibo ([Cordova](https://github.com/iVanPan/cordova_weibo), [RN](https://github.com/reactnativecn/react-native-weibo)
  - more+
 
 ### UI
 
+ - ActionSheet (https://github.com/EddyVerbruggen/cordova-plugin-actionsheet)
  - Camera
+ - Dialog (https://github.com/apache/cordova-plugin-dialogs)
+ - Feedback (https://github.com/EddyVerbruggen/nativescript-feedback)
  - QRCode
+ - Share (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
 
 Example
 ---
