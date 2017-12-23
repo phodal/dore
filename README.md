@@ -4,9 +4,9 @@
 
 **Dore 是一个使用 React Native 实现的 WebView 容器，可以让你在 WebView 调用 React Native 组件。**
 
-设计初衷：用于迁移 Cordova 的 WebView 应用到 React Native 的 WebView。
+设计初衷：作为迁移 Cordova 的 WebView 应用到 React Native 的 WebView 的基础设施。
 
-Ionic v1 + Angular Demo: [examples](https://github.com/phodal/dore/tree/master/examples)
+Demo (Ionic v1 + Angular + React Native + Dore) : see in [examples](https://github.com/phodal/dore/tree/master/examples)
 
 Screenshots:
 
