@@ -70,8 +70,9 @@ export default class ExampleWebView extends Component {
 
   render() {
     const source = require('./www/index.html');
+    // DoreOpen.open('https://www.phodal.com/');
+    // DoreOpen.open('./sample.pdf');
     DoreOpen.open('./sample.pdf');
-    console.log(DoreOpen.open("-----"));
 
     return (
       <View>

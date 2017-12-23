@@ -183,9 +183,9 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
-		403CEF6B1FEC08C700AE7765 /* PBXContainerItemProxy */ = {
+		403CF00A1FED28AF00AE7765 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E3D8F5AFF3274858AACD9859 /* DoreOpen.xcodeproj */;
+			containerPortal = 4911C1E66FF74BA280EAFDA6 /* DoreOpen.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 40AA2A891FEBFADC0073FC34;
 			remoteInfo = DoreOpen;
@@ -387,6 +387,7 @@
 		2DB1A21557874CDBAD8FB5CF /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		4067E8151FE612FF00B289D4 /* DatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
 		4067E8171FE6167A00B289D4 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		4911C1E66FF74BA280EAFDA6 /* DoreOpen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = DoreOpen.xcodeproj; path = "../node_modules/dore-open/iOS/DoreOpen.xcodeproj"; sourceTree = "<group>"; };
 		4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNViewShot.xcodeproj; path = "../node_modules/react-native-view-shot/ios/RNViewShot.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		738E91CDF5CC4AF68234651C /* libRCTDoreOpen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTDoreOpen.a; sourceTree = "<group>"; };
@@ -402,7 +403,6 @@
 		BFF9CDF31FE7510900C16E87 /* RNNoTagDatepicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNNoTagDatepicker.xcodeproj; path = "../node_modules/react-native-notag-datepicker/ios/RNNoTagDatepicker.xcodeproj"; sourceTree = "<group>"; };
 		C5467694081D4D139A05092F /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
-		E3D8F5AFF3274858AACD9859 /* DoreOpen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = DoreOpen.xcodeproj; path = "../node_modules/dore-open/iOS/DoreOpen.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -553,10 +553,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		403CEF681FEC08C700AE7765 /* Products */ = {
+		403CF0071FED28AF00AE7765 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				403CEF6C1FEC08C700AE7765 /* libDoreOpen.a */,
+				403CF00B1FED28AF00AE7765 /* libDoreOpen.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -676,7 +676,7 @@
 				2C9AA3E1B3EF4FCD86DE9D2E /* RNDeviceBrightness.xcodeproj */,
 				14DC5D1054B046DBB34F8646 /* ReactNativePermissions.xcodeproj */,
 				4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */,
-				E3D8F5AFF3274858AACD9859 /* DoreOpen.xcodeproj */,
+				4911C1E66FF74BA280EAFDA6 /* DoreOpen.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -786,8 +786,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 403CEF681FEC08C700AE7765 /* Products */;
-					ProjectRef = E3D8F5AFF3274858AACD9859 /* DoreOpen.xcodeproj */;
+					ProductGroup = 403CF0071FED28AF00AE7765 /* Products */;
+					ProjectRef = 4911C1E66FF74BA280EAFDA6 /* DoreOpen.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
@@ -1025,11 +1025,11 @@
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		403CEF6C1FEC08C700AE7765 /* libDoreOpen.a */ = {
+		403CF00B1FED28AF00AE7765 /* libDoreOpen.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libDoreOpen.a;
-			remoteRef = 403CEF6B1FEC08C700AE7765 /* PBXContainerItemProxy */;
+			remoteRef = 403CF00A1FED28AF00AE7765 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		404E56B11FE5818B00966185 /* libRCTBlob-tvOS.a */ = {
@@ -1276,6 +1276,7 @@
 					"$(SRCROOT)/../node_modules/dore-open/ios/RCTDoreOpen",
 					"$(SRCROOT)/../node_modules/dore-open/ios",
 					"$(SRCROOT)/../node_modules/dore-open/iOS/DoreOpen",
+					"$(SRCROOT)/../node_modules/dore-open/iOS/DoreOpen",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1310,6 +1311,7 @@
 					"$(SRCROOT)/../node_modules/react-native-view-shot/ios",
 					"$(SRCROOT)/../node_modules/dore-open/ios/RCTDoreOpen",
 					"$(SRCROOT)/../node_modules/dore-open/ios",
+					"$(SRCROOT)/../node_modules/dore-open/iOS/DoreOpen",
 					"$(SRCROOT)/../node_modules/dore-open/iOS/DoreOpen",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
