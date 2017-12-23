@@ -23,6 +23,7 @@ import StorageBridge from "./bridge/StorageBridge";
 import AsyncStorageBridge from "./bridge/AsyncStorageBridge";
 import AvailabilityBridge from "./bridge/AvailabilityBridge";
 import ShakeEvent from "./events/ShakeEvent";
+import FlashlightBridge from "./bridge/FlashlightBridge";
 
 const Dore = {};
 
@@ -115,6 +116,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'SHAKE': {
       return ShakeEvent(payload, webView, Dore.Shake);
+    }
+    case 'FLASHLIGHT': {
+      return FlashlightBridge(payload, Dore.Flashlight);
     }
   }
 };
