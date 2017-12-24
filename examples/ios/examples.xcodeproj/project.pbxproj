@@ -32,6 +32,7 @@
 		EBC93D30060F4644AFE86309 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */; };
 		46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */; };
 		423832EF92DB467BB95FFEB2 /* libRNShakeEvent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA5FE95ACA4B7BA87306C7 /* libRNShakeEvent.a */; };
+		E8B89168CD1A4416ADCFC56D /* libRCTTorch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A929DB412714A2A9F85831E /* libRCTTorch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -387,6 +388,8 @@
 		02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */ = {isa = PBXFileReference; name = "libRNViewShot.a"; path = "libRNViewShot.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		FBC852881BD14658B8A05142 /* RNShakeEvent.xcodeproj */ = {isa = PBXFileReference; name = "RNShakeEvent.xcodeproj"; path = "../node_modules/react-native-shake-event/ios/RNShakeEvent.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		28FA5FE95ACA4B7BA87306C7 /* libRNShakeEvent.a */ = {isa = PBXFileReference; name = "libRNShakeEvent.a"; path = "libRNShakeEvent.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */ = {isa = PBXFileReference; name = "RCTTorch.xcodeproj"; path = "../node_modules/react-native-torch/ios/RCTTorch.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		5A929DB412714A2A9F85831E /* libRCTTorch.a */ = {isa = PBXFileReference; name = "libRCTTorch.a"; path = "libRCTTorch.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +419,7 @@
 				AEEB1BCA551B4ADF9AD7629C /* libReactNativePermissions.a in Frameworks */,
 				46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */,
 				423832EF92DB467BB95FFEB2 /* libRNShakeEvent.a in Frameworks */,
+				E8B89168CD1A4416ADCFC56D /* libRCTTorch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +646,7 @@
 				14DC5D1054B046DBB34F8646 /* ReactNativePermissions.xcodeproj */,
 				4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */,
 				FBC852881BD14658B8A05142 /* RNShakeEvent.xcodeproj */,
+				5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1217,11 +1222,13 @@
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-view-shot/ios",
 					"$(SRCROOT)/../node_modules/react-native-shake-event/ios",
+					"$(SRCROOT)/../node_modules/react-native-torch/ios",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
@@ -1253,11 +1260,13 @@
 					"$(SRCROOT)/../node_modules/react-native-permissions/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-view-shot/ios",
 					"$(SRCROOT)/../node_modules/react-native-shake-event/ios",
+					"$(SRCROOT)/../node_modules/react-native-torch/ios",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",

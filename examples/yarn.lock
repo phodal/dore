@@ -3504,6 +3504,10 @@ react-native-shake-event@^4.0.1:
   dependencies:
     invariant "^2.2.2"
 
+react-native-torch@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-torch/-/react-native-torch-1.0.1.tgz#2cb5da44538b292feec17857abe8447578679565"
+
 react-native-view-shot@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-native-view-shot/-/react-native-view-shot-2.2.0.tgz#482dc21bc37379aca8f3f97a694c080a57f1ea78"
