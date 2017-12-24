@@ -206,8 +206,11 @@
     addShakeListener: function () {
       return invoke('SHAKE', {type: 'ADD_LISTENER'});
     },
-    removeShakeListener: function () {
-      return invoke('SHAKE', {type: 'REMOVE_LISTENER'});
+    onFlashlight: function () {
+      return invoke('FLASHLIGHT', {type: 'ON'});
+    },
+    offFlashlight: function () {
+      return invoke('FLASHLIGHT', {type: 'OFF'});
     },
     console: {
       // assert(test?: boolean, message?: string, optionalParams: any[]): void;

@@ -9,6 +9,7 @@ import Permissions from 'react-native-permissions'
 import { captureScreen } from "react-native-view-shot";
 import { AppInstalledChecker } from "react-native-check-app-install";
 import RNShakeEvent from 'react-native-shake-event';
+import Torch from 'react-native-torch';
 
 import Dore from 'dore';
 
@@ -52,6 +53,9 @@ export default class ExampleWebView extends Component {
     }, {
       name: 'Shake',
       class: RNShakeEvent
+    }, {
+      name: 'Flashlight',
+      class: Torch
     }]);
   }
 

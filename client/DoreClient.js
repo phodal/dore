@@ -209,7 +209,7 @@
     onFlashlight: function () {
       return invoke('FLASHLIGHT', {type: 'ON'});
     },
-    onFlashlight: function () {
+    offFlashlight: function () {
       return invoke('FLASHLIGHT', {type: 'OFF'});
     },
     console: {
