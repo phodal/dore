@@ -35,6 +35,7 @@ Features
  - Clipboard 
  - DatePicker (iOS by [react-native-notag-datepicker](https://github.com/phodal/react-native-notag-datepicker))
  - DeviceInfo (by [react-native-device-info](https://github.com/rebeccahughes/react-native-device-info))
+ - Flashlight (https://github.com/ludo/react-native-torch)
  - Geolocation
  - Keyboard
  - NetInfo
@@ -53,7 +54,6 @@ Features
  - BluetoothSerial (https://github.com/don/BluetoothSerial)
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)
  - DeepLinking (https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking)
- - Flashlight (https://github.com/ludo/react-native-torch)
  - fs 
  - NativeSettings (https://github.com/guyromb/Cordova-open-native-settings)
  - NFC
