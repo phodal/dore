@@ -581,6 +581,41 @@ DoreClient.captureScreen().then(function(response) {
 })
 ```
 
+### SMS
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| sendSMS              |     event     |       event           |
+
+Install:
+
+```
+yarn add react-native-sms
+react-native link react-native-sms
+```
+
+Inject
+
+```
+import SendSMS from 'react-native-sms';
+
+Dore.inject([{
+  name: 'SMS',
+  class: SendSMS
+}]);
+```
+
+Examples:
+
+```
+$scope.sendSMS = function () {
+  DoreClient.sendSMS({
+    body: 'Hello, world',
+    recipients: ['10086']
+  });
+}
+```
+
 ### StatusBar
 
 | function             | return type   |    return             |
