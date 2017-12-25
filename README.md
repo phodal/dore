@@ -50,22 +50,15 @@ Features
  
 ### Todo 
 
- - Battery (https://github.com/oojr/react-native-battery)
  - BLE (https://github.com/don/cordova-plugin-ble-central)
  - BluetoothSerial (https://github.com/don/BluetoothSerial)
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)
- - DeepLinking (https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking)
- - fs 
- - NFC
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
- - Storage
  - SQLite (https://github.com/andpor/react-native-sqlite-storage)
- - TTS (https://github.com/naoufal/react-native-speech)
- - Wechat ([Cordova](https://github.com/xu-li/cordova-plugin-wechat) [RN](https://github.com/yorkie/react-native-wechat))
- - Weibo ([Cordova](https://github.com/iVanPan/cordova_weibo), [RN](https://github.com/reactnativecn/react-native-weibo)
- - more+
 
-### UI
+### No Features
+
+#### UI
 
  - ActionSheet (https://github.com/EddyVerbruggen/cordova-plugin-actionsheet)
  - Camera
@@ -74,8 +67,14 @@ Features
  - QRCode
  - Share (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
 
-### noworks
+#### no-to-works
 
+ - NFC 
+ - fs 
+ - DeepLinking (https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking)
+ - TTS (https://github.com/naoufal/react-native-speech)
+ - Wechat ([Cordova](https://github.com/xu-li/cordova-plugin-wechat) [RN](https://github.com/yorkie/react-native-wechat))
+ - Weibo ([Cordova](https://github.com/iVanPan/cordova_weibo), [RN](https://github.com/reactnativecn/react-native-weibo)
  - ~~NativeSettings (https://github.com/guyromb/Cordova-open-native-settings)~~
 
 Example
