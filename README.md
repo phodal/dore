@@ -43,6 +43,7 @@ Features
  - Permissions (by [react-native-permissions](https://github.com/yonahforst/react-native-permissions))
  - ScreenShot (by [react-native-view-shot](https://github.com/gre/react-native-view-shot))
  - Shake (by [react-native-shake-event](https://github.com/jadsonlourenco/react-native-shake-event))
+ - SMS (by [react-native-sms](https://github.com/tkporter/react-native-sms))
  - StatusBar
  - Toast (by [dore-toast](https://github.com/GrowthStudio/dore-toast))
  - Vibration
@@ -57,7 +58,6 @@ Features
  - fs 
  - NFC
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
- - SMS (https://github.com/tkporter/react-native-sms)
  - Storage
  - SQLite (https://github.com/andpor/react-native-sqlite-storage)
  - TTS (https://github.com/naoufal/react-native-speech)

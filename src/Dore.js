@@ -18,12 +18,13 @@ import BrightnessBridge from './bridge/BrightnessBridge';
 import PermissionsBridge from './bridge/PermissionsBridge';
 
 import ConsoleBridge from './bridge/ConsoleBridge';
-import ScreenshotBridge from "./bridge/ScreenshotBridge";
-import StorageBridge from "./bridge/StorageBridge";
-import AsyncStorageBridge from "./bridge/AsyncStorageBridge";
-import AvailabilityBridge from "./bridge/AvailabilityBridge";
-import ShakeEvent from "./events/ShakeEvent";
-import FlashlightBridge from "./bridge/FlashlightBridge";
+import ScreenshotBridge from './bridge/ScreenshotBridge';
+import StorageBridge from './bridge/StorageBridge';
+import AsyncStorageBridge from './bridge/AsyncStorageBridge';
+import AvailabilityBridge from './bridge/AvailabilityBridge';
+import ShakeEvent from './events/ShakeEvent';
+import FlashlightBridge from './bridge/FlashlightBridge';
+import SMSBridge from './bridge/SMSBridge';
 
 const Dore = {};
 
@@ -119,6 +120,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'FLASHLIGHT': {
       return FlashlightBridge(payload, Dore.Flashlight);
+    }
+    case 'SMS': {
+      return SMSBridge(payload, webView, Dore.SMS);
     }
   }
 };

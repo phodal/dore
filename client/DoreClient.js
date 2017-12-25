@@ -212,6 +212,9 @@
     offFlashlight: function () {
       return invoke('FLASHLIGHT', {type: 'OFF'});
     },
+    sendSMS: function (options) {
+      return invoke('SMS', {type: 'OFF', options: options});
+    },
     console: {
       // assert(test?: boolean, message?: string, optionalParams: any[]): void;
       assert: function (test, message, optionalParams) {
