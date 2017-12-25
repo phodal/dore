@@ -3,6 +3,7 @@ package com.examples;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.tkporter.sendsms.SendSMSPackage;
 import com.cubicphuse.RCTTorch.RCTTorchPackage;
 import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
 import com.rpt.reactnativecheckpackageinstallation.CheckPackageInstallationPackage;
@@ -32,6 +33,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            SendSMSPackage.getInstance(),
             new RCTTorchPackage(),
             new RNShakeEventPackage(),
             new CheckPackageInstallationPackage(),

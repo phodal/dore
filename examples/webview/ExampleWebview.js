@@ -10,6 +10,7 @@ import { captureScreen } from "react-native-view-shot";
 import { AppInstalledChecker } from "react-native-check-app-install";
 import RNShakeEvent from 'react-native-shake-event';
 import Torch from 'react-native-torch';
+import SendSMS from 'react-native-sms'
 
 import Dore from 'dore';
 
@@ -56,6 +57,9 @@ export default class ExampleWebView extends Component {
     }, {
       name: 'Flashlight',
       class: Torch
+    }, {
+      name: 'SMS',
+      class: SendSMS
     }]);
   }
 

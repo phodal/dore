@@ -229,6 +229,12 @@ angular
     };
     $scope.offFlashlight = function () {
       DoreClient.offFlashlight();
+    };
+    $scope.sendSMS = function () {
+      DoreClient.sendSMS({
+        body: 'Hello, world',
+        recipients: ['10086']
+      });
     }
   })
 

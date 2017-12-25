@@ -3504,6 +3504,10 @@ react-native-shake-event@^4.0.1:
   dependencies:
     invariant "^2.2.2"
 
+react-native-sms@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/react-native-sms/-/react-native-sms-1.5.0.tgz#3f63eb6de07735651d470f4161205f6f6f63eab2"
+
 react-native-torch@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-native-torch/-/react-native-torch-1.0.1.tgz#2cb5da44538b292feec17857abe8447578679565"

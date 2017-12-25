@@ -213,7 +213,7 @@
       return invoke('FLASHLIGHT', {type: 'OFF'});
     },
     sendSMS: function (options) {
-      return invoke('SMS', {type: 'OFF', options: options});
+      return invoke('SMS', {type: 'send', options: options});
     },
     console: {
       // assert(test?: boolean, message?: string, optionalParams: any[]): void;

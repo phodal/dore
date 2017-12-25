@@ -1,4 +1,6 @@
 rootProject.name = 'examples'
+include ':react-native-sms'
+project(':react-native-sms').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sms/android')
 include ':react-native-torch'
 project(':react-native-torch').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-torch/android')
 include ':react-native-shake-event'

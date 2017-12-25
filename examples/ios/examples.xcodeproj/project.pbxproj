@@ -33,6 +33,7 @@
 		46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */; };
 		423832EF92DB467BB95FFEB2 /* libRNShakeEvent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA5FE95ACA4B7BA87306C7 /* libRNShakeEvent.a */; };
 		E8B89168CD1A4416ADCFC56D /* libRCTTorch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A929DB412714A2A9F85831E /* libRCTTorch.a */; };
+		BD193FBF58D043AD992EBD0B /* libSendSMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFE23C342AB4A45BAE60EEC /* libSendSMS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -390,6 +391,8 @@
 		28FA5FE95ACA4B7BA87306C7 /* libRNShakeEvent.a */ = {isa = PBXFileReference; name = "libRNShakeEvent.a"; path = "libRNShakeEvent.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */ = {isa = PBXFileReference; name = "RCTTorch.xcodeproj"; path = "../node_modules/react-native-torch/ios/RCTTorch.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		5A929DB412714A2A9F85831E /* libRCTTorch.a */ = {isa = PBXFileReference; name = "libRCTTorch.a"; path = "libRCTTorch.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		EFF2DEC140AA478FAD856DC3 /* SendSMS.xcodeproj */ = {isa = PBXFileReference; name = "SendSMS.xcodeproj"; path = "../node_modules/react-native-sms/SendSMS.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		AFFE23C342AB4A45BAE60EEC /* libSendSMS.a */ = {isa = PBXFileReference; name = "libSendSMS.a"; path = "libSendSMS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -420,6 +423,7 @@
 				46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */,
 				423832EF92DB467BB95FFEB2 /* libRNShakeEvent.a in Frameworks */,
 				E8B89168CD1A4416ADCFC56D /* libRCTTorch.a in Frameworks */,
+				BD193FBF58D043AD992EBD0B /* libSendSMS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +651,7 @@
 				4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */,
 				FBC852881BD14658B8A05142 /* RNShakeEvent.xcodeproj */,
 				5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */,
+				EFF2DEC140AA478FAD856DC3 /* SendSMS.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1223,11 +1228,13 @@
 					"$(SRCROOT)/../node_modules/react-native-view-shot/ios",
 					"$(SRCROOT)/../node_modules/react-native-shake-event/ios",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-sms/SendSMS",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
@@ -1261,11 +1268,13 @@
 					"$(SRCROOT)/../node_modules/react-native-view-shot/ios",
 					"$(SRCROOT)/../node_modules/react-native-shake-event/ios",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
+					"$(SRCROOT)/../node_modules/react-native-sms/SendSMS",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
