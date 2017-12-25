@@ -55,7 +55,6 @@ Features
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)
  - DeepLinking (https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking)
  - fs 
- - NativeSettings (https://github.com/guyromb/Cordova-open-native-settings)
  - NFC
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - SMS (https://github.com/tkporter/react-native-sms)
@@ -74,6 +73,10 @@ Features
  - Feedback (https://github.com/EddyVerbruggen/nativescript-feedback)
  - QRCode
  - Share (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+
+### noworks
+
+ - ~~NativeSettings (https://github.com/guyromb/Cordova-open-native-settings)~~
 
 Example
 ---
