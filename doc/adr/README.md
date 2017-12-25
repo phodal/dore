@@ -5,3 +5,4 @@
 * [3. 添加-jsdoc](0003-添加-jsdoc.md)
 * [4. doreclient-cordova-bridge](0004-doreclient-cordova-bridge.md)
 * [5. dore-native-ui](0005-dore-native-ui.md)
+* [6. 编写迁移示例文档](0006-编写迁移示例文档.md)
