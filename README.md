@@ -6,6 +6,10 @@
 
 设计初衷：作为迁移 Cordova 的 WebView 应用到 React Native 的 WebView 的基础设施。
 
+Feel free to give a pull request or issues, questions.
+
+欢迎使用 Dore，如果你在过程中遇到问题，可以与我们联系。
+
 Demo (Ionic v1 + Angular + React Native + Dore) : see in [examples](https://github.com/phodal/dore/tree/master/examples)
 
 Screenshots:
@@ -51,9 +55,7 @@ Features
 ### Todo 
 
  - BLE (https://github.com/don/cordova-plugin-ble-central)
- - BluetoothSerial (https://github.com/don/BluetoothSerial)
  - Calender (https://github.com/wmcmahan/react-native-calendar-events)
- - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - SQLite (https://github.com/andpor/react-native-sqlite-storage)
 
 ### No Features
@@ -71,10 +73,12 @@ Features
 
  - NFC 
  - fs 
+ - BluetoothSerial (https://github.com/don/BluetoothSerial)
  - DeepLinking (https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking)
  - TTS (https://github.com/naoufal/react-native-speech)
  - Wechat ([Cordova](https://github.com/xu-li/cordova-plugin-wechat) [RN](https://github.com/yorkie/react-native-wechat))
  - Weibo ([Cordova](https://github.com/iVanPan/cordova_weibo), [RN](https://github.com/reactnativecn/react-native-weibo)
+ - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - ~~NativeSettings (https://github.com/guyromb/Cordova-open-native-settings)~~
 
 Example
