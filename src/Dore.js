@@ -25,6 +25,7 @@ import AvailabilityBridge from './bridge/AvailabilityBridge';
 import ShakeEvent from './events/ShakeEvent';
 import FlashlightBridge from './bridge/FlashlightBridge';
 import SMSBridge from './bridge/SMSBridge';
+import CalendarBridge from './bridge/CalendarBridge';
 
 const Dore = {};
 
@@ -123,6 +124,9 @@ Dore.handleMessage = (event, webView) => {
     }
     case 'SMS': {
       return SMSBridge(payload, webView, Dore.SMS);
+    }
+    case 'CALENDAR': {
+      return CalendarBridge(payload, webView, Dore.Calendar);
     }
   }
 };
