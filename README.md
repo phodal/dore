@@ -341,10 +341,8 @@ $scope.stackTraces = function () {
     function bar() {
       console.trace();
     }
-
     bar();
   }
-
   foo();
 };
 ```
@@ -396,8 +394,36 @@ $scope.isTablet = function() {
 };
 ```
 
-### Geolocation
+### Flashlight
 
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| onFlashlight         |     -         |       -               |
+| offFlashlight        |     -         |       -               |
+
+inject
+
+```
+import Torch from 'react-native-torch';
+
+Dore.inject([{
+  name: 'Flashlight',
+  class: Torch
+}]);
+```
+
+usage
+
+```
+$scope.onFlashlight = function () {
+  DoreClient.onFlashlight();
+};
+$scope.offFlashlight = function () {
+  DoreClient.offFlashlight();
+}
+```
+
+### Geolocation
 
 | function             | return type   |    return             |
 -----------------------|---------------|-----------------------|

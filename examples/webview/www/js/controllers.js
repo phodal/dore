@@ -223,10 +223,10 @@ angular
     };
     $scope.removeShakeListener = function () {
       DoreClient.removeShakeListener();
-    }
+    };
     $scope.onFlashlight = function () {
       DoreClient.onFlashlight();
-    }
+    };
     $scope.offFlashlight = function () {
       DoreClient.offFlashlight();
     }
