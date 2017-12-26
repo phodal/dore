@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -21,19 +22,20 @@
 		4067E8141FE612FA00B289D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		4067E8161FE612FF00B289D4 /* DatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4067E8151FE612FF00B289D4 /* DatePicker.xib */; };
 		4067E8201FE616B700B289D4 /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4067E81D1FE6167A00B289D4 /* libRCTPushNotification.a */; };
+		423832EF92DB467BB95FFEB2 /* libRNShakeEvent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA5FE95ACA4B7BA87306C7 /* libRNShakeEvent.a */; };
 		440A62F25E024B1198020D62 /* libRNNoTagDatepicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFB08140E5C456888BD3709 /* libRNNoTagDatepicker.a */; };
+		46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		872F254A54AE4421BF0CC35D /* libRCTToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 125FAFE5CCF04DB384AD52A3 /* libRCTToast.a */; };
 		8A9758AC82AD4E9082D3F1BB /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A48A991F21BB4047977ECB83 /* libRNDeviceInfo.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		AEEB1BCA551B4ADF9AD7629C /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC71A6211E5748538A0726B7 /* libReactNativePermissions.a */; };
-		DA605C1EAC8444EAAB913772 /* libRNDeviceBrightness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9E2C8C09544F4B02C1E12 /* libRNDeviceBrightness.a */; };
-		EBC93D30060F4644AFE86309 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */; };
-		46B69DDC63094A7BBC3A8244 /* libRNViewShot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */; };
-		423832EF92DB467BB95FFEB2 /* libRNShakeEvent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FA5FE95ACA4B7BA87306C7 /* libRNShakeEvent.a */; };
-		E8B89168CD1A4416ADCFC56D /* libRCTTorch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A929DB412714A2A9F85831E /* libRCTTorch.a */; };
 		BD193FBF58D043AD992EBD0B /* libSendSMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFE23C342AB4A45BAE60EEC /* libSendSMS.a */; };
+		D32EDBD077E449D3B9BAB55A /* libRNCalendarEvents.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA72A06A7C5D420FACA8B8C7 /* libRNCalendarEvents.a */; };
+		DA605C1EAC8444EAAB913772 /* libRNDeviceBrightness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9E2C8C09544F4B02C1E12 /* libRNDeviceBrightness.a */; };
+		E8B89168CD1A4416ADCFC56D /* libRCTTorch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A929DB412714A2A9F85831E /* libRCTTorch.a */; };
+		EBC93D30060F4644AFE86309 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,6 +263,41 @@
 			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
 			remoteInfo = "privatedata-tvOS";
 		};
+		405F9A951FF28A6A00332A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA5891D81BA9A9FC002B4DB2;
+			remoteInfo = RCTTorch;
+		};
+		405F9A981FF28A6A00332A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNViewShot;
+		};
+		405F9A9B1FF28A6A00332A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFF2DEC140AA478FAD856DC3 /* SendSMS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 95688E1A1D38251600F72D63;
+			remoteInfo = SendSMS;
+		};
+		405F9AA01FF28A6A00332A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBC852881BD14658B8A05142 /* RNShakeEvent.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNShakeEvent;
+		};
+		405F9AA51FF28A6A00332A0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ACFDE1ACDCE4EC280847903 /* RNCalendarEvents.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BEC43C6A1C723089001221C6;
+			remoteInfo = RNCalendarEvents;
+		};
 		4067E81C1FE6167A00B289D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4067E8171FE6167A00B289D4 /* RCTPushNotification.xcodeproj */;
@@ -356,6 +393,7 @@
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* examplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = examplesTests.m; sourceTree = "<group>"; };
+		02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNViewShot.a; sourceTree = "<group>"; };
 		125FAFE5CCF04DB384AD52A3 /* libRCTToast.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTToast.a; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
@@ -369,30 +407,31 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		14DC5D1054B046DBB34F8646 /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativePermissions.xcodeproj; path = "../node_modules/react-native-permissions/ios/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; };
 		1853882D700D4355B21D51B7 /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; };
+		28FA5FE95ACA4B7BA87306C7 /* libRNShakeEvent.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNShakeEvent.a; sourceTree = "<group>"; };
 		2C9AA3E1B3EF4FCD86DE9D2E /* RNDeviceBrightness.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceBrightness.xcodeproj; path = "../node_modules/react-native-device-brightness/RNDeviceBrightness.xcodeproj"; sourceTree = "<group>"; };
 		2DB1A21557874CDBAD8FB5CF /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		4067E8151FE612FF00B289D4 /* DatePicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePicker.xib; sourceTree = "<group>"; };
 		4067E8171FE6167A00B289D4 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
+		4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNViewShot.xcodeproj; path = "../node_modules/react-native-view-shot/ios/RNViewShot.xcodeproj"; sourceTree = "<group>"; };
+		5A929DB412714A2A9F85831E /* libRCTTorch.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTTorch.a; sourceTree = "<group>"; };
+		5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTTorch.xcodeproj; path = "../node_modules/react-native-torch/ios/RCTTorch.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7ACFDE1ACDCE4EC280847903 /* RNCalendarEvents.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCalendarEvents.xcodeproj; path = "../node_modules/react-native-calendar-events/RNCalendarEvents.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		9EFB08140E5C456888BD3709 /* libRNNoTagDatepicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNNoTagDatepicker.a; sourceTree = "<group>"; };
 		A0E9E2C8C09544F4B02C1E12 /* libRNDeviceBrightness.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceBrightness.a; sourceTree = "<group>"; };
 		A48A991F21BB4047977ECB83 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
+		AA72A06A7C5D420FACA8B8C7 /* libRNCalendarEvents.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCalendarEvents.a; sourceTree = "<group>"; };
 		AC71A6211E5748538A0726B7 /* libReactNativePermissions.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativePermissions.a; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		AFFE23C342AB4A45BAE60EEC /* libSendSMS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSendSMS.a; sourceTree = "<group>"; };
 		BFF9CDED1FE74FE900C16E87 /* RCTToast.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTToast.xcodeproj; path = "../node_modules/dore-toast/ios/RCTToast.xcodeproj"; sourceTree = "<group>"; };
 		BFF9CDF31FE7510900C16E87 /* RNNoTagDatepicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNNoTagDatepicker.xcodeproj; path = "../node_modules/react-native-notag-datepicker/ios/RNNoTagDatepicker.xcodeproj"; sourceTree = "<group>"; };
 		C5467694081D4D139A05092F /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
-		4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */ = {isa = PBXFileReference; name = "RNViewShot.xcodeproj"; path = "../node_modules/react-native-view-shot/ios/RNViewShot.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */ = {isa = PBXFileReference; name = "libRNViewShot.a"; path = "libRNViewShot.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		FBC852881BD14658B8A05142 /* RNShakeEvent.xcodeproj */ = {isa = PBXFileReference; name = "RNShakeEvent.xcodeproj"; path = "../node_modules/react-native-shake-event/ios/RNShakeEvent.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		28FA5FE95ACA4B7BA87306C7 /* libRNShakeEvent.a */ = {isa = PBXFileReference; name = "libRNShakeEvent.a"; path = "libRNShakeEvent.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */ = {isa = PBXFileReference; name = "RCTTorch.xcodeproj"; path = "../node_modules/react-native-torch/ios/RCTTorch.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		5A929DB412714A2A9F85831E /* libRCTTorch.a */ = {isa = PBXFileReference; name = "libRCTTorch.a"; path = "libRCTTorch.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		EFF2DEC140AA478FAD856DC3 /* SendSMS.xcodeproj */ = {isa = PBXFileReference; name = "SendSMS.xcodeproj"; path = "../node_modules/react-native-sms/SendSMS.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		AFFE23C342AB4A45BAE60EEC /* libSendSMS.a */ = {isa = PBXFileReference; name = "libSendSMS.a"; path = "libSendSMS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		EFF2DEC140AA478FAD856DC3 /* SendSMS.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SendSMS.xcodeproj; path = "../node_modules/react-native-sms/SendSMS.xcodeproj"; sourceTree = "<group>"; };
+		FBC852881BD14658B8A05142 /* RNShakeEvent.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNShakeEvent.xcodeproj; path = "../node_modules/react-native-shake-event/ios/RNShakeEvent.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,6 +463,7 @@
 				423832EF92DB467BB95FFEB2 /* libRNShakeEvent.a in Frameworks */,
 				E8B89168CD1A4416ADCFC56D /* libRCTTorch.a in Frameworks */,
 				BD193FBF58D043AD992EBD0B /* libSendSMS.a in Frameworks */,
+				D32EDBD077E449D3B9BAB55A /* libRNCalendarEvents.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +595,11 @@
 				D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */,
 				A0E9E2C8C09544F4B02C1E12 /* libRNDeviceBrightness.a */,
 				AC71A6211E5748538A0726B7 /* libReactNativePermissions.a */,
+				02C11D8F1F584AB59FA42CB7 /* libRNViewShot.a */,
+				28FA5FE95ACA4B7BA87306C7 /* libRNShakeEvent.a */,
+				5A929DB412714A2A9F85831E /* libRCTTorch.a */,
+				AFFE23C342AB4A45BAE60EEC /* libSendSMS.a */,
+				AA72A06A7C5D420FACA8B8C7 /* libRNCalendarEvents.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -573,6 +618,46 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		405F9A8E1FF28A6A00332A0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				405F9A991FF28A6A00332A0B /* libRNViewShot.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		405F9A901FF28A6A00332A0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				405F9A961FF28A6A00332A0B /* libRCTTorch.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		405F9A921FF28A6A00332A0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				405F9A9C1FF28A6A00332A0B /* libSendSMS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		405F9A9D1FF28A6A00332A0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				405F9AA11FF28A6A00332A0B /* libRNShakeEvent.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		405F9AA21FF28A6A00332A0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				405F9AA61FF28A6A00332A0B /* libRNCalendarEvents.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		4067E8181FE6167A00B289D4 /* Products */ = {
@@ -652,6 +737,7 @@
 				FBC852881BD14658B8A05142 /* RNShakeEvent.xcodeproj */,
 				5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */,
 				EFF2DEC140AA478FAD856DC3 /* SendSMS.xcodeproj */,
+				7ACFDE1ACDCE4EC280847903 /* RNCalendarEvents.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -809,6 +895,10 @@
 					ProjectRef = BFF9CDED1FE74FE900C16E87 /* RCTToast.xcodeproj */;
 				},
 				{
+					ProductGroup = 405F9A901FF28A6A00332A0B /* Products */;
+					ProjectRef = 5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302E01ABCB9EE00DB3ED1 /* Products */;
 					ProjectRef = 00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */;
 				},
@@ -825,6 +915,10 @@
 					ProjectRef = 14DC5D1054B046DBB34F8646 /* ReactNativePermissions.xcodeproj */;
 				},
 				{
+					ProductGroup = 405F9AA21FF28A6A00332A0B /* Products */;
+					ProjectRef = 7ACFDE1ACDCE4EC280847903 /* RNCalendarEvents.xcodeproj */;
+				},
+				{
 					ProductGroup = 4067E9CF1FE7844E00B289D4 /* Products */;
 					ProjectRef = 2C9AA3E1B3EF4FCD86DE9D2E /* RNDeviceBrightness.xcodeproj */;
 				},
@@ -835,6 +929,18 @@
 				{
 					ProductGroup = BFF9CDF41FE7510900C16E87 /* Products */;
 					ProjectRef = BFF9CDF31FE7510900C16E87 /* RNNoTagDatepicker.xcodeproj */;
+				},
+				{
+					ProductGroup = 405F9A9D1FF28A6A00332A0B /* Products */;
+					ProjectRef = FBC852881BD14658B8A05142 /* RNShakeEvent.xcodeproj */;
+				},
+				{
+					ProductGroup = 405F9A8E1FF28A6A00332A0B /* Products */;
+					ProjectRef = 4ED8F410392E4D4AA7AB069D /* RNViewShot.xcodeproj */;
+				},
+				{
+					ProductGroup = 405F9A921FF28A6A00332A0B /* Products */;
+					ProjectRef = EFF2DEC140AA478FAD856DC3 /* SendSMS.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1069,6 +1175,41 @@
 			remoteRef = 404E56F21FE5849700966185 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		405F9A961FF28A6A00332A0B /* libRCTTorch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTTorch.a;
+			remoteRef = 405F9A951FF28A6A00332A0B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		405F9A991FF28A6A00332A0B /* libRNViewShot.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNViewShot.a;
+			remoteRef = 405F9A981FF28A6A00332A0B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		405F9A9C1FF28A6A00332A0B /* libSendSMS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSendSMS.a;
+			remoteRef = 405F9A9B1FF28A6A00332A0B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		405F9AA11FF28A6A00332A0B /* libRNShakeEvent.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNShakeEvent.a;
+			remoteRef = 405F9AA01FF28A6A00332A0B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		405F9AA61FF28A6A00332A0B /* libRNCalendarEvents.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCalendarEvents.a;
+			remoteRef = 405F9AA51FF28A6A00332A0B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		4067E81D1FE6167A00B289D4 /* libRCTPushNotification.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1229,11 +1370,13 @@
 					"$(SRCROOT)/../node_modules/react-native-shake-event/ios",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
 					"$(SRCROOT)/../node_modules/react-native-sms/SendSMS",
+					"$(SRCROOT)/../node_modules/react-native-calendar-events",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
@@ -1269,11 +1412,13 @@
 					"$(SRCROOT)/../node_modules/react-native-shake-event/ios",
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
 					"$(SRCROOT)/../node_modules/react-native-sms/SendSMS",
+					"$(SRCROOT)/../node_modules/react-native-calendar-events",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",

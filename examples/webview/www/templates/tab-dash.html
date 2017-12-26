@@ -219,6 +219,16 @@
       <ion-item ng-click="sendSMS()">
         send
       </ion-item>
+
+      <div class="item item-divider">
+        Calendar
+      </div>
+      <ion-item ng-click="calendarAuthorizationStatus()">
+        status: {{authStatus}}
+      </ion-item>
+      <ion-item ng-click="requestCalendarAuthorize()">
+        requestCalendarAuthorize
+      </ion-item>
     </ion-list>
   </ion-content>
 </ion-view>

@@ -236,6 +236,15 @@ angular
         recipients: ['10086']
       });
     }
+    $scope.calendarAuthorizationStatus = function () {
+      DoreClient.calendarAuthorizationStatus().then(function(response){
+        $scope.authStatus = response;
+        $scope.$apply();
+      });
+    }
+    $scope.requestCalendarAuthorize = function () {
+      DoreClient.requestCalendarAuthorize();
+    }
   })
 
   .controller('DeviceCtrl', function ($scope) {

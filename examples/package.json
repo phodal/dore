@@ -17,11 +17,12 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "dore": "0.4.1",
+    "dore": "0.5.0",
     "dore-icon-badge": "1.2.1",
     "dore-toast": "^1.0.8",
     "react": "16.0.0",
     "react-native": "0.50.3",
+    "react-native-calendar-events": "^1.4.3",
     "react-native-check-app-install": "^0.0.4",
     "react-native-device-brightness": "^1.2.0",
     "react-native-device-info": "^0.13.0",

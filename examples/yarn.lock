@@ -1462,9 +1462,9 @@ dore-toast@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/dore-toast/-/dore-toast-1.0.8.tgz#25c3a8a7d6ddcbfdb190e82660a4ded55fd72680"
 
-dore@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/dore/-/dore-0.4.1.tgz#46a27d635574c89b04c69431a82cd1438442b580"
+dore@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/dore/-/dore-0.5.0.tgz#990b481e87c155a4bfaecdae3aa723be25d1f2dc"
 
 duplexer2@0.0.2:
   version "0.0.2"
@@ -3473,6 +3473,10 @@ react-devtools-core@^2.5.0:
   dependencies:
     shell-quote "^1.6.1"
     ws "^2.0.3"
+
+react-native-calendar-events@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/react-native-calendar-events/-/react-native-calendar-events-1.4.3.tgz#29804e8b44d6946e69ab5a20902d9449ed315c47"
 
 react-native-check-app-install@^0.0.4:
   version "0.0.4"

@@ -3,6 +3,7 @@ package com.examples;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.calendarevents.CalendarEventsPackage;
 import com.tkporter.sendsms.SendSMSPackage;
 import com.cubicphuse.RCTTorch.RCTTorchPackage;
 import com.jadsonlourenco.RNShakeEvent.RNShakeEventPackage;
@@ -33,6 +34,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new CalendarEventsPackage(),
             SendSMSPackage.getInstance(),
             new RCTTorchPackage(),
             new RNShakeEventPackage(),

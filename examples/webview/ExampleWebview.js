@@ -11,6 +11,7 @@ import { AppInstalledChecker } from "react-native-check-app-install";
 import RNShakeEvent from 'react-native-shake-event';
 import Torch from 'react-native-torch';
 import SendSMS from 'react-native-sms'
+import RNCalendarEvents from 'react-native-calendar-events';
 
 import Dore from 'dore';
 
@@ -60,6 +61,9 @@ export default class ExampleWebView extends Component {
     }, {
       name: 'SMS',
       class: SendSMS
+    }, {
+      name: 'Calendar',
+      class: RNCalendarEvents
     }]);
   }
 
