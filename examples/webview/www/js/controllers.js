@@ -267,8 +267,8 @@ angular
       })
     };
     $scope.fetchAllCalendar = function () {
-      DoreClient.fetchAllCalendar('2016-08-19T19:26:00.000Z',
-        '2019-08-19T19:26:00.000Z', ['1', '2']).then(function(response){
+      DoreClient.fetchAllCalendar('2017-12-26T19:26:00.000Z',
+        '2018-01-1T19:26:00.000Z', ['1', '2']).then(function(response){
         console.log(response);
         $scope.fetchCalendars = response;
         $scope.$apply();
