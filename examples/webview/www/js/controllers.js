@@ -275,7 +275,8 @@ angular
       })
     };
     $scope.removeFirstCalendar = function () {
-      DoreClient.findCalendars().then(function(response){
+      DoreClient.fetchAllCalendar('2017-12-26T19:26:00.000Z',
+        '2018-01-1T19:26:00.000Z', ['1', '2']).then(function(response){
         console.log(response);
         if (response.length < 1) {
           return DoreClient.showToast("请先创建日历");
