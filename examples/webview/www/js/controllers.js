@@ -245,9 +245,6 @@ angular
     $scope.requestCalendarAuthorize = function () {
       DoreClient.requestCalendarAuthorize();
     };
-    $scope.requestCalendarAuthorize = function () {
-      DoreClient.requestCalendarAuthorize();
-    };
     $scope.saveCalendar = function () {
       DoreClient.saveCalendar("title",
         {

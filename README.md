@@ -278,6 +278,97 @@ $scope.setBrightness = function () {
 };
 ```
 
+### Calendar
+
+| function             | return type   |    return             |
+-----------------------|---------------|-----------------------|
+| calendarAuthorizationStatus   |  promise      |  String      |
+| requestCalendarAuthorize |  -        |      -                |
+| findEventById        |  promise      |      json             |
+| fetchAllCalendar     |  promise      |      json             |
+| saveCalendar         |  promise      |      json             |
+| removeCalendar       |  promise      |      json             |
+| findCalendars        |  promise      |      json             |
+
+install
+
+```
+yarn add react-native-calendar-events
+react-native link react-native-calendar-events
+```
+
+inject
+
+```
+import RNCalendarEvents from 'react-native-calendar-events';
+
+Dore.inject([{
+  name: 'Calendar',
+  class: RNCalendarEvents
+}]);
+```
+
+examples:
+
+permissions action:
+
+```
+DoreClient.calendarAuthorizationStatus().then(function (response) {
+  $scope.authStatus = response;
+  $scope.$apply();
+});
+DoreClient.requestCalendarAuthorize();
+```
+
+calendar actions:
+
+```  
+$scope.saveCalendar = function () {
+  DoreClient.saveCalendar("title",
+    {
+      location: 'location',
+      notes: 'notes',
+      startDate: new Date().toISOString(),
+      endDate: new Date().toISOString()
+    }).then(function(response){
+      console.log(response);
+  })
+};
+$scope.findCalendars = function () {
+  DoreClient.findCalendars().then(function(response){
+    console.log(response);
+    $scope.calendars = response;
+    $scope.$apply();
+  })
+};
+$scope.fetchAllCalendar = function () {
+  DoreClient.fetchAllCalendar('2017-12-26T19:26:00.000Z',
+    '2018-01-1T19:26:00.000Z', ['1', '2']).then(function(response){
+    console.log(response);
+    $scope.fetchCalendars = response;
+    $scope.$apply();
+  })
+};
+$scope.removeFirstCalendar = function () {
+  DoreClient.fetchAllCalendar('2017-12-26T19:26:00.000Z',
+    '2018-01-1T19:26:00.000Z', ['1', '2']).then(function(response){
+    console.log(response);
+    if (response.length < 1) {
+      return DoreClient.showToast("请先创建日历");
+    }
+    var lastCalendar = response[0];
+    DoreClient.removeCalendar(lastCalendar.id)
+  })
+};
+$scope.findEventById = function () {
+  DoreClient.findEventById("297D3B27-4070-49A4-8BF9-1E7631727B4A").then(function(response){
+    console.log(response);
+    $scope.savedCalendar = response;
+    $scope.$apply();
+  })
+};
+```
+
 ### Clipboard
 
 | function             | return type   |    return             |
