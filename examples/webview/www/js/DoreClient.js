@@ -221,8 +221,8 @@
     requestCalendarAuthorize: function () {
       return invoke('CALENDAR', {type: 'REQUEST_AUTHORIZE'});
     },
-    findCalendarById: function (id) {
-      return getAsyncData('CALENDAR', {type: 'FIND_CALENDAR_BY_ID', id: id});
+    findEventById: function (id) {
+      return getAsyncData('CALENDAR', {type: 'FIND_EVENT_BY_ID', id: id});
     },
     fetchAllCalendar: function (startDate, endDate, calendars) {
       return getAsyncData('CALENDAR', {

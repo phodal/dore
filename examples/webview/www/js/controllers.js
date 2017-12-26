@@ -284,6 +284,13 @@ angular
         DoreClient.removeCalendar(lastCalendar.id)
       })
     };
+    $scope.findEventById = function () {
+      DoreClient.findEventById("297D3B27-4070-49A4-8BF9-1E7631727B4A").then(function(response){
+        console.log(response);
+        $scope.savedCalendar = response;
+        $scope.$apply();
+      })
+    };
   })
 
   .controller('DeviceCtrl', function ($scope) {

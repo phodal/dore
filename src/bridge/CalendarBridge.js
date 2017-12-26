@@ -37,8 +37,8 @@ let CalendarBridge = (payload, webView, Calendar) => {
           webView.postMessage(JSON.stringify(error));
         });
       break;
-    case 'FIND_CALENDAR_BY_ID':
-      Calendar.findCalendarById(payload.id)
+    case 'FIND_EVENT_BY_ID':
+      Calendar.findEventById(payload.id)
         .then(status => {
           webView.postMessage(JSON.stringify(status));
         })
