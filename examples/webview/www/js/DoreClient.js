@@ -233,10 +233,10 @@
       });
     },
     saveCalendar: function (title, settings) {
-      return invoke('CALENDAR', {type: 'SAVE_EVENT', title: title, settings: settings});
+      return getAsyncData('CALENDAR', {type: 'SAVE_EVENT', title: title, settings: settings});
     },
     removeCalendar: function (id) {
-      return invoke('CALENDAR', {type: 'REMOVE_EVENT_BY_ID', id: id});
+      return getAsyncData('CALENDAR', {type: 'REMOVE_EVENT_BY_ID', id: id});
     },
     findCalendars: function () {
       return getAsyncData('CALENDAR', {type: 'FIND_CALENDARS'});

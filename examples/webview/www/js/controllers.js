@@ -255,7 +255,9 @@ angular
           notes: 'notes',
           startDate: new Date().toISOString(),
           endDate: new Date().toISOString()
-        });
+        }).then(function(response){
+          console.log(response);
+      })
     };
     $scope.findCalendars = function () {
       DoreClient.findCalendars().then(function(response){
@@ -272,13 +274,13 @@ angular
         $scope.$apply();
       })
     };
-    $scope.removeLastCalendar = function () {
+    $scope.removeFirstCalendar = function () {
       DoreClient.findCalendars().then(function(response){
         console.log(response);
         if (response.length < 1) {
           return DoreClient.showToast("请先创建日历");
         }
-        var lastCalendar = response[response.length - 1];
+        var lastCalendar = response[0];
         DoreClient.removeCalendar(lastCalendar.id)
       })
     };
