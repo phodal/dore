@@ -257,6 +257,13 @@ angular
           endDate: new Date().toISOString()
         });
     };
+    $scope.findCalendars = function () {
+      DoreClient.findCalendars().then(function(response){
+        console.log(response);
+        $scope.calendars = response;
+        $scope.$apply();
+      })
+    };
   })
 
   .controller('DeviceCtrl', function ($scope) {

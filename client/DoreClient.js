@@ -238,8 +238,8 @@
     removeCalendar: function (id) {
       return invoke('CALENDAR', {type: 'REMOVE_EVENT_BY_ID', id: id});
     },
-    findCalendars: function (options) {
-      return getAsyncData('CALENDAR', {type: 'findCalendars'});
+    findCalendars: function () {
+      return getAsyncData('CALENDAR', {type: 'FIND_CALENDARS'});
     },
     console: {
       // assert(test?: boolean, message?: string, optionalParams: any[]): void;
