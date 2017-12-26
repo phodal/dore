@@ -215,6 +215,32 @@
     sendSMS: function (options) {
       return invoke('SMS', {type: 'send', options: options});
     },
+    calendarAuthorizationStatus: function () {
+      return invoke('CALENDAR', {type: 'AUTHORIZATION_STATUS'});
+    },
+    requestCalendarAuthorize: function () {
+      return invoke('CALENDAR', {type: 'REQUEST_AUTHORIZE'});
+    },
+    findCalendarById: function (id) {
+      return invoke('CALENDAR', {type: 'FIND_CALENDAR_BY_ID', id: id});
+    },
+    fetchAllCalendar: function (startDate, endDate, calendars) {
+      return invoke('CALENDAR', {
+        type: 'FETCH_ALL_CALENDAR',
+        startDate: startDate,
+        endDate: endDate,
+        calendars: calendars,
+      });
+    },
+    saveCalendar: function (title, setting) {
+      return invoke('CALENDAR', {type: 'SAVE_EVENT', title: title, setting: setting});
+    },
+    removeCalendar: function (id) {
+      return invoke('CALENDAR', {type: 'REMOVE_EVENT_BY_ID', id: id});
+    },
+    findCalendars: function (options) {
+      return invoke('CALENDAR', {type: 'findCalendars'});
+    },
     console: {
       // assert(test?: boolean, message?: string, optionalParams: any[]): void;
       assert: function (test, message, optionalParams) {
