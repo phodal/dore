@@ -24,7 +24,7 @@ export default class ExampleWebView extends Component {
   static componentName = 'ExampleWebView';
 
   constructor() {
-    super()
+    super();
     this.state = {
       isLoading: true
     };

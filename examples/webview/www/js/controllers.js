@@ -162,7 +162,7 @@ angular
     };
     $scope.stringSubstitutions = function () {
       for (var i = 0; i < 5; i++) {
-        var optionalParams = [ "Bob", i + 1];
+        var optionalParams = ["Bob", i + 1];
         console.log("Hello, %s. You've called me %d times.", optionalParams);
       }
     };
@@ -203,13 +203,13 @@ angular
     };
 
     $scope.getAsyncStorage = function (key) {
-      DoreClient.getAsyncStorage(key).then(function(response){
+      DoreClient.getAsyncStorage(key).then(function (response) {
         $scope.storage = response.data;
         $scope.$apply();
       })
     };
     $scope.checkURLScheme = function () {
-      DoreClient.checkURLScheme('whatsapp').then(function(response){
+      DoreClient.checkURLScheme('whatsapp').then(function (response) {
         $scope.isAppInstalled = response;
         $scope.$apply();
       })
@@ -235,16 +235,28 @@ angular
         body: 'Hello, world',
         recipients: ['10086']
       });
-    }
+    };
     $scope.calendarAuthorizationStatus = function () {
-      DoreClient.calendarAuthorizationStatus().then(function(response){
+      DoreClient.calendarAuthorizationStatus().then(function (response) {
         $scope.authStatus = response;
         $scope.$apply();
       });
-    }
+    };
     $scope.requestCalendarAuthorize = function () {
       DoreClient.requestCalendarAuthorize();
-    }
+    };
+    $scope.requestCalendarAuthorize = function () {
+      DoreClient.requestCalendarAuthorize();
+    };
+    $scope.saveCalendar = function () {
+      DoreClient.saveCalendar("title",
+        {
+          location: 'location',
+          notes: 'notes',
+          startDate: new Date().toISOString(),
+          endDate: new Date().toISOString()
+        });
+    };
   })
 
   .controller('DeviceCtrl', function ($scope) {

@@ -222,24 +222,24 @@
       return invoke('CALENDAR', {type: 'REQUEST_AUTHORIZE'});
     },
     findCalendarById: function (id) {
-      return invoke('CALENDAR', {type: 'FIND_CALENDAR_BY_ID', id: id});
+      return getAsyncData('CALENDAR', {type: 'FIND_CALENDAR_BY_ID', id: id});
     },
     fetchAllCalendar: function (startDate, endDate, calendars) {
-      return invoke('CALENDAR', {
+      return getAsyncData('CALENDAR', {
         type: 'FETCH_ALL_CALENDAR',
         startDate: startDate,
         endDate: endDate,
         calendars: calendars,
       });
     },
-    saveCalendar: function (title, setting) {
-      return invoke('CALENDAR', {type: 'SAVE_EVENT', title: title, setting: setting});
+    saveCalendar: function (title, settings) {
+      return invoke('CALENDAR', {type: 'SAVE_EVENT', title: title, settings: settings});
     },
     removeCalendar: function (id) {
       return invoke('CALENDAR', {type: 'REMOVE_EVENT_BY_ID', id: id});
     },
-    findCalendars: function (options) {
-      return invoke('CALENDAR', {type: 'findCalendars'});
+    findCalendars: function () {
+      return getAsyncData('CALENDAR', {type: 'findCalendars'});
     },
     console: {
       // assert(test?: boolean, message?: string, optionalParams: any[]): void;
