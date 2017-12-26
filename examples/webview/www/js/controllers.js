@@ -264,6 +264,24 @@ angular
         $scope.$apply();
       })
     };
+    $scope.fetchAllCalendar = function () {
+      DoreClient.fetchAllCalendar('2016-08-19T19:26:00.000Z',
+        '2019-08-19T19:26:00.000Z', ['1', '2']).then(function(response){
+        console.log(response);
+        $scope.fetchCalendars = response;
+        $scope.$apply();
+      })
+    };
+    $scope.removeLastCalendar = function () {
+      DoreClient.findCalendars().then(function(response){
+        console.log(response);
+        if (response.length < 1) {
+          return DoreClient.showToast("请先创建日历");
+        }
+        var lastCalendar = response[response.length - 1];
+        DoreClient.removeCalendar(lastCalendar.id)
+      })
+    };
   })
 
   .controller('DeviceCtrl', function ($scope) {
