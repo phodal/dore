@@ -411,7 +411,7 @@ $scope.isTablet = function() {
 
 inject
 
-```
+```javascript
 import Torch from 'react-native-torch';
 
 Dore.inject([{
@@ -422,7 +422,7 @@ Dore.inject([{
 
 usage
 
-```
+```javascript
 $scope.onFlashlight = function () {
   DoreClient.onFlashlight();
 };
@@ -598,7 +598,7 @@ react-native link react-native-sms
 
 Inject
 
-```
+```javascript
 import SendSMS from 'react-native-sms';
 
 Dore.inject([{
@@ -609,7 +609,7 @@ Dore.inject([{
 
 Examples:
 
-```
+```javascript
 $scope.sendSMS = function () {
   DoreClient.sendSMS({
     body: 'Hello, world',
@@ -683,7 +683,7 @@ DoreClient.vibrationCancel();
 Development
 ---
  
-### DoreClient：**Browser -> vibrationVibrate -> DoreClient -> window.postMessage -> RN**
+Workflow: DoreClient：**Browser -> vibrationVibrate -> DoreClient -> window.postMessage -> RN**
 
 DoreClient, handle message in WebView
 
@@ -715,7 +715,7 @@ DoreClient = {
 }
 ```
 
-### Dore: WebView -> onMessage -> Dore -> xxxBridge -> Native
+Workflow: Dore: WebView -> onMessage -> Dore -> xxxBridge -> Native
 
 Dore, handle message in React Native
 
