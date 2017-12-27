@@ -6,7 +6,7 @@
 
 设计初衷：作为迁移 Cordova 的 WebView 应用到 React Native 的 WebView 的基础设施。
 
-Feel free to give a pull request or issues, questions.
+**Feel free to give a pull request or issues, questions.**
 
 欢迎使用 Dore，如果你在过程中遇到问题，可以与我们联系。
 
@@ -22,7 +22,7 @@ Workflow:
 
 微信群：
 
-![QRCode](./doc/wechat.jpg)
+![Wechat Group](./doc/wechat.jpg)
 
 Features
 ---
@@ -40,7 +40,7 @@ Features
  - Clipboard 
  - DatePicker (iOS by [react-native-notag-datepicker](https://github.com/phodal/react-native-notag-datepicker))
  - DeviceInfo (by [react-native-device-info](https://github.com/rebeccahughes/react-native-device-info))
- - Flashlight (https://github.com/ludo/react-native-torch)
+ - Flashlight ([react-native-torch](https://github.com/ludo/react-native-torch))
  - Geolocation
  - Keyboard
  - NetInfo
@@ -59,7 +59,7 @@ Features
 
 ### Deprecated
 
-> Those plugins just list for future, don't plan to implement in Dore.
+> Those plugins just list, don't plan to implement in Dore.
 
 #### UI
 
@@ -74,14 +74,12 @@ Features
 
  - BluetoothSerial (https://github.com/don/BluetoothSerial)
  - BLE (https://github.com/don/cordova-plugin-ble-central)
- - DeepLinking (https://github.com/BranchMetrics/cordova-ionic-phonegap-branch-deep-linking)
  - fs
- - ~~NativeSettings (https://github.com/guyromb/Cordova-open-native-settings)~~
  - NFC  
  - Push Notifications (https://github.com/zo0r/react-native-push-notification)
  - TTS (https://github.com/naoufal/react-native-speech)
- - Wechat ([Cordova](https://github.com/xu-li/cordova-plugin-wechat) [RN](https://github.com/yorkie/react-native-wechat))
- - Weibo ([Cordova](https://github.com/iVanPan/cordova_weibo), [RN](https://github.com/reactnativecn/react-native-weibo)
+ - Wechat ([RN](https://github.com/yorkie/react-native-wechat))
+ - Weibo ([RN](https://github.com/reactnativecn/react-native-weibo))
 
 Example
 ---
