@@ -61,6 +61,22 @@
         cb(results);
       })
     },
+    //TODO: Test funcationl
+    SQLite: {
+      action: "SQLite",
+      open: function (name, version, displayName, databaseSize, operationDataBase, errorCB) {
+        var options = {
+          type: 'OPEN',
+          name: name,
+          version: version,
+          displayName: displayName,
+          databaseSize: databaseSize,
+          operationDataBase: operationDataBase.toString(),
+          errorCB: errorCB.toString()
+        };
+        return getAsyncData(this.action, options);
+      },
+    },
     getAppVersion: function () {
       return getAsyncData('DEVICE_INFO', {type: 'APP_VERSION'});
     },

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -36,6 +35,8 @@
 		DA605C1EAC8444EAAB913772 /* libRNDeviceBrightness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E9E2C8C09544F4B02C1E12 /* libRNDeviceBrightness.a */; };
 		E8B89168CD1A4416ADCFC56D /* libRCTTorch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A929DB412714A2A9F85831E /* libRCTTorch.a */; };
 		EBC93D30060F4644AFE86309 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */; };
+		58AB07113B29473CAD5EBB99 /* libSQLite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC415621164047B8BA72DF /* libSQLite.a */; };
+		204184A998B54079B145D6F1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 48392C3E9D734321B4A03B3E /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -432,6 +433,9 @@
 		D3F83B41AD6E42A491BAB2F6 /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
 		EFF2DEC140AA478FAD856DC3 /* SendSMS.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SendSMS.xcodeproj; path = "../node_modules/react-native-sms/SendSMS.xcodeproj"; sourceTree = "<group>"; };
 		FBC852881BD14658B8A05142 /* RNShakeEvent.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNShakeEvent.xcodeproj; path = "../node_modules/react-native-shake-event/ios/RNShakeEvent.xcodeproj"; sourceTree = "<group>"; };
+		5A0F51BA16374292A7D456C4 /* SQLite.xcodeproj */ = {isa = PBXFileReference; name = "SQLite.xcodeproj"; path = "../node_modules/react-native-sqlite-storage/src/ios/SQLite.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D6BC415621164047B8BA72DF /* libSQLite.a */ = {isa = PBXFileReference; name = "libSQLite.a"; path = "libSQLite.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		48392C3E9D734321B4A03B3E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; name = "libsqlite3.0.tbd"; path = "usr/lib/libsqlite3.0.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,6 +468,8 @@
 				E8B89168CD1A4416ADCFC56D /* libRCTTorch.a in Frameworks */,
 				BD193FBF58D043AD992EBD0B /* libSendSMS.a in Frameworks */,
 				D32EDBD077E449D3B9BAB55A /* libRNCalendarEvents.a in Frameworks */,
+				58AB07113B29473CAD5EBB99 /* libSQLite.a in Frameworks */,
+				204184A998B54079B145D6F1 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +622,7 @@
 		404E56D81FE5849600966185 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48392C3E9D734321B4A03B3E /* libsqlite3.0.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -738,6 +745,7 @@
 				5AF1CA576E7941CCA57DA26E /* RCTTorch.xcodeproj */,
 				EFF2DEC140AA478FAD856DC3 /* SendSMS.xcodeproj */,
 				7ACFDE1ACDCE4EC280847903 /* RNCalendarEvents.xcodeproj */,
+				5A0F51BA16374292A7D456C4 /* SQLite.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1371,11 +1379,13 @@
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
 					"$(SRCROOT)/../node_modules/react-native-sms/SendSMS",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
+					"$(SRCROOT)/../node_modules/react-native-sqlite-storage/src/ios",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
@@ -1413,11 +1423,13 @@
 					"$(SRCROOT)/../node_modules/react-native-torch/ios",
 					"$(SRCROOT)/../node_modules/react-native-sms/SendSMS",
 					"$(SRCROOT)/../node_modules/react-native-calendar-events",
+					"$(SRCROOT)/../node_modules/react-native-sqlite-storage/src/ios",
 				);
 				INFOPLIST_FILE = examples/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",
 					"\"$(SRCROOT)/examples\"",

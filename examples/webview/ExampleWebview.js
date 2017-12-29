@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import {View, WebView, Dimensions} from "react-native";
 import Toast from 'dore-toast';
 import Orientation from 'react-native-orientation';
@@ -6,13 +6,15 @@ import RNIconBadge from 'dore-icon-badge'
 import RNDeviceInfo from "react-native-device-info";
 import DeviceBrightness from 'react-native-device-brightness';
 import Permissions from 'react-native-permissions'
-import { captureScreen } from "react-native-view-shot";
-import { AppInstalledChecker } from "react-native-check-app-install";
+import {captureScreen} from "react-native-view-shot";
+import {AppInstalledChecker} from "react-native-check-app-install";
 import RNShakeEvent from 'react-native-shake-event';
 import Torch from 'react-native-torch';
 import SendSMS from 'react-native-sms'
 import RNCalendarEvents from 'react-native-calendar-events';
-
+import SQLite from 'react-native-sqlite-storage';
+SQLite.DEBUG(true);
+SQLite.enablePromise(true);
 import Dore from 'dore';
 
 let {
@@ -28,43 +30,48 @@ export default class ExampleWebView extends Component {
     this.state = {
       isLoading: true
     };
-    Dore.inject([{
-      name: 'Toast',
-      class: Toast
-    }, {
-      name: 'Orientation',
-      class: Orientation
-    }, {
-      name: 'Badge',
-      class: RNIconBadge
-    }, {
-      name: 'DeviceInfo',
-      class: RNDeviceInfo
-    }, {
-      name: 'Brightness',
-      class: DeviceBrightness
-    }, {
-      name: 'Permissions',
-      class: Permissions
-    }, {
-      name: 'Capture',
-      class: captureScreen
-    }, {
-      name: 'AppInstalledChecker',
-      class: AppInstalledChecker
-    }, {
-      name: 'Shake',
-      class: RNShakeEvent
-    }, {
-      name: 'Flashlight',
-      class: Torch
-    }, {
-      name: 'SMS',
-      class: SendSMS
-    }, {
-      name: 'Calendar',
-      class: RNCalendarEvents
-    }]);
+    Dore.inject([
+      {
+        name: 'SQLite',
+        class: SQLite
+      },
+      {
+        name: 'Toast',
+        class: Toast
+      }, {
+        name: 'Orientation',
+        class: Orientation
+      }, {
+        name: 'Badge',
+        class: RNIconBadge
+      }, {
+        name: 'DeviceInfo',
+        class: RNDeviceInfo
+      }, {
+        name: 'Brightness',
+        class: DeviceBrightness
+      }, {
+        name: 'Permissions',
+        class: Permissions
+      }, {
+        name: 'Capture',
+        class: captureScreen
+      }, {
+        name: 'AppInstalledChecker',
+        class: AppInstalledChecker
+      }, {
+        name: 'Shake',
+        class: RNShakeEvent
+      }, {
+        name: 'Flashlight',
+        class: Torch
+      }, {
+        name: 'SMS',
+        class: SendSMS
+      }, {
+        name: 'Calendar',
+        class: RNCalendarEvents
+      }]);
   }
 
   onMessage = evt => {
@@ -100,7 +107,7 @@ export default class ExampleWebView extends Component {
             this.webView = webView
           }}
           source={source}
-          style={{width:deviceWidth, height:deviceHeight}}
+          style={{width: deviceWidth, height: deviceHeight}}
           onMessage={this.onMessage}
           onLoadStart={this.onWebViewLoadStart}
         />

@@ -31,6 +31,7 @@
     "react-native-permissions": "^1.0.6",
     "react-native-shake-event": "^4.0.1",
     "react-native-sms": "^1.5.0",
+    "react-native-sqlite-storage": "^3.3.4",
     "react-native-torch": "^1.0.1",
     "react-native-view-shot": "^2.2.0"
   }
