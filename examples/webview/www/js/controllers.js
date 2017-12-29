@@ -301,7 +301,6 @@ angular
               console.log("Executing employee query");
               tx.executeSql('SELECT a.name, b.name as deptName FROM Employees a, Departments b WHERE a.department = b.department_id').then(([tx, results]) => {
 
-                // 传出的数据需要处理
                 var payload = {}
                 payload.result = []
                 payload.type = 'OPERATION_DATABASEE_DONE_QUERY_DB';
