@@ -252,12 +252,12 @@ angular
           notes: 'notes',
           startDate: new Date().toISOString(),
           endDate: new Date().toISOString()
-        }).then(function(response){
-          console.log(response);
+        }).then(function (response) {
+        console.log(response);
       })
     };
     $scope.findCalendars = function () {
-      DoreClient.findCalendars().then(function(response){
+      DoreClient.findCalendars().then(function (response) {
         console.log(response);
         $scope.calendars = response;
         $scope.$apply();
@@ -265,7 +265,7 @@ angular
     };
     $scope.fetchAllCalendar = function () {
       DoreClient.fetchAllCalendar('2017-12-26T19:26:00.000Z',
-        '2018-01-1T19:26:00.000Z', ['1', '2']).then(function(response){
+        '2018-01-1T19:26:00.000Z', ['1', '2']).then(function (response) {
         console.log(response);
         $scope.fetchCalendars = response;
         $scope.$apply();
@@ -273,7 +273,7 @@ angular
     };
     $scope.removeFirstCalendar = function () {
       DoreClient.fetchAllCalendar('2017-12-26T19:26:00.000Z',
-        '2018-01-1T19:26:00.000Z', ['1', '2']).then(function(response){
+        '2018-01-1T19:26:00.000Z', ['1', '2']).then(function (response) {
         console.log(response);
         if (response.length < 1) {
           return DoreClient.showToast("请先创建日历");
@@ -283,11 +283,129 @@ angular
       })
     };
     $scope.findEventById = function () {
-      DoreClient.findEventById("297D3B27-4070-49A4-8BF9-1E7631727B4A").then(function(response){
+      DoreClient.findEventById("297D3B27-4070-49A4-8BF9-1E7631727B4A").then(function (response) {
         console.log(response);
         $scope.savedCalendar = response;
         $scope.$apply();
       })
+    };
+    $scope._test_sqlite_functional = function () { // Test functional
+      function operationDataBase(webview, db) {
+        console.log('open then');
+        db.executeSql('SELECT 1 FROM Version LIMIT 1')
+          .then(function (result) {
+            console.log('executeSql then');
+            console.log(result);
+
+            function queryEmployees(tx) {
+              console.log("Executing employee query");
+              tx.executeSql('SELECT a.name, b.name as deptName FROM Employees a, Departments b WHERE a.department = b.department_id').then(([tx, results]) => {
+
+                // 传出的数据需要处理
+                var payload = {}
+                payload.result = []
+                payload.type = 'OPERATION_DATABASEE_DONE_QUERY_DB';
+                var len = results.rows.length;
+                for (let i = 0; i < len; i++) {
+                  let row = results.rows.item(i);
+                  payload.result.push(row)
+                }
+
+                webview.postMessage(JSON.stringify(payload));
+              }).catch((error) => {
+                console.log(error);
+              });
+            }
+
+            db.transaction(queryEmployees).then(() => {
+              console.log('query done.')
+            });
+          })
+          .catch(function (err) {
+            console.log('executeSql catch');
+            console.log(err);
+            db.transaction(function (tx) {
+              tx.executeSql('DROP TABLE IF EXISTS Employees;');
+              tx.executeSql('DROP TABLE IF EXISTS Offices;');
+              tx.executeSql('DROP TABLE IF EXISTS Departments;');
+
+              tx.executeSql('CREATE TABLE IF NOT EXISTS Version( '
+                + 'version_id INTEGER PRIMARY KEY NOT NULL); ').catch((error) => {
+                console.log(error);
+              });
+
+              tx.executeSql('CREATE TABLE IF NOT EXISTS Departments( '
+                + 'department_id INTEGER PRIMARY KEY NOT NULL, '
+                + 'name VARCHAR(30) ); ').catch((error) => {
+                console.log(error)
+              });
+
+              tx.executeSql('CREATE TABLE IF NOT EXISTS Offices( '
+                + 'office_id INTEGER PRIMARY KEY NOT NULL, '
+                + 'name VARCHAR(20), '
+                + 'longtitude FLOAT, '
+                + 'latitude FLOAT ) ; ').catch((error) => {
+                console.log(error)
+              });
+
+              tx.executeSql('CREATE TABLE IF NOT EXISTS Employees( '
+                + 'employe_id INTEGER PRIMARY KEY NOT NULL, '
+                + 'name VARCHAR(55), '
+                + 'office INTEGER, '
+                + 'department INTEGER, '
+                + 'FOREIGN KEY ( office ) REFERENCES Offices ( office_id ) '
+                + 'FOREIGN KEY ( department ) REFERENCES Departments ( department_id ));').catch((error) => {
+                console.log(error)
+              });
+
+              tx.executeSql('INSERT INTO Departments (name) VALUES ("Client Services");');
+              tx.executeSql('INSERT INTO Departments (name) VALUES ("Investor Services");');
+              tx.executeSql('INSERT INTO Departments (name) VALUES ("Shipping");');
+              tx.executeSql('INSERT INTO Departments (name) VALUES ("Direct Sales");');
+
+              tx.executeSql('INSERT INTO Offices (name, longtitude, latitude) VALUES ("Denver", 59.8,  34.1);');
+              tx.executeSql('INSERT INTO Offices (name, longtitude, latitude) VALUES ("Warsaw", 15.7, 54.1);');
+              tx.executeSql('INSERT INTO Offices (name, longtitude, latitude) VALUES ("Berlin", 35.3, 12.1);');
+              tx.executeSql('INSERT INTO Offices (name, longtitude, latitude) VALUES ("Paris", 10.7, 14.1);');
+
+              tx.executeSql('INSERT INTO Employees (name, office, department) VALUES ("Sylvester Stallone", 2,  4);');
+              tx.executeSql('INSERT INTO Employees (name, office, department) VALUES ("Elvis Presley", 2, 4);');
+              tx.executeSql('INSERT INTO Employees (name, office, department) VALUES ("Leslie Nelson", 3,  4);');
+              tx.executeSql('INSERT INTO Employees (name, office, department) VALUES ("Fidel Castro", 3, 3);');
+              tx.executeSql('INSERT INTO Employees (name, office, department) VALUES ("Bill Clinton", 1, 3);');
+              tx.executeSql('INSERT INTO Employees (name, office, department) VALUES ("Margaret Thatcher", 1, 3);');
+              tx.executeSql('INSERT INTO Employees (name, office, department) VALUES ("Donald Trump", 1, 3);');
+              tx.executeSql('INSERT INTO Employees (name, office, department) VALUES ("Dr DRE", 2, 2);');
+              tx.executeSql('INSERT INTO Employees (name, office, department) VALUES ("Samantha Fox", 2, 1);');
+              console.log("all executed SQL done");
+              webview.postMessage(JSON.stringify({
+                type: "OPERATION_DATABASEE_DONE_CREATE_TABLE_AND_INSERT_DATA",
+                result: 'init table done.'
+              }));
+            })
+          })
+      }
+
+      function errorCB(error) {
+        console.log(error)
+      }
+
+      var SQLite = DoreClient.SQLite;
+      SQLite.open(
+        'test.db',
+        '1.0',
+        'SQLite test databases',
+        200000,
+        operationDataBase,
+        errorCB)
+        .then(function (payload) {
+          console.log('open then');
+          console.log(payload);
+          alert(JSON.stringify(payload))
+        })
+        .catch(function (err) {
+          console.log(err)
+        })
     };
   })
 

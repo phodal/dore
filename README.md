@@ -769,6 +769,34 @@ DoreClient.vibrationVibrate(1000);
 DoreClient.vibrationCancel();
 ```
 
+
+### SQLite(Test functional)
+
+```javascript
+
+function operationDataBase(webview, db) {}
+function errorCB(error) {}
+
+var SQLite = DoreClient.SQLite;
+      SQLite.open(
+        'test.db',
+        '1.0',
+        'SQLite test databases',
+        200000,
+        operationDataBase,
+        errorCB)
+        .then(function (payload) {
+          console.log('open then');
+          console.log(payload);
+          alert(JSON.stringify(payload))
+        })
+        .catch(function (err) {
+          console.log(err)
+        })
+    };
+
+```
+
 Development
 ---
  

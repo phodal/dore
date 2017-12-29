@@ -27,6 +27,8 @@ import FlashlightBridge from './bridge/FlashlightBridge';
 import SMSBridge from './bridge/SMSBridge';
 import CalendarBridge from './bridge/CalendarBridge';
 
+import SQLiteBridge from './bridge/SQLiteBridge';
+
 const Dore = {};
 
 Dore.inject = modules => {
@@ -128,6 +130,10 @@ Dore.handleMessage = (event, webView) => {
     case 'CALENDAR': {
       return CalendarBridge(payload, webView, Dore.Calendar);
     }
+    case 'SQLite': {
+      return SQLiteBridge(payload, webView, Dore.SQLite);
+    }
+
   }
 };
 
