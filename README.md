@@ -2,6 +2,8 @@
 
 > Dore is a WebView container implemented using React Native. Help you migrate Cordova application to React Native WebView.
 
+[![npm](https://img.shields.io/npm/v/dore.svg)](https://www.npmjs.com/dore)
+
 **Dore 是一个使用 React Native 实现的 WebView 容器，可以让你在 WebView 调用 React Native 组件。**
 
 设计初衷：作为迁移 Cordova 的 WebView 应用到 React Native 的 WebView 的基础设施。
@@ -49,13 +51,10 @@ Features
  - ScreenShot (by [react-native-view-shot](https://github.com/gre/react-native-view-shot))
  - Shake (by [react-native-shake-event](https://github.com/jadsonlourenco/react-native-shake-event))
  - SMS (by [react-native-sms](https://github.com/tkporter/react-native-sms))
+ - SQLite (**Test Only**,[react-native-sqlite-storage](https://github.com/andpor/react-native-sqlite-storage)
  - StatusBar
  - Toast (by [dore-toast](https://github.com/GrowthStudio/dore-toast))
  - Vibration
- 
-### Todo 
-
- - SQLite (https://github.com/andpor/react-native-sqlite-storage)
 
 ### Deprecated
 
